@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Trang giới thiệu cây cảnh</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS của trang và Bootstrap -->
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="container my-3">
+        <div class="d-flex align-items-center">
+            <a href="index.html">
+                <img id="logo" src="images/logo.jpg" alt="Logo PV Garden" style="width: 50px; height: 50px;">
+            </a>
+            <h1 class="ms-2">PV GARDEN</h1>
+        </div>
+        <!-- Thanh tìm kiếm -->
+        <form class="search-form mt-2" action="#" method="get">
+            <input type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm" />
+            <button type="submit" aria-label="Nút tìm kiếm"><i class="bi bi-search"></i></button>
+        </form>
+    </header>
+
+    <!-- Thanh điều hướng -->
+    <nav aria-label="Main Navigation">
+        <ul class="w3-xlarge">
+            <li><a href="index.html" style="text-decoration: none"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+            <li><a href="#">Chậu</a></li>
+            <li><a href="#">2</a></li>
+
+            <!-- Dropdown Cách chăm sóc -->
+            <li class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cách chăm sóc
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Chăm sóc sen đá</a></li>
+                    <li><a class="dropdown-item" href="#">Chăm sóc xương rồng</a></li>
+                </ul>
+            </li>
+
+            <!-- Dropdown Vật tư cây trồng -->
+            <li class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Vật tư cây trồng
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Phân bón</a></li>
+                    <li><a class="dropdown-item" href="#">Chậu</a></li>
+                    <li><a class="dropdown-item" href="#">Sỏi, đá</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">Liên hệ</a></li>
+            <li><a href="cart.html" style="text-decoration: none"><i class="bi bi-cart"></i> Thêm vào giỏ hàng</a></li>
+        </ul>
+    </nav>
+
+    <!-- Giới thiệu -->
+    <section class="intro my-4">
+        <h2>Giới thiệu</h2>
+        <p>
+            Chào mừng bạn đến với trang web chuyên cung cấp thông tin, kiến thức và sản phẩm về cây cảnh mini!
+            Chúng tôi tự hào là điểm đến lý tưởng cho những ai yêu thích nghệ thuật cây xanh. Tại đây, bạn sẽ
+            khám phá vô vàn loại cây cảnh độc đáo, từ những cây trang trí bàn làm việc cho đến các loại bonsai
+            mang giá trị phong thủy cao.
+        </p>
+    </section>
+
+    <!-- Sản phẩm nổi bật -->
+    <section class="products my-4">
+        <h2>Sản phẩm nổi bật</h2>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=1">
+                        <img src="images/Cay-bonsai-mini-Mai-Chieu-Thuy-lun-luc-eb176435de62df3d83330d0de04bed04.webp" 
+                             alt="Cây Bonsai Mai Chiếu Thủy lùn" loading="lazy" />
+                        <p>Cây bonsai mini Mai Chiếu Thủy lùn</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=2">
+                        <img src="images/sen da.jpg" alt="Sen đá" loading="lazy" />
+                        <p>Sen đá</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=3">
+                        <img src="images/lanhodiep.jpg" alt="Hoa Lan Hồ Điệp" loading="lazy" />
+                        <p>Hoa Lan</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=4">
+                        <img src="images/Bonsai-mini-Cay-Tung-bach-3784cf2e40dbaa12b1536f3cbb190743.webp" 
+                             alt="Cây Tùng Bách" loading="lazy" />
+                        <p>Cây Tùng Bách</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=5">
+                        <img src="images/Cay-Bonsai-mini-Linh-Sam-c7d6dfd639dac579116e90f46e41216b.webp" 
+                             alt="Cây Linh Sam" loading="lazy" />
+                        <p>Cây Linh Sam</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=6">
+                        <img src="images/Cay-Bonsai-mini-Mai-Chieu-Thuy-e415500df0e3cc97624749769265ff72.webp" 
+                             alt="Mai Chiếu Thủy" loading="lazy" />
+                        <p>Mai Chiếu Thủy</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=7">
+                        <img src="images/caycomayman.jpg" alt="Cây cỏ may mắn" loading="lazy" />
+                        <p>Cây cỏ may mắn hình trái tim</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=8">
+                        <img src="images/sendakimcuong.jpg" alt="Sen đá kim cương" loading="lazy" />
+                        <p>Sen đá kim cương</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=9">
+                        <img src="images/sendaphatba.jpg" alt="Sen đá phật bà" loading="lazy" />
+                        <p>Sen đá phật bà</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=10">
+                        <img src="images/luoi-ho-nga-voi.jpg" alt="Cây lưỡi hổ" loading="lazy" />
+                        <p>Cây lưỡi hổ ngà voi</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=11">
+                        <img src="images/sendahoahong.jpg" alt="Sen đá hoa hồng" loading="lazy" />
+                        <p>Sen đá hoa hồng</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=12">
+                        <img src="images/sendamongrong.jpg" alt="Sen đá móng rồng" loading="lazy" />
+                        <p>Sen đá móng rồng</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-4"> 
+        <div class="container text-center">
+            <p>© PV Garden - Mang thiên nhiên vào không gian sống</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100022441703176" target="_blank" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i> Phuvinh
+                </a>
+                <a href="https://www.instagram.com/?hl=en" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i> vinhadmw
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i> 0353603304
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
