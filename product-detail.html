@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <title>Chi tiết sản phẩm - PV Garden</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chi tiết sản phẩm cây cảnh tại PV Garden - Chuyên cung cấp các loại cây cảnh mini độc đáo và đẹp mắt.">
+
+    <!-- CSS của trang và Bootstrap -->
+    <link href="product-detail.css" rel="stylesheet" />
+ 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="container my-3">
+        <div class="d-flex align-items-center">
+            <a href="index.html">
+                <img id="logo" src="images/logo.jpg" alt="Logo PV Garden" style="width: 50px; height: 50px;">
+            </a>
+            <h1 class="ms-2">PV GARDEN</h1>
+        </div>
+        <!-- Thanh tìm kiếm -->
+        <form class="search-form mt-2" action="#" method="get">
+            <input type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm" />
+            <button type="submit" aria-label="Nút tìm kiếm"><i class="bi bi-search"></i></button>
+        </form>
+    </header>
+
+    <!-- Thanh điều hướng -->
+    <nav aria-label="Main Navigation"> 
+        <ul class="w3-xlarge">
+            <li><a href="index.html" style="text-decoration: none"><i class="fa fa-home"></i> Trang chủ</a></li>
+            <li><a href="gioithieu.html">Giới thiệu</a></li>
+           
+            <!-- Dropdown Cách chăm sóc -->
+            <li class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cách chăm sóc
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Chăm sóc sen đá</a></li>
+                    <li><a class="dropdown-item" href="#">Chăm sóc xương rồng</a></li>
+                </ul>
+            </li>
+
+            <!-- Dropdown Vật tư cây trồng -->
+            <li class="dropdown">
+                <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Vật tư cây trồng
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Phân bón</a></li>
+                    <li><a class="dropdown-item" href="#">Chậu</a></li>
+                    <li><a class="dropdown-item" href="#">Sỏi, đá</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#" id="loginBtn">Đăng nhập</a></li>
+            <li>
+                <a href="#" style="text-decoration: none" id="cartLink" data-bs-toggle="modal" data-bs-target="#cartModal">
+                    <i class="bi bi-cart"></i> Giỏ hàng
+                    <span id="cartItemCount" class="badge bg-danger">0</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Chi tiết sản phẩm -->
+    <section class="product-detail my-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/Cay-bonsai-mini-Mai-Chieu-Thuy-lun-luc-eb176435de62df3d83330d0de04bed04.webp" 
+                         alt="Cây Bonsai Mai Chiếu Thủy lùn" class="img-fluid" id="productImage" />
+                </div>
+                <div class="col-md-6">
+                    <h1 id="productName">Cây bonsai mini Mai Chiếu Thủy lùn</h1>
+                    <p class="price">Giá: <span id="productPrice">250.000</span> VNĐ</p>
+                    <p class="description">
+                        Cây bonsai mini Mai Chiếu Thủy lùn là một loại cây cảnh độc đáo, 
+                        thích hợp để trang trí bàn làm việc hoặc không gian nhỏ. 
+                        Với dáng cây nhỏ gọn và lá xanh mướt, cây mang lại không khí 
+                        tươi mát và thanh bình cho không gian sống của bạn.
+                    </p>
+                    <ul class="features">
+                        <li>Chiều cao: 15-20 cm</li>
+                        <li>Độ tuổi: 2-3 năm</li>
+                        <li>Chậu: Gốm sứ cao cấp</li>
+                        <li>Phù hợp với: Văn phòng, phòng khách, bàn làm việc</li>
+                    </ul>
+                    <form class="d-flex" id="addToCartForm">
+                        <input type="number" class="form-control me-2" id="quantity" value="1" min="1" style="width: 70px;">
+                        <button class="btn btn-primary" type="submit">Thêm vào giỏ hàng</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hướng dẫn chăm sóc -->
+    <section class="care-instructions my-4">
+        <div class="container">
+            <h2>Hướng dẫn chăm sóc</h2>
+            <ul>
+                <li>Ánh sáng: Cần ánh sáng đầy đủ nhưng tránh ánh nắng trực tiếp</li>
+                <li>Nước: Tưới nước vừa phải, để đất hơi khô giữa các lần tưới</li>
+                <li>Nhiệt độ: Thích hợp ở 18-25°C</li>
+                <li>Độ ẩm: Thích hợp với độ ẩm trung bình</li>
+                <li>Cắt tỉa: Cắt tỉa định kỳ để giữ dáng cây</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sản phẩm liên quan -->
+    <section class="related-products my-4">
+        <div class="container">
+            <h2>Sản phẩm liên quan</h2>
+            <div class="row">
+                <!-- Thêm 3-4 sản phẩm liên quan ở đây -->
+                <div class="col-md-3 col-sm-6 product-item">
+                    <a href="product-detail.html?id=2">
+                        <img src="images/sen da.jpg" alt="Sen đá" loading="lazy" />
+                        <p>Sen đá</p>
+                    </a>
+                </div>
+                <!-- ... Thêm các sản phẩm khác tương tự ... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Phần hiển thị đánh giá -->
+    <section class="reviews mt-5">
+        <h2>Đánh giá sản phẩm</h2>
+        <div class="mb-3">
+            <span id="averageRating">0.0</span>/5 sao
+            (<span id="totalReviews">0</span> đánh giá)
+        </div>
+        <div id="reviewsContainer">
+            <!-- Đánh giá sẽ được hiển thị ở đây -->
+        </div>
+        <button id="openReviewModalBtn" class="btn btn-primary mt-3">Viết đánh giá</button>
+    </section>
+
+    <!-- Modal đánh giá -->
+    <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reviewModalLabel">Đánh giá sản phẩm</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="reviewForm">
+                        <div class="mb-3">
+                            <label for="reviewName" class="form-label">Tên của bạn</label>
+                            <input type="text" class="form-control" id="reviewName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewRating" class="form-label">Đánh giá</label>
+                            <select class="form-select" id="reviewRating" required>
+                                <option value="">Chọn số sao</option>
+                                <option value="1">1 sao</option>
+                                <option value="2">2 sao</option>
+                                <option value="3">3 sao</option>
+                                <option value="4">4 sao</option>
+                                <option value="5">5 sao</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reviewComment" class="form-label">Nhận xét</label>
+                            <textarea class="form-control" id="reviewComment" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="mt-4"> 
+        <div class="container text-center">
+            <p>© PV Garden - Mang thiên nhiên vào không gian sống</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100022441703176" target="_blank" aria-label="Facebook">
+                    <i class="bi bi-facebook"></i> Phuvinh
+                </a>
+                <a href="https://www.instagram.com/?hl=en" target="_blank" aria-label="Instagram">
+                    <i class="bi bi-instagram"></i> vinhadmw
+                </a>
+                <a href="#" aria-label="WhatsApp">
+                    <i class="bi bi-whatsapp"></i> 0353603304
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Modal Giỏ hàng -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Giỏ hàng của bạn</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+                    <div class="text-end mt-3">
+                        <strong>Tổng cộng: <span id="cartTotal">0</span> VNĐ</strong>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn btn-primary">Thanh toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

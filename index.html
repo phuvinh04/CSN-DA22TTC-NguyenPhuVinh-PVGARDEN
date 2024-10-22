@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="images/logo.jpg" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PV Garden - Chuyên cung cấp thông tin, kiến thức và sản phẩm về cây cảnh mini. Khám phá các loại cây cảnh độc đáo và nghệ thuật cây xanh.">
 
     <!-- CSS của trang và Bootstrap -->
     <link href="style.css" rel="stylesheet" />
@@ -32,12 +33,12 @@
     </header>
 
     <!-- Thanh điều hướng -->
-    <nav aria-label="Main Navigation">
+    <nav aria-label="Main Navigation"> 
         <ul class="w3-xlarge">
             <li><a href="index.html" style="text-decoration: none"><i class="fa fa-home"></i> Trang chủ</a></li>
             <li><a href="gioithieu.html">Giới thiệu</a></li>
-            <li><a href="#">Chậu</a></li>
-            <li><a href="#">2</a></li>
+            <li><a href="product-detail.html">Sản Phẩm</a></li>
+           
 
             <!-- Dropdown Cách chăm sóc -->
             <li class="dropdown">
@@ -62,7 +63,7 @@
                 </ul>
             </li>
 
-            <li><a href="#">Liên hệ</a></li>
+            <li><a href="#" id="loginBtn">Đăng nhập</a></li>
             <li><a href="cart.html" style="text-decoration: none"><i class="bi bi-cart"></i> Thêm vào giỏ hàng</a></li>
         </ul>
     </nav>
@@ -84,82 +85,191 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=1">
-                        <img src="images/Cay-bonsai-mini-Mai-Chieu-Thuy-lun-luc-eb176435de62df3d83330d0de04bed04.webp" 
-                             alt="Cây Bonsai Mai Chiếu Thủy lùn" loading="lazy" />
-                        <p>Cây bonsai mini Mai Chiếu Thủy lùn</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=1">
+                            <img src="images/Cay-bonsai-mini-Mai-Chieu-Thuy-lun-luc-eb176435de62df3d83330d0de04bed04.webp" 
+                                 alt="Cây Bonsai Mai Chiếu Thủy lùn" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="1">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Cây bonsai mini Mai Chiếu Thủy lùn</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=2">
-                        <img src="images/sen da.jpg" alt="Sen đá" loading="lazy" />
-                        <p>Sen đá</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=2">
+                            <img src="images/sen da.jpg" alt="Sen đá" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="2">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Sen đá</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=3">
-                        <img src="images/lanhodiep.jpg" alt="Hoa Lan Hồ Điệp" loading="lazy" />
-                        <p>Hoa Lan</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=3">
+                            <img src="images/lanhodiep.jpg" alt="Hoa Lan Hồ Điệp" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="3">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Hoa Lan</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=4">
-                        <img src="images/Bonsai-mini-Cay-Tung-bach-3784cf2e40dbaa12b1536f3cbb190743.webp" 
-                             alt="Cây Tùng Bách" loading="lazy" />
-                        <p>Cây Tùng Bách</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=4">
+                            <img src="images/Bonsai-mini-Cay-Tung-bach-3784cf2e40dbaa12b1536f3cbb190743.webp" 
+                                 alt="Cây Tùng Bách" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="4">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Cây Tùng Bách</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=5">
-                        <img src="images/Cay-Bonsai-mini-Linh-Sam-c7d6dfd639dac579116e90f46e41216b.webp" 
-                             alt="Cây Linh Sam" loading="lazy" />
-                        <p>Cây Linh Sam</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=5">
+                            <img src="images/Cay-Bonsai-mini-Linh-Sam-c7d6dfd639dac579116e90f46e41216b.webp" 
+                                 alt="Cây Linh Sam" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="5">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Cây Linh Sam</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=6">
-                        <img src="images/Cay-Bonsai-mini-Mai-Chieu-Thuy-e415500df0e3cc97624749769265ff72.webp" 
-                             alt="Mai Chiếu Thủy" loading="lazy" />
-                        <p>Mai Chiếu Thủy</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=6">
+                            <img src="images/Cay-Bonsai-mini-Mai-Chieu-Thuy-e415500df0e3cc97624749769265ff72.webp" 
+                                 alt="Mai Chiếu Thủy" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="6">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Mai Chiếu Thủy</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=7">
-                        <img src="images/caycomayman.jpg" alt="Cây cỏ may mắn" loading="lazy" />
-                        <p>Cây cỏ may mắn hình trái tim</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=7">
+                            <img src="images/caycomayman.jpg" alt="Cây cỏ may mắn" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="7">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Cây cỏ may mắn hình trái tim</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=8">
-                        <img src="images/sendakimcuong.jpg" alt="Sen đá kim cương" loading="lazy" />
-                        <p>Sen đá kim cương</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=8">
+                            <img src="images/sendakimcuong.jpg" alt="Sen đá kim cương" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="8">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Sen đá kim cương</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=9">
-                        <img src="images/sendaphatba.jpg" alt="Sen đá phật bà" loading="lazy" />
-                        <p>Sen đá phật bà</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=9">
+                            <img src="images/sendaphatba.jpg" alt="Sen đá phật bà" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="9">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Sen đá phật bà</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=10">
-                        <img src="images/luoi-ho-nga-voi.jpg" alt="Cây lưỡi hổ" loading="lazy" />
-                        <p>Cây lưỡi hổ ngà voi</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=10">
+                            <img src="images/luoi-ho-nga-voi.jpg" alt="Cây lưỡi hổ" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="10">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Cây lưỡi hổ ngà voi</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=11">
-                        <img src="images/sendahoahong.jpg" alt="Sen đá hoa hồng" loading="lazy" />
-                        <p>Sen đá hoa hồng</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=11">
+                            <img src="images/sendahoahong.jpg" alt="Sen đá hoa hồng" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="11">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Sen đá hoa hồng</p>
                 </div>
                 <div class="col-md-3 col-sm-6 product-item">
-                    <a href="product-detail.html?id=12">
-                        <img src="images/sendamongrong.jpg" alt="Sen đá móng rồng" loading="lazy" />
-                        <p>Sen đá móng rồng</p>
-                    </a>
+                    <div class="position-relative">
+                        <a href="product-detail.html?id=12">
+                            <img src="images/sendamongrong.jpg" alt="Sen đá móng rồng" loading="lazy" />
+                        </a>
+                        <button class="btn btn-outline-danger btn-sm position-absolute top-0 end-0 m-2 favorite-btn" data-id="12">
+                            <i class="bi bi-heart"></i>
+                        </button>
+                    </div>
+                    <p>Sen đá móng rồng</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Thêm phần Sản phẩm yêu thích -->
+    <section class="favorite-products my-4" style="display: none;">
+        <h2>Sản phẩm yêu thích</h2>
+        <div class="container">
+            <div class="row" id="favoriteProductsContainer">
+                <!-- Sản phẩm yêu thích sẽ được thêm vào đây bằng JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Thêm phần đánh giá của khách hàng -->
+    <section class="customer-reviews my-4">
+        <h2>Đánh giá của khách hàng</h2>
+        <div class="container">
+            <div class="row" id="reviewsContainer">
+                <!-- Existing reviews will be here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Thêm form gửi đánh giá -->
+    <section class="submit-review my-4">
+        <h2>Gửi đánh giá của bạn</h2>
+        <div class="container">
+            <form id="reviewForm">
+                <div class="mb-3">
+                    <label for="reviewerName" class="form-label">Tên của bạn</label>
+                    <input type="text" class="form-control" id="reviewerName" required>
+                </div>
+                <div class="mb-3">
+                    <label for="reviewText" class="form-label">Đánh giá của bạn</label>
+                    <textarea class="form-control" id="reviewText" rows="3" required></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="reviewRating" class="form-label">Đánh giá (1-5 sao)</label>
+                    <select class="form-select" id="reviewRating" required>
+                        <option value="">Chọn đánh giá</option>
+                        <option value="1">1 sao</option>
+                        <option value="2">2 sao</option>
+                        <option value="3">3 sao</option>
+                        <option value="4">4 sao</option>
+                        <option value="5">5 sao</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Gửi đánh giá</button>
+            </form>
         </div>
     </section>
 
@@ -180,6 +290,116 @@
             </div>
         </div>
     </footer>
+
+    <!-- Thêm script cho nút đăng nhập -->
+    <script>
+        document.getElementById('loginBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Chức năng đăng nhập đang được phát triển. Vui lòng thử lại sau!');
+        });
+    </script>
+
+    <!-- Thêm script xử lý form đánh giá -->
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = document.getElementById('reviewerName').value;
+            var text = document.getElementById('reviewText').value;
+            var rating = document.getElementById('reviewRating').value;
+            
+            // Tạo phần tử đánh giá mới
+            var newReview = document.createElement('div');
+            newReview.className = 'col-md-4';
+            newReview.innerHTML = `
+                <blockquote>
+                    <p>"${text}"</p>
+                    <footer>- ${name} (${rating} sao)</footer>
+                </blockquote>
+            `;
+            
+            // Thêm đánh giá mới vào container
+            var reviewsContainer = document.getElementById('reviewsContainer');
+            reviewsContainer.insertBefore(newReview, reviewsContainer.firstChild);
+            
+            // Reset form
+            this.reset();
+            
+            // Thông báo thành công
+            alert('Cảm ơn bạn đã gửi đánh giá!');
+        });
+    </script>
+
+    <!-- Cập nhật script xử lý sản phẩm yêu thích -->
+    <script>
+        let favoriteProducts = [];
+
+        function toggleFavorite(productId) {
+            const index = favoriteProducts.findIndex(product => product.id === productId);
+            if (index === -1) {
+                // Add to favorites
+                const product = {
+                    id: productId,
+                    name: document.querySelector(`.product-item [data-id="${productId}"]`).closest('.product-item').querySelector('p').textContent,
+                    image: document.querySelector(`.product-item [data-id="${productId}"]`).closest('.product-item').querySelector('img').src
+                };
+                favoriteProducts.push(product);
+            } else {
+                // Remove from favorites
+                favoriteProducts.splice(index, 1);
+            }
+            updateFavoriteButtons();
+            displayFavoriteProducts();
+        }
+
+        function updateFavoriteButtons() {
+            document.querySelectorAll('.favorite-btn').forEach(btn => {
+                const productId = parseInt(btn.getAttribute('data-id'));
+                const isFavorite = favoriteProducts.some(product => product.id === productId);
+                btn.innerHTML = isFavorite ? '<i class="bi bi-heart-fill"></i>' : '<i class="bi bi-heart"></i>';
+            });
+        }
+
+        function displayFavoriteProducts() {
+            const container = document.getElementById('favoriteProductsContainer');
+            container.innerHTML = '';
+            favoriteProducts.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.className = 'col-md-3 col-sm-6 product-item';
+                productElement.innerHTML = `
+                    <a href="product-detail.html?id=${product.id}">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy" />
+                        <p>${product.name}</p>
+                    </a>
+                    <button class="btn btn-outline-danger btn-sm remove-favorite" data-id="${product.id}">
+                        <i class="bi bi-heart-fill"></i> Bỏ yêu thích
+                    </button>
+                `;
+                container.appendChild(productElement);
+            });
+            
+            // Show or hide the favorite products section
+            const favoriteSection = document.querySelector('.favorite-products');
+            favoriteSection.style.display = favoriteProducts.length > 0 ? 'block' : 'none';
+        }
+
+        // Event delegation for favorite buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('.favorite-btn')) {
+                const button = e.target.closest('.favorite-btn');
+                const productId = parseInt(button.getAttribute('data-id'));
+                toggleFavorite(productId);
+            }
+            if (e.target.closest('.remove-favorite')) {
+                const button = e.target.closest('.remove-favorite');
+                const productId = parseInt(button.getAttribute('data-id'));
+                toggleFavorite(productId);
+            }
+        });
+
+        // Initialize
+        updateFavoriteButtons();
+        displayFavoriteProducts();
+    </script>
 
 </body>
 </html>
