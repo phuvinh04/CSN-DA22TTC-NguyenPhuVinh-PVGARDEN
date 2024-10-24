@@ -117,6 +117,11 @@ function displayReviews() {
     const reviewsContainer = document.getElementById('reviewsContainer');
     reviewsContainer.innerHTML = '';
 
+    if (reviews.length === 0) {
+        reviewsContainer.innerHTML = '<p>Chưa có đánh giá nào cho sản phẩm này.</p>';
+        return;
+    }
+
     reviews.forEach(review => {
         const stars = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
         reviewsContainer.innerHTML += `
@@ -131,7 +136,6 @@ function displayReviews() {
         `;
     });
 
-    // Cập nhật số lượng đánh giá và điểm trung bình
     updateReviewStats();
 }
 
@@ -143,19 +147,10 @@ function updateReviewStats() {
     document.getElementById('averageRating').textContent = averageRating.toFixed(1);
 }
 
-function toggleReviewSection() {
-    const reviewSection = document.getElementById('reviewSection');
-    if (reviewSection.style.display === 'none') {
-        reviewSection.style.display = 'block';
-        displayReviews();
-    } else {
-        reviewSection.style.display = 'none';
-    }
-}
-
 document.addEventListener('DOMContentLoaded', function() {
     console.log("DOM fully loaded");
     updateCartDisplay();
+    displayReviews();
 
     const addToCartForm = document.getElementById('addToCartForm');
     if (addToCartForm) {
@@ -185,20 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const cartModal = document.getElementById('cartModal');
-    if (cartModal) {
-        cartModal.addEventListener('show.bs.modal', function () {
-            console.log("Cart modal is about to be shown");
-            updateCartDisplay();
-        });
-    } else {
-        console.error("Cart modal not found");
-    }
-
-    // Hiển thị đánh giá khi trang được tải
-    displayReviews();
-
-    // Xử lý form đánh giá
     const reviewForm = document.getElementById('reviewForm');
     if (reviewForm) {
         reviewForm.addEventListener('submit', function(e) {
@@ -208,23 +189,22 @@ document.addEventListener('DOMContentLoaded', function() {
             const comment = document.getElementById('reviewComment').value;
             addReview(name, rating, comment);
             reviewForm.reset();
+            var reviewModal = bootstrap.Modal.getInstance(document.getElementById('reviewModal'));
+            reviewModal.hide();
         });
     } else {
         console.error("Review form not found");
     }
 
-    // Xử lý nút hiển thị đánh giá
-    const showReviewsButton = document.getElementById('showReviewsButton');
-    if (showReviewsButton) {
-        showReviewsButton.addEventListener('click', toggleReviewSection);
+    const openReviewModalBtn = document.getElementById('openReviewModalBtn');
+    if (openReviewModalBtn) {
+        openReviewModalBtn.addEventListener('click', function() {
+            var reviewModal = new bootstrap.Modal(document.getElementById('reviewModal'));
+            reviewModal.show();
+        });
     } else {
-        console.error("Show reviews button not found");
+        console.error("Open review modal button not found");
     }
-});
-
-// Initialize Bootstrap modal
-var myModal = new bootstrap.Modal(document.getElementById('cartModal'), {
-    keyboard: false
 });
 
 // Open cart modal when clicking on cart icon
@@ -233,8 +213,10 @@ if (cartLink) {
     cartLink.addEventListener('click', function(e) {
         e.preventDefault();
         console.log("Cart link clicked");
-        myModal.show();
+        var cartModal = new bootstrap.Modal(document.getElementById('cartModal'));
+        cartModal.show();
     });
 } else {
     console.error("Cart link not found");
 }
+

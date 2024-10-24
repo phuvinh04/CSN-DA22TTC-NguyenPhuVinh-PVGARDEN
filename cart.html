@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Các thẻ meta và link CSS giống như trong index.html -->
+    <title>Giỏ hàng - PV Garden</title>
+</head>
+<body>
+    <!-- Header và Navigation giống như trong index.html -->
+
+    <div class="main-content">
+        <section class="cart my-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Giỏ hàng của bạn</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Giá</th>
+                            <th>Số lượng</th>
+                            <th>Tổng</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Lặp lại mẫu này cho mỗi sản phẩm trong giỏ hàng -->
+                        <tr>
+                            <td>Tên sản phẩm</td>
+                            <td>xxx.xxx VNĐ</td>
+                            <td><input type="number" value="1" min="1" class="form-control"></td>
+                            <td>xxx.xxx VNĐ</td>
+                            <td><button class="btn btn-danger btn-sm">Xóa</button></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="3" class="text-end">Tổng cộng:</td>
+                            <td>xxx.xxx VNĐ</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <div class="text-end">
+                    <a href="#" class="btn btn-primary">Tiến hành thanh toán</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Include script -->
+    <script src="include.js"></script>
+</body>
+</html>

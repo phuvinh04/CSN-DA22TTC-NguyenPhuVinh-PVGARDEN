@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Các thẻ meta và link CSS giống như trong index.html -->
+    <title>Thanh toán - PV Garden</title>
+</head>
+<body>
+    <!-- Header và Navigation giống như trong index.html -->
+
+    <div class="main-content">
+        <section class="checkout my-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Thông tin thanh toán</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="firstName" class="form-label">Họ</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="lastName" class="form-label">Tên</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="address" class="form-label">Địa chỉ</label>
+                        <input type="text" class="form-control" id="address" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Số điện thoại</label>
+                        <input type="tel" class="form-control" id="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="paymentMethod" class="form-label">Phương thức thanh toán</label>
+                        <select class="form-select" id="paymentMethod" required>
+                            <option value="">Chọn phương thức thanh toán</option>
+                            <option value="cod">Thanh toán khi nhận hàng</option>
+                            <option value="bank">Chuyển khoản ngân hàng</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Đặt hàng</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Include script -->
+    <script src="include.js"></script>
+    </body>
+</html>
+
