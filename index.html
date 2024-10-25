@@ -1,124 +1,67 @@
-<!DOCTYPE html>
 <html lang="vi">
-<head>
-    <title>MOW Garden - Cây Cảnh Mini</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-    </style>
-</head>
-<body class="bg-gray-100">
-    <header class="bg-green-700 shadow">
-        <div class="container mx-auto flex justify-between items-center py-4 px-6">
-            <div class="text-3xl font-bold text-white">MOW</div>
-            <nav class="space-x-4">
-                <a class="text-white hover:text-gray-300" href="#">Trang chủ</a>
-                <a class="text-white hover:text-gray-300" href="#">Trang sản phẩm theo loại</a>
-                <a class="text-white hover:text-gray-300" href="#">Trang sản phẩm chi tiết</a>
-                <a class="text-white hover:text-gray-300" href="#">Trang vật tư trồng kiểng</a>
-            </nav>
-            <div class="flex items-center space-x-4">
-                <span class="text-white">0đ</span>
-                <i class="fas fa-shopping-cart text-white"></i>
-            </div>
-        </div>
-    </header>
-
-    <main>
-        <section class="relative">
-            <img alt="Close-up of succulent plants" class="w-full h-64 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/9qCjejMqqyz5ekusjqKNO555O8hFPBcD3GJHAbSEkPRAp8pTA.jpg" width="1200"/>
-            <div class="absolute inset-0 flex items-center justify-center">
-                <h1 class="text-white text-3xl font-bold">CÂY CẢNH MINI</h1>
-            </div>
-        </section>
-        <section class="bg-white py-8">
-            <div class="container mx-auto text-center">
-                <p class="text-gray-700">
-                    Với một vài chậu cây cảnh mini trên bàn làm việc, kệ sách có thể giúp bạn cải thiện cảm xúc, tăng cường tâm trạng rất tốt. Hãy để MOW Garden giúp bạn sở hữu những chậu cây cảnh mini thật chất lượng nhé.
-                </p>
-            </div>
-        </section>
-        <section class="container mx-auto py-8">
-            <div class="flex justify-between items-center mb-4">
-                <div class="text-gray-700">Trang chủ » Cây Cảnh Mini</div>
-                <div class="flex items-center space-x-4">
-                    <button class="text-green-700">CHỌN DANH MỤC</button>
-                    <span class="text-gray-700">Hiển thị 1–48 của 83 kết quả</span>
-                    <select class="border border-gray-300 rounded px-2 py-1">
-                        <option>Mới nhất</option>
-                    </select>
-                </div>
-            </div>
-            <div class="grid grid-cols-3 gap-8">
-                <div class="bg-white p-4 rounded shadow">
-                    <img alt="Sansevieria Cylindrica in a smiley face pot" class="w-full h-48 object-cover mb-4" height="200" src="https://storage.googleapis.com/a1aa/image/XL2bGT16dRpDM1jeX8ovnicA3eijoM3EMlbXqhYKdd8Gp8pTA.jpg" width="200"/>
-                    <div class="text-center">
-                        <p class="text-gray-700">Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevieria Cylindrica SANS0002</p>
-                        <p class="text-green-700 font-bold">120.000đ</p>
-                        <button class="bg-green-700 text-white px-4 py-2 rounded mt-2">Đặt hàng</button>
-                    </div>
-                </div>
-                <!-- Thêm các sản phẩm khác tương tự ở đây -->
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-white text-gray-800">
-        <div class="container mx-auto">
-            <div class="text-center py-8">
-                <img alt="MOW Garden Logo" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/we4X5cWLgIS1J6w9iraM0iGKkUyA5xdVSpMhXdTDAsvMbepTA.jpg" width="200"/>
-                <p class="text-lg mt-4">
-                    MOW Garden mong mang đến không gian sống xanh, như là một cách để khơi nguồn cảm hứng, cải thiện chất lượng tinh thần tươi và đồng thời còn mang lại tính thẩm mỹ cho không gian nội thất.
-                </p>
-            </div>
-            <div class="text-center py-4">
-                <span class="inline-block w-8 h-1 bg-gray-800 mb-2"></span>
-                <p class="text-sm">DMCA PROTECTED</p>
-            </div>
-            <div class="text-center py-4">
-                <p class="text-sm">Công ty TNHH MOW Garden</p>
-                <p class="text-sm">MST: 0317709035</p>
-            </div>
-            <div class="bg-green-900 text-white py-8">
-                <div class="container mx-auto flex justify-between space-x-8">
-                    <div class="w-1/3">
-                        <h2 class="text-lg font-bold mb-4">VỀ CHÚNG TÔI</h2>
-                        <ul>
-                            <li class="mb-2"><a class="hover:underline" href="#">Giới thiệu</a></li>
-                            <li class="mb-2"><a class="hover:underline" href="#">Liên hệ</a></li>
-                            <li class="mb-2"><a class="hover:underline" href="#">Chính sách bảo mật</a></li>
-                            <li class="mb-2"><a class="hover:underline" href="#">Chính sách bảo hành</a></li>
-                            <li class="mb-2"><a class="hover:underline" href="#">Phương thức thanh toán</a></li>
-                            <li class="mb-2"><a class="hover:underline" href="#">Phương thức vận chuyển</a></li>
-                        </ul>
-                    </div>
-                    <div class="w-1/3">
-                        <h2 class="text-lg font-bold mb-4">LIÊN HỆ</h2>
-                        <p class="mb-2">Hotline 1: 09 6688 9393</p>
-                        <p class="mb-2">Hotline 2: 0838 369 639</p>
-                        <p class="mb-2">Hotline 3: 097 753 7494</p>
-                        <p class="mb-2">Email: hotro@mowgarden.com</p>
-                        <p class="mb-2">Địa chỉ: 256 – 258 Bình Thành, BHH B, Q. Bình Tân, Tp.HCM</p>
-                    </div>
-                    <div class="w-1/3">
-                        <h2 class="text-lg font-bold mb-4">MẠNG XÃ HỘI</h2>
-                        <div class="flex space-x-4">
-                            <a class="text-white hover:text-gray-400" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="text-white hover:text-gray-400" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="text-white hover:text-gray-400" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="text-white hover:text-gray-400" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center py-4">
-                <img alt="Bộ Công Thương Logo" class="mx-auto" height="100" src="https://storage.googleapis.com/a1aa/image/UEHMs2Tyk862PhKylHvyYTYYmBWxd1IM1HIIcBMoakeNbepTA.jpg" width="200"/>
-            </div>
-        </div>
-    </footer>
-</body>
+	<head>
+		<meta charset="utf-8"/>
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<title>
+			Cửa Hàng Cây Cảnh
+		</title>
+		<script src="https://cdn.tailwindcss.com">
+		</script>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+	</head>
+	<body class="bg-green-50 font-sans">
+		<nav class="bg-green-600 text-white py-4">
+			<!-- Nội dung của thanh điều hướng sẽ được thêm vào đây -->
+		</nav>
+		<main class="container mx-auto px-4 py-8 mt-8">
+			<div class="text-center mb-8">
+				<h1 class="text-4xl font-bold text-green-800 mb-4">Chào mừng đến với PV GARDEN</h1>
+				<p class="text-xl text-green-700">Khám phá thế giới cây cảnh mini tuyệt đẹp của chúng tôi, nơi mang đến không gian xanh và sự tươi mới cho mọi góc nhỏ trong ngôi nhà bạn. Tại PV GARDEN, chúng tôi tự hào cung cấp những loại cây cảnh mini độc đáo, dễ chăm sóc và phù hợp với mọi không gian sống.</p>
+			</div>
+			<h2 class="text-3xl font-bold text-green-800 mb-6">Sản phẩm nổi bật</h2>
+			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+					<img alt="Cây tùng bồng lai tiểu cảnh chậu sứ thổ cẩm TUBO005" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/Ddzkln6eN8VlTyyhUaLEELlt6GBvxVp1fYo4GdS3Rl6f1enOB.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây tùng bồng lai tiểu cảnh</h3>
+						<p class="text-green-700 font-bold">500.000đ</p>
+						<button class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+					<img alt="Cây phát tài bờ 5 – Cây thiết mộc lan CPTK001" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/QKDzVi7uE3rED1JGXegdvo89N7ESaAeLxQMEGNHIizUe1enOB.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây phát tài bờ 5</h3>
+						<p class="text-green-700 font-bold">750.000đ</p>
+						<button class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+					<img alt="Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick LONI040" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/fYWsIFOglEQAT6i9p2MTHEjFiE4R5pr1Y7HrArYzUSJdtfpTA.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây kim ngân ba thân</h3>
+						<p class="text-green-700 font-bold">280.000đ</p>
+						<button class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+					<img alt="Cây trầu bà đế vương xanh chậu mặt cool 'Imperial Green' chậu sứ PHIG006" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/GeJ1vhjo5WQXTqT3H7sL9G6hYon27TCVQjR5rIbLxLleafTnA.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây trầu bà đế vương xanh</h3>
+						<p class="text-green-700 font-bold">120.000đ</p>
+						<button class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+					</div>
+				</div>
+				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+					<img alt="Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevieria Cylindrica SANS002" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/3UFvwMY7IE7BFFbPjRrNrMSfvuFR2ksJogBY70JiJyygtfpTA.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây Lưỡi Hổ Vương Miện</h3>
+						<p class="text-green-700 font-bold">120.000đ</p>
+						<button class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+					</div>
+				</div>
+			</div>
+		</main>
+		<script src="include.js"></script>
+	</body>
 </html>
