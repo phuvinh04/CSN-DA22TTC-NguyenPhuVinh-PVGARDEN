@@ -18,11 +18,11 @@ PV GARDEN là một website bán cây cảnh được thiết kế để cung c�
 ### Backend:
 - Node.js
 - Express.js
-- MongoDB (Mongoose)
+- JSON cục bộ (data.json)
 
 ### API:
 - Google Generative AI (cho chatbot)
-- REST API
+- REST API (kết nối với JSON cục bộ)
 
 ## Cấu trúc thư mục
 ```
@@ -73,6 +73,3 @@ http://localhost:3000
 ## Lưu ý quan trọng:
 - Cần có kết nối internet để load Tailwind CSS và Font Awesome
 - Cần có API key hợp lệ cho Google Generative AI để chatbot hoạt động
-- Cần cấu hình MongoDB để lưu trữ dữ liệu sản phẩm
-
-
