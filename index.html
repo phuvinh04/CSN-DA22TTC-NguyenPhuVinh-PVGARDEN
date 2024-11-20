@@ -1,84 +1,338 @@
-<html lang="vi">
-	<head>
-		<meta charset="utf-8"/>
-		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-		<title>
-			Cửa Hàng Cây Cảnh
-		</title>
-		<script src="https://cdn.tailwindcss.com">
-		</script>
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-	</head>
-	<body class="bg-green-50 font-sans">
-		<nav class="bg-green-600 text-white py-4">
-			
-		</nav>
-		<main class="container mx-auto px-4 py-8 mt-8">
-			<div class="text-center mb-8">
-				<h1 class="text-4xl font-bold text-green-800 mb-4">Chào mừng đến với PV GARDEN</h1>
-				<p class="text-xl text-green-700">Khám phá thế giới cây cảnh mini tuyệt đẹp của chúng tôi, nơi mang đến không gian xanh và sự tươi mới cho mọi góc nhỏ trong ngôi nhà bạn. Tại PV GARDEN, chúng tôi tự hào cung cấp những loại cây cảnh mini độc đáo, dễ chăm sóc và phù hợp với mọi không gian sống.</p>
-			</div>
-			<h2 class="text-3xl font-bold text-green-800 mb-6">Sản phẩm nổi bật</h2>
-			<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-					<img alt="Cây tùng bồng lai tiểu cảnh chậu sứ thổ cẩm TUBO005" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/Ddzkln6eN8VlTyyhUaLEELlt6GBvxVp1fYo4GdS3Rl6f1enOB.jpg"/>
-					<div class="p-4">
-						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây tùng bồng lai tiểu cảnh</h3>
-						<p class="text-green-700 font-bold">500.000đ</p>
-						<button onclick="addToCart('TUBO005', 'Cây tùng bồng lai tiểu cảnh', 500000, 'https://storage.googleapis.com/a1aa/image/Ddzkln6eN8VlTyyhUaLEELlt6GBvxVp1fYo4GdS3Rl6f1enOB.jpg')" 
-								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-							Thêm vào giỏ
-						</button>
-					</div>
-				</div>
-				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-					<img alt="Cây phát tài bờ 5 – Cây thiết mộc lan CPTK001" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/QKDzVi7uE3rED1JGXegdvo89N7ESaAeLxQMEGNHIizUe1enOB.jpg"/>
-					<div class="p-4">
-						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây phát tài bờ 5</h3>
-						<p class="text-green-700 font-bold">750.000đ</p>
-						<button onclick="addToCart('CPTK001', 'Cây phát tài bờ 5', 750000, 'https://storage.googleapis.com/a1aa/image/QKDzVi7uE3rED1JGXegdvo89N7ESaAeLxQMEGNHIizUe1enOB.jpg')" 
-								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-							Thêm vào giỏ
-						</button>
-					</div>
-				</div>
-				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-					<img alt="Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick LONI040" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/fYWsIFOglEQAT6i9p2MTHEjFiE4R5pr1Y7HrArYzUSJdtfpTA.jpg"/>
-					<div class="p-4">
-						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây kim ngân ba thân</h3>
-						<p class="text-green-700 font-bold">280.000đ</p>
-						<button onclick="addToCart('LONI040', 'Cây kim ngân ba thân', 280000, 'https://storage.googleapis.com/a1aa/image/fYWsIFOglEQAT6i9p2MTHEjFiE4R5pr1Y7HrArYzUSJdtfpTA.jpg')" 
-								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-							Thêm vào giỏ
-						</button>
-					</div>
-				</div>
-				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-					<img alt="Cây trầu bà đế vương xanh chậu mặt cool 'Imperial Green' chậu sứ PHIG006" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/GeJ1vhjo5WQXTqT3H7sL9G6hYon27TCVQjR5rIbLxLleafTnA.jpg"/>
-					<div class="p-4">
-						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây trầu bà đế vương xanh</h3>
-						<p class="text-green-700 font-bold">120.000đ</p>
-						<button onclick="addToCart('PHIG006', 'Cây trầu bà đế vương xanh', 120000, 'https://storage.googleapis.com/a1aa/image/GeJ1vhjo5WQXTqT3H7sL9G6hYon27TCVQjR5rIbLxLleafTnA.jpg')" 
-								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-							Thêm vào giỏ
-						</button>
-					</div>
-				</div>
-				<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-					<img alt="Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevieria Cylindrica SANS002" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/3UFvwMY7IE7BFFbPjRrNrMSfvuFR2ksJogBY70JiJyygtfpTA.jpg"/>
-					<div class="p-4">
-						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây Lưỡi Hổ Vương Miện</h3>
-						<p class="text-green-700 font-bold">120.000đ</p>
-						<button onclick="addToCart('SANS002', 'Cây Lưỡi Hổ Vương Miện', 120000, 'https://storage.googleapis.com/a1aa/image/3UFvwMY7IE7BFFbPjRrNrMSfvuFR2ksJogBY70JiJyygtfpTA.jpg')" 
-								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-							Thêm vào giỏ
-						</button>
-					</div>
-				</div>
-			</div>
-		</main>
-		<script src="include.js"></script>
-		<script src="cart.js"></script>
-	</body>
-</html>
-
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>PV GARDEN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-green-50 font-sans">
+    <main class="container mx-auto px-4 py-8 mt-8">
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-green-800 mb-4 transition duration-300 hover:text-green-600">Chào mừng đến với PV GARDEN</h1>
+            <p class="text-xl text-green-700">Khám phá thế giới cây cảnh mini tuyệt đẹp của chúng tôi, nơi mang đến không gian xanh và sự tươi mới cho mọi góc nhỏ trong ngôi nhà bạn. Tại PV GARDEN, chúng tôi tự hào cung cấp những loại cây cảnh mini độc đáo, dễ chăm sóc và phù hợp với mọi không gian sống.</p>
+        </div>
+
+        <h2 class="text-3xl font-bold text-green-800 mb-6">Sản phẩm nổi bật</h2>
+
+        <div class="bg-[#f8f5ed] py-10">
+            <h1 class="text-center text-xl font-bold text-green-800 mb-8">DANH MỤC SẢN PHẨM</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+                <!-- Cây dễ chăm -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-1.jpg" alt="Cây dễ chăm" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CÂY DỄ CHĂM</h2>
+                    </div>
+                </div>
+                <!-- Cây văn phòng -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-2.jpg" alt="Cây văn phòng" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CÂY VĂN PHÒNG</h2>
+                    </div>
+                </div>
+                <!-- Cây phong thủy -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-3.jpg" alt="Cây phong thủy" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CÂY PHONG THỦY</h2>
+                    </div>
+                </div>
+                <!-- Cây để bàn -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-4.jpg" alt="Cây để bàn" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CÂY ĐỂ BÀN</h2>
+                    </div>
+                </div>
+                <!-- Cây trồng nước -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-5.jpg" alt="Cây trồng nước" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CÂY TRỒNG NƯỚC</h2>
+                    </div>
+                </div>
+                <!-- Cây cao cấp -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-6.jpg" alt="Cây cao cấp" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CÂY CAO CẤP</h2>
+                    </div>
+                </div>
+                <!-- Chậu đất nung -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-7.jpg" alt="Chậu đất nung" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CHẬU ĐẤT NUNG</h2>
+                    </div>
+                </div>
+                <!-- Chậu xi măng -->
+                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                    <img src="your-image-url-8.jpg" alt="Chậu xi măng" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h2 class="text-center text-green-800 font-semibold">CHẬU XI MĂNG</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây tùng bồng lai tiểu cảnh chậu sứ thổ cẩm TUBO005" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/Ddzkln6eN8VlTyyhUaLEELlt6GBvxVp1fYo4GdS3Rl6f1enOB.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây tùng bồng lai tiểu cảnh</h3>
+                    <p class="text-green-700 font-bold">500.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('TUBO005', 'Cây tùng bồng lai tiểu cảnh', 500000, 'https://storage.googleapis.com/a1aa/image/Ddzkln6eN8VlTyyhUaLEELlt6GBvxVp1fYo4GdS3Rl6f1enOB.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây tùng bồng lai tiểu cảnh'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây phát tài bờ 5 – Cây thiết mộc lan CPTK001" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/QKDzVi7uE3rED1JGXegdvo89N7ESaAeLxQMEGNHIizUe1enOB.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây phát tài bờ 5</h3>
+                    <p class="text-green-700 font-bold">750.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('CPTK001', 'Cây phát tài bờ 5', 750000, 'https://storage.googleapis.com/a1aa/image/QKDzVi7uE3rED1JGXegdvo89N7ESaAeLxQMEGNHIizUe1enOB.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây phát tài bờ 5'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick LONI040" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/fYWsIFOglEQAT6i9p2MTHEjFiE4R5pr1Y7HrArYzUSJdtfpTA.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây kim ngân ba thân</h3>
+                    <p class="text-green-700 font-bold">280.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('LONI040', 'Cây kim ngân ba thân', 280000, 'https://storage.googleapis.com/a1aa/image/fYWsIFOglEQAT6i9p2MTHEjFiE4R5pr1Y7HrArYzUSJdtfpTA.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây kim ngân ba thân'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây trầu bà đế vương xanh chậu mặt cool 'Imperial Green' chậu sứ PHIG006" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/GeJ1vhjo5WQXTqT3H7sL9G6hYon27TCVQjR5rIbLxLleafTnA.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây trầu bà đế vương xanh</h3>
+                    <p class="text-green-700 font-bold">120.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('PHIG006', 'Cây trầu bà đế vương xanh', 120000, 'https://storage.googleapis.com/a1aa/image/GeJ1vhjo5WQXTqT3H7sL9G6hYon27TCVQjR5rIbLxLleafTnA.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây trầu bà đế vương xanh'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevieria Cylindrica SANS002" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/3UFvwMY7IE7BFFbPjRrNrMSfvuFR2ksJogBY70JiJyygtfpTA.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây Lưỡi Hổ Vương Miện</h3>
+                    <p class="text-green-700 font-bold">120.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('SANS002', 'Cây Lưỡi Hổ Vương Miện', 120000, 'https://storage.googleapis.com/a1aa/image/3UFvwMY7IE7BFFbPjRrNrMSfvuFR2ksJogBY70JiJyygtfpTA.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='sanpham.html?name=Cây Lưỡi Hổ Vương Miện'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây xương rồng mini chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/xuongrong.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây xương rồng mini</h3>
+                    <p class="text-green-700 font-bold">150.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('XR001', 'Cây xương rồng mini', 150000, 'https://storage.googleapis.com/a1aa/image/xuongrong.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây xương rồng mini'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây lô hội chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/aloevera.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây lô hội</h3>
+                    <p class="text-green-700 font-bold">200.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('AL001', 'Cây lô hội', 200000, 'https://storage.googleapis.com/a1aa/image/aloevera.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây lô hội'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây lan ý chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/lany.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây lan ý</h3>
+                    <p class="text-green-700 font-bold">300.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('LY001', 'Cây lan ý', 300000, 'https://storage.googleapis.com/a1aa/image/lany.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây lan ý'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây cọ cảnh chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/cocanh.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây cọ cảnh</h3>
+                    <p class="text-green-700 font-bold">400.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('CC001', 'Cây cọ cảnh', 400000, 'https://storage.googleapis.com/a1aa/image/cocanh.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây cọ cảnh'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây bàng Singapore chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/bang.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây bàng Singapore</h3>
+                    <p class="text-green-700 font-bold">600.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('BS001', 'Cây bàng Singapore', 600000, 'https://storage.googleapis.com/a1aa/image/bang.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây bàng Singapore'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây ngọc bích chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/ngocbich.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây ngọc bích</h3>
+                    <p class="text-green-700 font-bold">350.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('NB001', 'Cây ngọc bích', 350000, 'https://storage.googleapis.com/a1aa/image/ngocbich.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây ngọc bích'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây bướm vàng chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/buomvang.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây bướm vàng</h3>
+                    <p class="text-green-700 font-bold">450.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('BV001', 'Cây bướm vàng', 450000, 'https://storage.googleapis.com/a1aa/image/buomvang.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây bướm vàng'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây cẩm nhung chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/camnhung.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây cẩm nhung</h3>
+                    <p class="text-green-700 font-bold">500.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('CN001', 'Cây cẩm nhung', 500000, 'https://storage.googleapis.com/a1aa/image/camnhung.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây cẩm nhung'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây cọ nhật chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/conhat.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây cọ nhật</h3>
+                    <p class="text-green-700 font-bold">550.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('CNJ001', 'Cây cọ nhật', 550000, 'https://storage.googleapis.com/a1aa/image/conhat.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây cọ nhật'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây bạch trúc chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/bachtruc.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây bạch trúc</h3>
+                    <p class="text-green-700 font-bold">700.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('BT001', 'Cây bạch trúc', 700000, 'https://storage.googleapis.com/a1aa/image/bachtruc.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây bạch trúc'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây phú quý chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/phuquy.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây phú quý</h3>
+                    <p class="text-green-700 font-bold">800.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('PQ001', 'Cây phú quý', 800000, 'https://storage.googleapis.com/a1aa/image/phuquy.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây phú quý'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây bưởi chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/buoi.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây bưởi</h3>
+                    <p class="text-green-700 font-bold">900.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('B001', 'Cây bưởi', 900000, 'https://storage.googleapis.com/a1aa/image/buoi.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây bưởi'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây quất chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/quat.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây quất</h3>
+                    <p class="text-green-700 font-bold">950.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('Q001', 'Cây quất', 950000, 'https://storage.googleapis.com/a1aa/image/quat.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây quất'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây hồng môn chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/hongmon.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây hồng môn</h3>
+                    <p class="text-green-700 font-bold">1.000.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('HM001', 'Cây hồng môn', 1000000, 'https://storage.googleapis.com/a1aa/image/hongmon.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây hồng môn'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây cẩm thạch chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/camthach.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây cẩm thạch</h3>
+                    <p class="text-green-700 font-bold">1.200.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('CT001', 'Cây cẩm thạch', 1200000, 'https://storage.googleapis.com/a1aa/image/camthach.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây cẩm thạch'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                <img alt="Cây bạch hạc chậu sứ" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/bachhac.jpg" />
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold text-green-800 mb-2">Cây bạch hạc</h3>
+                    <p class="text-green-700 font-bold">1.500.000đ</p>
+                    <div class="flex space-x-2">
+                        <button onclick="addToCart('BH001', 'Cây bạch hạc', 1500000, 'https://storage.googleapis.com/a1aa/image/bachhac.jpg')" class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">Thêm vào giỏ</button>
+                        <button onclick="window.location.href='product-detail.html?name=Cây bạch hạc'" class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">Xem thông tin</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+	<script src="include.js"></script>
+</body>
+</html>

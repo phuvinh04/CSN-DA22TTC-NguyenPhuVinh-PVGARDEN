@@ -1,0 +1,835 @@
+<html lang="vi">
+
+	<head>
+
+		<meta charset="utf-8"/>
+
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+		<title>
+
+			Sản phẩm - PV GARDEN
+
+		</title>
+
+		<script src="https://cdn.tailwindcss.com">
+
+		</script>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+	</head>
+
+	<body class="bg-green-50 font-sans">
+		<main class="container mx-auto px-4 py-8 mt-8">
+
+			<div class="text-center mb-8">
+
+				<h1 class="text-4xl font-bold text-green-800 mb-4">Danh sách sản phẩm</h1>
+
+				<p class="text-xl text-green-700">Tìm hiểu thêm về tất cả các sản phẩm mà chúng tôi cung cấp.</p>
+
+			</div>
+
+			<!-- Nhóm sản phẩm cây cảnh -->
+			<h2 class="text-2xl font-bold text-green-800 mb-4">Cây Cảnh</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây tùng bồng lai tiểu cảnh" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/Ddzkln6eN8VlTyyhUaLEELlt6GBvxVp1fYo4GdS3Rl6f1enOB.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây tùng bồng lai tiểu cảnh</h3>
+						<p class="text-green-700 font-bold">500.000đ</p>
+						<p class="text-green-700">Mô tả: Cây tùng bồng lai là một loại cây cảnh đẹp, dễ chăm sóc, thích hợp cho mọi không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('TUBO005', 'Cây tùng bồng lai tiểu cảnh', 500000, 'https://storage.googleapis.com/a1aa/image/Ddzkln6eN8VlTyyhUaLEELlt6GBvxVp1fYo4GdS3Rl6f1enOB.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('TUBO005')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá" class="w-full h-48 object-cover" src="https://example.com/sen-da.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá</h3>
+						<p class="text-green-700 font-bold">400.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá là một loại cây cảnh đẹp, dễ chăm sóc và rất được yêu thích.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD002', 'Cây sen đá', 400000, 'https://example.com/sen-da.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD002')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá nở hoa" class="w-full h-48 object-cover" src="https://example.com/sen-da-no-hoa.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá nở hoa</h3>
+						<p class="text-green-700 font-bold">450.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá nở hoa là một loại cây cảnh độc đáo, mang lại vẻ đẹp rực rỡ cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD003', 'Cây sen đá nở hoa', 450000, 'https://example.com/sen-da-no-hoa.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD003')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá mini" class="w-full h-48 object-cover" src="https://example.com/sen-da-mini.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá mini</h3>
+						<p class="text-green-700 font-bold">350.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá mini là lựa chọn hoàn hảo cho không gian nhỏ, dễ chăm sóc và mang lại vẻ đẹp tự nhiên.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD004', 'Cây sen đá mini', 350000, 'https://example.com/sen-da-mini.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD004')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Thêm 20 sản phẩm khác -->
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây bàng Singapore" class="w-full h-48 object-cover" src="https://example.com/bang-singapore.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây bàng Singapore</h3>
+						<p class="text-green-700 font-bold">700.000đ</p>
+						<p class="text-green-700">Mô tả: Cây bàng Singapore là một loại cây cảnh lớn, thích hợp cho không gian rộng.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('BS001', 'Cây bàng Singapore', 700000, 'https://example.com/bang-singapore.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('BS001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây ngọc bích" class="w-full h-48 object-cover" src="https://example.com/ngoc-bich.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây ngọc bích</h3>
+						<p class="text-green-700 font-bold">450.000đ</p>
+						<p class="text-green-700">Mô tả: Cây ngọc bích là một loại cây cảnh đẹp, mang lại sự tươi mới cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('NB001', 'Cây ngọc bích', 450000, 'https://example.com/ngoc-bich.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('NB001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây lưỡi hổ" class="w-full h-48 object-cover" src="https://example.com/luoi-ho.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây lưỡi hổ</h3>
+						<p class="text-green-700 font-bold">250.000đ</p>
+						<p class="text-green-700">Mô tả: Cây lưỡi hổ là một loại cây dễ chăm sóc, có khả năng thanh lọc không khí.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('LH001', 'Cây lưỡi hổ', 250000, 'https://example.com/luoi-ho.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('LH001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây trầu bà" class="w-full h-48 object-cover" src="https://example.com/trau-ba.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây trầu bà</h3>
+						<p class="text-green-700 font-bold">300.000đ</p>
+						<p class="text-green-700">Mô tả: Cây trầu bà là một loại cây cảnh dễ trồng, thích hợp cho không gian trong nhà.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('TB001', 'Cây trầu bà', 300000, 'https://example.com/trau-ba.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('TB001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây phát tài" class="w-full h-48 object-cover" src="https://example.com/phat-tai.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây phát tài</h3>
+						<p class="text-green-700 font-bold">600.000đ</p>
+						<p class="text-green-700">Mô tả: Cây phát tài là biểu tượng của sự thịnh vượng và may mắn.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('PT001', 'Cây phát tài', 600000, 'https://example.com/phat-tai.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('PT001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây bướm đêm" class="w-full h-48 object-cover" src="https://example.com/buom-dem.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây bướm đêm</h3>
+						<p class="text-green-700 font-bold">350.000đ</p>
+						<p class="text-green-700">Mô tả: Cây bướm đêm có hoa nở vào ban đêm, mang lại vẻ đẹp huyền bí.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('BD001', 'Cây bướm đêm', 350000, 'https://example.com/buom-dem.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('BD001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây cọ" class="w-full h-48 object-cover" src="https://example.com/co.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây cọ</h3>
+						<p class="text-green-700 font-bold">800.000đ</p>
+						<p class="text-green-700">Mô tả: Cây cọ là loại cây mang lại không khí nhiệt đới cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('CC001', 'Cây cọ', 800000, 'https://example.com/co.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('CC001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây bạch trúc" class="w-full h-48 object-cover" src="https://example.com/bach-truc.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây bạch trúc</h3>
+						<p class="text-green-700 font-bold">900.000đ</p>
+						<p class="text-green-700">Mô tả: Cây bạch trúc mang lại vẻ đẹp thanh thoát và nhẹ nhàng cho không gian.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('BT001', 'Cây bạch trúc', 900000, 'https://example.com/bach-truc.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('BT001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây hương thảo" class="w-full h-48 object-cover" src="https://example.com/huong-thao.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây hương thảo</h3>
+						<p class="text-green-700 font-bold">500.000đ</p>
+						<p class="text-green-700">Mô tả: Cây hương thảo có hương thơm dễ chịu, thích hợp cho không gian thư giãn.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('HT001', 'Cây hương thảo', 500000, 'https://example.com/huong-thao.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('HT001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây nhài" class="w-full h-48 object-cover" src="https://example.com/nhai.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây nhài</h3>
+						<p class="text-green-700 font-bold">600.000đ</p>
+						<p class="text-green-700">Mô tả: Cây nhài có hoa nở vào ban đêm, mang lại hương thơm quyến rũ.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('NH001', 'Cây nhài', 600000, 'https://example.com/nhai.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('NH001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây phong lữ" class="w-full h-48 object-cover" src="https://example.com/phong-lu.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây phong lữ</h3>
+						<p class="text-green-700 font-bold">400.000đ</p>
+						<p class="text-green-700">Mô tả: Cây phong lữ có hoa nở rực rỡ, thích hợp cho không gian ngoài trời.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('PL001', 'Cây phong lữ', 400000, 'https://example.com/phong-lu.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('PL001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây cẩm tú cầu" class="w-full h-48 object-cover" src="https://example.com/cam-tu-cau.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây cẩm tú cầu</h3>
+						<p class="text-green-700 font-bold">700.000đ</p>
+						<p class="text-green-700">Mô tả: Cây cẩm tú cầu có hoa nở to, mang lại vẻ đẹp lãng mạn cho không gian.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('CT001', 'Cây cẩm tú cầu', 700000, 'https://example.com/cam-tu-cau.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('CT001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- Nhóm sản phẩm cây xương rồng -->
+			<h2 class="text-2xl font-bold text-green-800 mb-4 mt-8">Cây Xương Rồng</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây xương rồng" class="w-full h-48 object-cover" src="https://example.com/xuong-rong.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây xương rồng</h3>
+						<p class="text-green-700 font-bold">300.000đ</p>
+						<p class="text-green-700">Mô tả: Cây xương rồng là một loại cây dễ chăm sóc, thích hợp cho những người bận rộn.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('XR001', 'Cây xương rồng', 300000, 'https://example.com/xuong-rong.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('XR001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Thêm 20 sản phẩm cây xương rồng khác -->
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây xương rồng mini" class="w-full h-48 object-cover" src="https://example.com/xuong-rong-mini.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây xương rồng mini</h3>
+						<p class="text-green-700 font-bold">250.000đ</p>
+						<p class="text-green-700">Mô tả: Cây xương rồng mini thích hợp cho bàn làm việc.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('XR002', 'Cây xương rồng mini', 250000, 'https://example.com/xuong-rong-mini.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('XR002')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây xương rồng bát giác" class="w-full h-48 object-cover" src="https://example.com/xuong-rong-bat-giac.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây xương rồng bát giác</h3>
+						<p class="text-green-700 font-bold">350.000đ</p>
+						<p class="text-green-700">Mô tả: Cây xương rồng bát giác có hình dáng độc đáo.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('XR003', 'Cây xương rồng bát giác', 350000, 'https://example.com/xuong-rong-bat-giac.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('XR003')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây xương rồng cầu vồng" class="w-full h-48 object-cover" src="https://example.com/xuong-rong-cau-vong.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây xương rồng cầu vồng</h3>
+						<p class="text-green-700 font-bold">400.000đ</p>
+						<p class="text-green-700">Mô tả: Cây xương rồng cầu vồng với màu sắc rực rỡ.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('XR004', 'Cây xương rồng cầu vồng', 400000, 'https://example.com/xuong-rong-cau-vong.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('XR004')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây xương rồng nở hoa" class="w-full h-48 object-cover" src="https://example.com/xuong-rong-no-hoa.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây xương rồng nở hoa</h3>
+						<p class="text-green-700 font-bold">500.000đ</p>
+						<p class="text-green-700">Mô tả: Cây xương rồng nở hoa vào mùa hè.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('XR005', 'Cây xương rồng nở hoa', 500000, 'https://example.com/xuong-rong-no-hoa.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('XR005')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<!-- Thêm 15 sản phẩm cây xương rồng khác tương tự -->
+
+			</div>
+
+			<!-- Nhóm sản phẩm cây hoa -->
+			<h2 class="text-2xl font-bold text-green-800 mb-4 mt-8">Cây Hoa</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây hoa hồng" class="w-full h-48 object-cover" src="https://example.com/hoa-hong.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây hoa hồng</h3>
+						<p class="text-green-700 font-bold">200.000đ</p>
+						<p class="text-green-700">Mô tả: Cây hoa hồng là biểu tượng của tình yêu và sự lãng mạn.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('HH001', 'Cây hoa hồng', 200000, 'https://example.com/hoa-hong.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('HH001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây hoa cúc" class="w-full h-48 object-cover" src="https://example.com/hoa-cuc.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây hoa cúc</h3>
+						<p class="text-green-700 font-bold">150.000đ</p>
+						<p class="text-green-700">Mô tả: Cây hoa cúc mang lại vẻ đẹp tươi sáng cho không gian.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('HC001', 'Cây hoa cúc', 150000, 'https://example.com/hoa-cuc.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('HC001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây hoa lan" class="w-full h-48 object-cover" src="https://example.com/hoa-lan.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây hoa lan</h3>
+						<p class="text-green-700 font-bold">300.000đ</p>
+						<p class="text-green-700">Mô tả: Cây hoa lan là biểu tượng của sự sang trọng.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('HL001', 'Cây hoa lan', 300000, 'https://example.com/hoa-lan.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('HL001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây hoa nhài" class="w-full h-48 object-cover" src="https://example.com/hoa-nhai.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây hoa nhài</h3>
+						<p class="text-green-700 font-bold">250.000đ</p>
+						<p class="text-green-700">Mô tả: Cây hoa nhài có hương thơm quyến rũ.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('HN001', 'Cây hoa nhài', 250000, 'https://example.com/hoa-nhai.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('HN001')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				
+
+			</div>
+
+			<!-- Nhóm sản phẩm cây sen đá -->
+			<h2 class="text-2xl font-bold text-green-800 mb-4 mt-8">Cây Sen Đá</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá" class="w-full h-48 object-cover" src="https://example.com/sen-da.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá</h3>
+						<p class="text-green-700 font-bold">400.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá là một loại cây cảnh đẹp, dễ chăm sóc và rất được yêu thích.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD002', 'Cây sen đá', 400000, 'https://example.com/sen-da.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD002')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá mini" class="w-full h-48 object-cover" src="https://example.com/sen-da-mini.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá mini</h3>
+						<p class="text-green-700 font-bold">350.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá mini là lựa chọn hoàn hảo cho không gian nhỏ.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD003', 'Cây sen đá mini', 350000, 'https://example.com/sen-da-mini.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD003')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá nở hoa" class="w-full h-48 object-cover" src="https://example.com/sen-da-no-hoa.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá nở hoa</h3>
+						<p class="text-green-700 font-bold">450.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá nở hoa mang lại vẻ đẹp rực rỡ cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD004', 'Cây sen đá nở hoa', 450000, 'https://example.com/sen-da-no-hoa.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD004')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá vàng" class="w-full h-48 object-cover" src="https://example.com/sen-da-vang.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá vàng</h3>
+						<p class="text-green-700 font-bold">500.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá vàng mang lại sự tươi mới cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD005', 'Cây sen đá vàng', 500000, 'https://example.com/sen-da-vang.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD005')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá đỏ" class="w-full h-48 object-cover" src="https://example.com/sen-da-do.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá đỏ</h3>
+						<p class="text-green-700 font-bold">550.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá đỏ là biểu tượng của sự may mắn.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD006', 'Cây sen đá đỏ', 550000, 'https://example.com/sen-da-do.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD006')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá xanh" class="w-full h-48 object-cover" src="https://example.com/sen-da-xanh.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá xanh</h3>
+						<p class="text-green-700 font-bold">600.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá xanh mang lại sự bình yên cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD007', 'Cây sen đá xanh', 600000, 'https://example.com/sen-da-xanh.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD007')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá tím" class="w-full h-48 object-cover" src="https://example.com/sen-da-tim.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá tím</h3>
+						<p class="text-green-700 font-bold">650.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá tím mang lại sự lãng mạn cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD008', 'Cây sen đá tím', 650000, 'https://example.com/sen-da-tim.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD008')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá bông" class="w-full h-48 object-cover" src="https://example.com/sen-da-bong.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá bông</h3>
+						<p class="text-green-700 font-bold">700.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá bông mang lại vẻ đẹp độc đáo cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD009', 'Cây sen đá bông', 700000, 'https://example.com/sen-da-bong.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD009')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá chậu sứ" class="w-full h-48 object-cover" src="https://example.com/sen-da-chau-su.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá chậu sứ</h3>
+						<p class="text-green-700 font-bold">750.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá chậu sứ mang lại sự sang trọng cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD010', 'Cây sen đá chậu sứ', 750000, 'https://example.com/sen-da-chau-su.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD010')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá chậu nhựa" class="w-full h-48 object-cover" src="https://example.com/sen-da-chau-nhua.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá chậu nhựa</h3>
+						<p class="text-green-700 font-bold">800.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá chậu nhựa là lựa chọn tiết kiệm cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD011', 'Cây sen đá chậu nhựa', 800000, 'https://example.com/sen-da-chau-nhua.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD011')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá chậu thủy tinh" class="w-full h-48 object-cover" src="https://example.com/sen-da-chau-thuy-tinh.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá chậu thủy tinh</h3>
+						<p class="text-green-700 font-bold">850.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá chậu thủy tinh mang lại vẻ đẹp hiện đại cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD012', 'Cây sen đá chậu thủy tinh', 850000, 'https://example.com/sen-da-chau-thuy-tinh.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD012')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá chậu gốm" class="w-full h-48 object-cover" src="https://example.com/sen-da-chau-gom.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá chậu gốm</h3>
+						<p class="text-green-700 font-bold">900.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá chậu gốm mang lại sự sang trọng cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD013', 'Cây sen đá chậu gốm', 900000, 'https://example.com/sen-da-chau-gom.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD013')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá chậu đất" class="w-full h-48 object-cover" src="https://example.com/sen-da-chau-dat.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá chậu đất</h3>
+						<p class="text-green-700 font-bold">950.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá chậu đất là lựa chọn tự nhiên cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD014', 'Cây sen đá chậu đất', 950000, 'https://example.com/sen-da-chau-dat.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD014')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá chậu tre" class="w-full h-48 object-cover" src="https://example.com/sen-da-chau-tre.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá chậu tre</h3>
+						<p class="text-green-700 font-bold">1.000.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá chậu tre mang lại sự gần gũi với thiên nhiên.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD015', 'Cây sen đá chậu tre', 1000000, 'https://example.com/sen-da-chau-tre.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD015')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white rounded-lg shadow-md overflow-hidden">
+					<img alt="Cây sen đá chậu nhôm" class="w-full h-48 object-cover" src="https://example.com/sen-da-chau-nhom.jpg"/>
+					<div class="p-4">
+						<h3 class="text-lg font-semibold text-green-800 mb-2">Cây sen đá chậu nhôm</h3>
+						<p class="text-green-700 font-bold">1.050.000đ</p>
+						<p class="text-green-700">Mô tả: Cây sen đá chậu nhôm mang lại vẻ đẹp hiện đại và sang trọng cho không gian sống.</p>
+						<div class="flex space-x-2 mt-4">
+							<button onclick="addToCart('SD016', 'Cây sen đá chậu nhôm', 1050000, 'https://example.com/sen-da-chau-nhom.jpg')" 
+								class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+								Thêm vào giỏ
+							</button>
+							<button onclick="viewDetails('SD016')" 
+								class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+								Xem chi tiết
+							</button>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+				
+
+			
+		</main>
+
+		<script src="include.js"></script>
+
+	</body>
+
+</html>

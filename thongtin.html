@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cây Cảnh Nhỏ</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="https://cdn.jsdelivr.net/npm/@google/generative-ai"></script>
+    <script defer src="bot.js"></script>
+    <script defer src="chat.js"></script>
+    <script defer src="java.js"></script>
+    <script defer src="include.js"></script>
 </head>
 <body class="h-full">
     <header class="bg-green-600 text-white p-4">
@@ -20,19 +25,8 @@
 
         <section id="products" class="mb-8">
             <h2 class="text-2xl font-bold mb-4">Sản Phẩm</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showProductDetail('Cây Xương Rồng', 50, 'Cây xương rồng dễ trồng, thích hợp để bàn.')">
-                    <h3 class="text-xl font-semibold">Cây Xương Rồng</h3>
-                    <p class="text-gray-600">Giá: 50 VNĐ</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showProductDetail('Cây Sen Đá', 40, 'Cây sen đá có hình dáng đẹp và dễ chăm sóc.')">
-                    <h3 class="text-xl font-semibold">Cây Sen Đá</h3>
-                    <p class="text-gray-600">Giá: 40 VNĐ</p>
-                </div>
-                <div class="bg-white p-4 rounded shadow cursor-pointer" onclick="showProductDetail('Cây Cỏ Đuôi Gà', 30, 'Cây cỏ đuôi gà có lá mềm và đẹp.')">
-                    <h3 class="text-xl font-semibold">Cây Cỏ Đuôi Gà</h3>
-                    <p class="text-gray-600">Giá: 30 VNĐ</p>
-                </div>
+            <div id="products-container" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
             </div>
         </section>
 
@@ -72,8 +66,35 @@
         </section>
     </main>
 
-    <script src="java.js"></script>
-    <!-- Include script -->
-    <script src="include.js"></script>
+    <section id="chat-container" class="fixed bottom-4 right-4 w-80">
+        <div class="bg-white rounded-lg shadow-lg">
+            <!-- Header chat -->
+            <div class="bg-green-600 text-white p-3 rounded-t-lg flex justify-between items-center">
+                <h3 class="font-semibold">Chat với Cây Cảnh Nhỏ</h3>
+                <button onclick="toggleChat()" class="hover:text-gray-200">
+                    <span id="chat-toggle">−</span>
+                </button>
+            </div>
+            
+            <!-- Khung chat -->
+            <div id="chat-messages" class="h-80 overflow-y-auto p-4 space-y-4">
+                <!-- Tin nhắn sẽ được thêm vào đây -->
+            </div>
+
+            <!-- Input chat -->
+            <div class="border-t p-4">
+                <form id="chat-form" class="flex gap-2">
+                    <input type="text" 
+                           id="chat-input"
+                           class="flex-1 border rounded-lg px-3 py-2 focus:outline-none focus:border-green-500"
+                           placeholder="Nhập tin nhắn...">
+                    <button type="submit" 
+                            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600">
+                        Gửi
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
