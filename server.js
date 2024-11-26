@@ -179,6 +179,15 @@ app.get('/api/data', (req, res) => {
     res.json(data);
 });
 
+// Thêm endpoint tìm kiếm sản phẩm
+app.get('/api/search', (req, res) => {
+    const query = req.query.q.toLowerCase();
+    const results = data.products.filter(product => 
+        product.name.toLowerCase().includes(query)
+    );
+    res.json(results);
+});
+
 // Khởi động server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);

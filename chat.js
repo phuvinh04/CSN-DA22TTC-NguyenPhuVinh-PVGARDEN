@@ -1,4 +1,4 @@
-// Đợi DOM load xong mới chạy code
+// Đảm bảo code chỉ chạy sau khi DOM đã load
 document.addEventListener('DOMContentLoaded', () => {
     let isChatOpen = true;
 

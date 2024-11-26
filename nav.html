@@ -1,108 +1,403 @@
 <html lang="vi">
 
+
+
 <head>
+
+
 
   <meta charset="utf-8"/>
 
+
+
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+
 
   <title>PV GARDEN</title>
 
+
+
   <script src="https://cdn.tailwindcss.com"></script>
+
+
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 
+
+
 </head>
+
+
 
 <body class="bg-green-50">
 
+
+
   <header class="bg-green-600 text-white">
+
+
 
     <div class="container mx-auto flex items-center justify-between py-2 px-4">
 
+
+
       <div class="flex items-center">
+
+
 
         <img alt="Logo PV GARDEN" class="h-10 w-10" src="images/logo.jpg"/>
 
+
+
         <span class="ml-2 font-bold text-lg">PV GARDEN</span>
 
+
+
       </div>
+
+
 
       <nav class="flex items-center space-x-4">
 
+
+
         <a class="hover:text-gray-300" href="index.html">Trang chủ</a>
+
+
 
         <a class="hover:text-gray-300" href="gioithieu.html">Giới thiệu</a>
 
+
+
         <a class="hover:text-gray-300" href="sanpham.html">Sản phẩm</a>
 
+
+
         <div class="relative group">
+
+
 
           <button class="hover:text-gray-300 focus:outline-none">Cách chăm sóc</button>
 
-          <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block group-focus-within:block">
+
+
+          <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block group-focus-within:block z-50">
+
+
 
             <a class="block px-4 py-2 hover:bg-gray-200" href="senda.html">Chăm sóc sen đá</a>
 
+
+
             <a class="block px-4 py-2 hover:bg-gray-200" href="senda.html">Chăm sóc xương rồng</a>
+
+
 
           </div>
 
+
+
         </div>
+
+
 
         <div class="relative group">
 
+
+
           <button class="hover:text-gray-300 focus:outline-none">Vật tư cây trồng</button>
 
-          <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block group-focus-within:block">
+
+
+          <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block group-focus-within:block z-50">
+
+
 
             <a class="block px-4 py-2 hover:bg-gray-200" href="fertilizers.html">Phân bón</a>
 
+
+
             <a class="block px-4 py-2 hover:bg-gray-200" href="tools.html">Đất</a>
+
+
 
             <a class="block px-4 py-2 hover:bg-gray-200" href="pots.html">Dụng cụ cắt tỉa</a>
 
+
+
             <a class="block px-4 py-2 hover:bg-gray-200" href="pots.html">Chậu cây</a>
+
+
 
           </div>
 
+
+
         </div>
 
-      <div class="flex items-center space-x-2">
 
-        <input id="searchInput" class="px-2 py-1 rounded text-black" placeholder="Tìm kiếm sản phẩm" type="text"/>
 
-        <button id="searchButton" class="bg-white text-green-600 px-2 py-1 rounded" onclick="searchProducts();">Tìm</button>
+        <div class="relative">
+
+
+
+          <div class="flex items-center space-x-2">
+
+
+
+            <input type="text" id="searchInput" 
+
+              class="px-4 py-2 rounded-lg text-black border border-gray-300 focus:outline-none focus:border-green-500"
+
+              placeholder="Tìm kiếm sản phẩm..."/>
+
+
+
+            <button onclick="searchProducts()" 
+
+              class="px-4 py-2 bg-white text-green-600 rounded-lg hover:bg-gray-100 transition-colors">
+
+
+
+              <i class="fas fa-search"></i>
+
+
+
+            </button>
+
+
+
+          </div>
+
+
+
+          <div id="searchResults" 
+
+            class="absolute w-full mt-1 bg-white rounded-lg shadow-lg max-h-96 overflow-y-auto hidden z-50">
+
+          </div>
+
+
+
+        </div>
+
+
 
         <a class="flex items-center hover:text-gray-300" href="cart.html" id="cartLink">
 
+
+
           <i class="fas fa-shopping-cart"></i>
+
+
 
           <span class="ml-1">Giỏ hàng (<span id="cartItemCount">0</span>)</span>
 
+
+
         </a>
 
-      </div>
 
-      <div id="searchResults" class="absolute bg-white shadow-lg mt-2 rounded hidden"></div>
+
+      </nav>
+
+
 
     </div>
 
+
+
   </header>
 
+
+
   <script>
+
+    let productData = []; // Biến lưu trữ dữ liệu sản phẩm
+
+
+
+    // Tải dữ liệu sản phẩm ngay khi trang được load
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        fetch('data.json')
+
+            .then(response => response.json())
+
+            .then(data => {
+
+                productData = data.products;
+
+            })
+
+            .catch(error => {
+
+                console.error('Lỗi:', error);
+
+            });
+
+    });
+
+
+
     function searchProducts() {
-      const query = document.getElementById('searchInput').value.toLowerCase();
-      // Logic to search products and display results
-      console.log('Searching for:', query);
+
+        const query = document.getElementById('searchInput').value.toLowerCase().trim();
+
+        const searchResults = document.getElementById('searchResults');
+
+        
+
+        if (!query) {
+
+            searchResults.classList.add('hidden');
+
+            return;
+
+        }
+
+
+
+        // Tìm kiếm sản phẩm từ dữ liệu đã tải
+
+        const results = productData.filter(product => {
+
+            const productName = product.name.toLowerCase();
+
+            return productName.includes(query);
+
+        });
+
+
+
+        displayResults(results);
+
     }
 
-    function showCartItems() {
-      // Logic to show cart items
-      console.log('Showing cart items');
+
+
+    function displayResults(results) {
+
+        const searchResults = document.getElementById('searchResults');
+
+        searchResults.innerHTML = '';
+
+        
+
+        if (results.length === 0) {
+
+            searchResults.innerHTML = `
+
+                <div class="p-4 text-gray-500 text-center">
+
+                    Không tìm thấy sản phẩm phù hợp
+
+                </div>`;
+
+            searchResults.classList.remove('hidden');
+
+            return;
+
+        }
+
+
+
+        // Hiển thị tất cả kết quả tìm kiếm
+
+        results.forEach(product => {
+
+            const resultItem = document.createElement('div');
+
+            resultItem.className = 'flex items-center p-3 border-b hover:bg-gray-50 cursor-pointer';
+
+            resultItem.innerHTML = `
+
+                <div class="flex items-center w-full">
+
+                    <img src="${product.image_url}" 
+
+                         alt="${product.name}"
+
+                         class="w-12 h-12 object-cover rounded"
+
+                         onerror="this.src='images/default-product.jpg'">
+
+                    <div class="ml-3 flex-grow">
+
+                        <div class="text-sm font-medium">${product.name}</div>
+
+                        <div class="text-green-600 font-bold">
+
+                            ${product.price.toLocaleString('vi-VN')}đ
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            `;
+
+            resultItem.onclick = () => {
+
+                window.location.href = `product-detail.html?id=${product.id}`;
+
+            };
+
+            searchResults.appendChild(resultItem);
+
+        });
+
+
+
+        searchResults.classList.remove('hidden');
+
     }
+
+
+
+    // Sửa lại sự kiện click cho nút tìm kiếm
+
+    document.querySelector('.fas.fa-search').parentElement.addEventListener('click', () => {
+
+        const searchResults = document.getElementById('searchResults');
+
+        if (searchResults.classList.contains('hidden')) {
+
+            searchProducts();
+
+        } else {
+
+            searchResults.classList.add('hidden');
+
+        }
+
+    });
+
+
+
+    // Thêm sự kiện focus cho input
+
+    document.getElementById('searchInput').addEventListener('focus', () => {
+
+        if (document.getElementById('searchInput').value.trim()) {
+
+            searchProducts();
+
+        }
+
+    });
+
   </script>
+
+
 
 </body>
 
+
+
 </html>
+
+

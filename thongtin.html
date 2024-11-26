@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cây Cảnh Nhỏ</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/@google/generative-ai"></script>
-    <script defer src="bot.js"></script>
-    <script defer src="chat.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+    <script type="module" src="bot.js"></script>
+    <script type="module" src="chat.js"></script>
     <script defer src="java.js"></script>
     <script defer src="include.js"></script>
 </head>
