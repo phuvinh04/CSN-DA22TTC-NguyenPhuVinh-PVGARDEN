@@ -128,7 +128,56 @@
             }
         }
 
-        
+        // Hàm thêm vào giỏ hàng
+        function addToCart(name, price, image_url) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const productId = name.toLowerCase().replace(/\s+/g, '-'); // Tạo ID từ tên sản phẩm
+            
+            const existingProduct = cart.find(item => item.id === productId);
+            
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: name,
+                    price: price,
+                    image: image_url,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            alert('Đã thêm sản phẩm vào giỏ hàng!');
+        }
+
+        async function loadCategoryImages() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                const categoryImages = data.product_category_images;
+                
+                // Lấy tất cả các div danh mục
+                const categoryDivs = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4.gap-6.px-4 img');
+                
+                // Gán hình ảnh trực tiếp theo index
+                categoryDivs.forEach((img, index) => {
+                    if (categoryImages[index]) {
+                        img.src = categoryImages[index];
+                        console.log(`Loading image ${index}:`, categoryImages[index]); // Debug log
+                    } else {
+                        console.error(`No image found for index ${index}`);
+                    }
+                });
+            } catch (error) {
+                console.error('Lỗi khi tải hình ảnh danh mục:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadFeaturedProducts();
+            loadCategoryImages();
+        });
     </script>
 </body>
 </html>
