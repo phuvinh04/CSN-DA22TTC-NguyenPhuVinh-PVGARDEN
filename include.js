@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .then(response => response.text())
         .then(data => {
             document.body.insertAdjacentHTML('afterbegin', data);
+            // Khởi tạo search sau khi nav đã được load
+            initializeSearch();
         });
 
     // Load footer
@@ -67,6 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Thêm script search.js
+const searchScript = document.createElement('script');
+searchScript.src = 'search.js';
+document.head.appendChild(searchScript);
 
 function removeFromCart() {
     if (cartItemCount > 0) {
