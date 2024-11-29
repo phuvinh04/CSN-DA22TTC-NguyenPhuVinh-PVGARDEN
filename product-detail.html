@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="vi" class="h-full bg-gray-100">
 <head>
-    <!-- Các thẻ meta và link CSS giống như trong index.html -->
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Chi tiết sản phẩm - PV Garden</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-full">
-    <!-- Header và Navigation giống như trong index.html -->
+    
 
     <div class="main-content mt-16">
         <section class="product-detail my-12">
@@ -16,16 +17,19 @@
                         <img src="images/product-large.jpg" class="w-full h-auto rounded-lg shadow-lg" alt="Tên sản phẩm">
                     </div>
                     <div class="w-full md:w-1/2 px-4">
-                        <h2 class="text-3xl font-bold mb-4">Tên sản phẩm</h2>
-                        <p class="text-2xl font-semibold text-gray-700 mb-4">Giá: xxx.xxx VNĐ</p>
+                        <h2 class="text-3xl font-bold mb-4" id="productName">Tên sản phẩm</h2>
+                        <p class="text-2xl font-semibold text-gray-700 mb-4" id="productPrice">Giá: xxx.xxx VNĐ</p>
                         <p class="text-gray-600 mb-6">Mô tả chi tiết về sản phẩm...</p>
-                        <form>
+                        <form id="addToCartForm">
                             <div class="mb-4">
                                 <label for="quantity" class="block text-gray-700 text-sm font-bold mb-2">Số lượng</label>
                                 <input type="number" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="quantity" value="1" min="1">
                             </div>
-                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Thêm vào giỏ hàng</button>
+                            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                                Thêm vào giỏ hàng
+                            </button>
                         </form>
+                        <div id="notification" class="hidden mt-4 p-4 rounded-md"></div>
                     </div>
                 </div>
             </div>

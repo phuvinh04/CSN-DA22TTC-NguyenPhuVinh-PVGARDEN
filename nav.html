@@ -46,18 +46,45 @@
           <a class="block px-4 py-2 hover:bg-gray-200" href="fertilizers.html">Phân bón</a>
           <a class="block px-4 py-2 hover:bg-gray-200" href="tools.html">Đất</a>
           <a class="block px-4 py-2 hover:bg-gray-200" href="pots.html">Dụng cụ cắt tỉa</a>
-          <a class="block px-4 py-2 hover:bg-gray-200" href="pots.html">Chậu cây</a>
+          <a class="block px-4 py-2 hover:bg-gray-200" href="chaucay.html">Chậu cây</a>
         </div>
       </div>
 
-      <a class="flex items-center hover:text-gray-300" href="cart.html" id="cartLink">
-        <i class="fas fa-shopping-cart"></i>
-        <span class="ml-1">Giỏ hàng (<span id="cartItemCount">0</span>)</span>
+      <a class="flex items-center hover:text-gray-300" href="cart.html">
+        <i class="fas fa-shopping-cart mr-2"></i>
+        <span>Giỏ hàng (<span id="cartItemCount">0</span> mặt hàng)</span>
       </a>
     </nav>
   </div>
 </header>
 
 <div class="pt-16"></div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Lấy dữ liệu từ localStorage
+      const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+      
+      // Tính tổng số lượng sản phẩm
+      const totalQuantity = cart.reduce((total, item) => total + (item.quantity || 0), 0);
+      
+      // Cập nhật số lượng trên nav
+      const cartCount = document.getElementById('cartItemCount');
+      if (cartCount) {
+          cartCount.textContent = totalQuantity;
+      }
+  });
+  
+  // Lắng nghe sự thay đổi của localStorage
+  window.addEventListener('storage', function(e) {
+      if (e.key === 'cartItems') {
+          const cart = JSON.parse(e.newValue || '[]');
+          const totalQuantity = cart.reduce((total, item) => total + (item.quantity || 0), 0);
+          const cartCount = document.getElementById('cartItemCount');
+          if (cartCount) {
+              cartCount.textContent = totalQuantity;
+          }
+      }
+  });
+  </script>
 
 

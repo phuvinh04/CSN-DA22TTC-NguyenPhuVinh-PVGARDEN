@@ -17,68 +17,68 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
                
                 <!-- Cây văn phòng -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="cay-van-phong.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-2.jpg" alt="Cây văn phòng" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">CÂY VĂN PHÒNG</h2>
                     </div>
-                </div>
+                </a>
 
                 <!-- Cây phong thủy -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="cay-phong-thuy.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-3.jpg" alt="Cây phong thủy" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">CÂY PHONG THỦY</h2>
                     </div>
-                </div>
+                </a>
 
                 <!-- Cây để bàn -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="cay-de-ban.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-4.jpg" alt="Cây để bàn" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">CÂY ĐỂ BÀN</h2>
                     </div>
-                </div>
+                </a>
 
                 <!-- Cây trồng nước -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="cay-trong-nuoc.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-5.jpg" alt="Cây trồng nước" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">CÂY TRỒNG NƯỚC</h2>
                     </div>
-                </div>
+                </a>
 
                 <!-- Cây cao cấp -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="cay-cao-cap.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-6.jpg" alt="Cây cao cấp" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">CÂY CAO CẤP</h2>
                     </div>
-                </div>
+                </a>
 
                 <!-- Chậu đất nung -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="chau-dat-nung.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-7.jpg" alt="Chậu đất nung" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">CHẬU ĐẤT NUNG</h2>
                     </div>
-                </div>
+                </a>
 
                 <!-- Chậu xi măng -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="chau-xi-mang.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-8.jpg" alt="Chậu xi măng" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">CHẬU XI MĂNG</h2>
                     </div>
-                </div>
+                </a>
 
                 <!-- Kéo cắt cành -->
-                <div class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
+                <a href="keo-cat-canh.html" class="bg-white shadow-lg rounded-md overflow-hidden transition-transform hover:scale-105">
                     <img src="your-image-url-9.jpg" alt="Kéo cắt cành" class="w-full h-48 object-cover">
                     <div class="p-4">
                         <h2 class="text-center text-green-800 font-semibold">KÉO CẮT CÀNH</h2>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
 
@@ -101,18 +101,20 @@
                 
                 featuredProducts.forEach(product => {
                     const productCard = `
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105 h-full flex flex-col">
                             <img alt="${product.name}" class="w-full h-48 object-cover" src="${product.image_url}"/>
-                            <div class="p-4">
-                                <h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
-                                <p class="text-green-700 font-bold">${product.price.toLocaleString('vi-VN')}đ</p>
-                                <div class="flex space-x-2">
+                            <div class="p-4 flex flex-col h-full">
+                                <h3 class="text-sm font-semibold text-green-800 mb-2 line-clamp-2">${product.name}</h3>
+                                <p class="text-green-700 font-bold mt-auto mb-3">${product.price.toLocaleString('vi-VN')}đ</p>
+                                <div class="flex gap-2">
                                     <button onclick="addToCart('${product.name}', ${product.price}, '${product.image_url}')" 
-                                            class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+                                            class="flex-1 flex items-center justify-center bg-green-600 text-white py-2 px-2 rounded-md hover:bg-green-700 transition-colors text-sm">
+                                        <i class="fas fa-cart-plus mr-1"></i>
                                         Thêm vào giỏ
                                     </button>
                                     <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
-                                            class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+                                            class="flex-1 flex items-center justify-center bg-blue-600 text-white py-2 px-2 rounded-md hover:bg-blue-700 transition-colors text-sm">
+                                        <i class="fas fa-info-circle mr-1"></i>
                                         Xem chi tiết
                                     </button>
                                 </div>
@@ -126,54 +128,7 @@
             }
         }
 
-        // Hàm thêm vào giỏ hàng
-        function addToCart(id, name, price, imageUrl) {
-            let cart = JSON.parse(localStorage.getItem('cart')) || [];
-            const existingProduct = cart.find(item => item.id === id);
-            
-            if (existingProduct) {
-                existingProduct.quantity += 1;
-            } else {
-                cart.push({
-                    id: id,
-                    name: name,
-                    price: price,
-                    imageUrl: imageUrl,
-                    quantity: 1
-                });
-            }
-            
-            localStorage.setItem('cart', JSON.stringify(cart));
-            alert('Đã thêm sản phẩm vào giỏ hàng!');
-        }
-
-        async function loadCategoryImages() {
-            try {
-                const response = await fetch('data.json');
-                const data = await response.json();
-                const categoryImages = data.product_category_images;
-                
-                // Lấy tất cả các div danh mục
-                const categoryDivs = document.querySelectorAll('.grid.grid-cols-1.md\\:grid-cols-2.lg\\:grid-cols-4.gap-6.px-4 img');
-                
-                // Gán hình ảnh trực tiếp theo index
-                categoryDivs.forEach((img, index) => {
-                    if (categoryImages[index]) {
-                        img.src = categoryImages[index];
-                        console.log(`Loading image ${index}:`, categoryImages[index]); // Debug log
-                    } else {
-                        console.error(`No image found for index ${index}`);
-                    }
-                });
-            } catch (error) {
-                console.error('Lỗi khi tải hình ảnh danh mục:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            loadFeaturedProducts();
-            loadCategoryImages();
-        });
+        
     </script>
 </body>
 </html>
