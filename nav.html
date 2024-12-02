@@ -1,8 +1,19 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PV GARDEN</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg">
+</head>
+<body>
 <header class="bg-green-600 text-white fixed w-full top-0 z-50">
   <div class="container mx-auto flex items-center justify-between py-2 px-4">
     <div class="flex items-center">
-      <img alt="Logo PV GARDEN" class="h-10 w-10" src="images/logo.jpg"/>
-      <span class="ml-2 font-bold text-lg">PV GARDEN</span>
+      <a href="index.html" class="flex items-center hover:opacity-90 transition-opacity">
+        <img alt="Logo PV GARDEN" class="h-12 w-12 rounded-full shadow-lg" src="images/logo.jpg"/>
+        <span class="ml-3 font-bold text-xl tracking-wide">PV GARDEN</span>
+      </a>
     </div>
 
     <div class="flex-1 max-w-xl mx-8 relative z-[100]">
@@ -36,14 +47,14 @@
         <button class="hover:text-gray-300 focus:outline-none">Cách chăm sóc</button>
         <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block group-focus-within:block">
           <a class="block px-4 py-2 hover:bg-gray-200" href="senda.html">Chăm sóc sen đá</a>
-          <a class="block px-4 py-2 hover:bg-gray-200" href="senda.html">Chăm sóc xương rồng</a>
+          <a class="block px-4 py-2 hover:bg-gray-200" href="xuongrong.html">Chăm sóc xương rồng</a>
         </div>
       </div>
 
       <div class="relative group">
         <button class="hover:text-gray-300 focus:outline-none">Vật tư cây trồng</button>
         <div class="absolute bg-white text-black rounded shadow-lg hidden group-hover:block group-focus-within:block">
-          <a class="block px-4 py-2 hover:bg-gray-200" href="fertilizers.html">Phân bón</a>
+          <a class="block px-4 py-2 hover:bg-gray-200" href="phanbon.html">Phân bón</a>
           <a class="block px-4 py-2 hover:bg-gray-200" href="tools.html">Đất</a>
           <a class="block px-4 py-2 hover:bg-gray-200" href="pots.html">Dụng cụ cắt tỉa</a>
           <a class="block px-4 py-2 hover:bg-gray-200" href="chaucay.html">Chậu cây</a>
@@ -52,7 +63,7 @@
 
       <a class="flex items-center hover:text-gray-300" href="cart.html">
         <i class="fas fa-shopping-cart mr-2"></i>
-        <span>Giỏ hàng (<span id="cartItemCount">0</span> mặt hàng)</span>
+        <span>Giỏ hàng</span>
       </a>
     </nav>
   </div>
@@ -86,5 +97,5 @@
       }
   });
   </script>
-
-
+</body>
+</html>

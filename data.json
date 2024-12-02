@@ -1,468 +1,494 @@
 {
-
-    "products": [
-
-      {
-
-        "name": "Cây tùng bồng lai tiểu cảnh chậu sứ thổ cẩm TUBO005",
-
-        "price": 500000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2024/03/tung-bong-lai-chu-su-de-ban-mowgarden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây phát tài bộ 5 - Cây thiết mộc lan CPTK001",
-
-        "price": 750000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-phat-tai-bo-mowgarden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick LONI040",
-
-        "price": 280000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-kim-ngan-3-than-mowgarden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây trầu bà đế vương xanh chậu mặt cool 'Imperial Green' chậu sứ PHIG006",
-
-        "price": 120000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-trau-ba-de-vuong-xanh-mowgarden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevireria Cylindrica SANS002",
-
-        "price": 120000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/luoi-ho-nga-voi-mowgarden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây cỏ lan chi để bàn chậu sứ mặt cười SPI004",
-
-        "price": 120000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/co-lan-chi-de-ban-mowgaden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây trầu bà đế vương đỏ để bàn 'Red Rojo' chậu sứ PHIR008",
-
-        "price": 320000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/trau-ba-de-vuong-do-de-ban-mowgarden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây lưỡi hổ Bantel Sensation chậu ươm STBS001",
-
-        "price": 160000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-luoi-ho-bengar-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây hạnh phúc để sàn 2 tầng lớn chậu đá mài RADE033",
-
-        "price": 1200000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-hanh-phuc-2-tang-chau-da-mai-tron-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây trầu bà cột chậu xi măng trụ vuông CTBC007",
-
-        "price": 1100000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-trau-ba-cot-chau-xi-mang-van-soc-ngang-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây hồng môn cỡ nhỏ chậu sứ trắng ANTH010",
-
-        "price": 240000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-hong-mon-de-ban-chau-su-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây ngũ gia bì cẩm thạch nhỏ chậu ươm SCHE020",
-
-        "price": 100000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-ngu-gia-bi-cam-thach-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây kim ngân một thân để bàn chậu sứ LONI039",
-
-        "price": 450000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-kim-ngan-mot-than-chau-su-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây cọ lá xẻ mini để bàn chậu sứ hoa văn LIVI005",
-
-        "price": 160000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-co-la-xe-de-ban-chau-su-trang-1a-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây hạnh phúc để sàn 2 tầng chậu sứ hoa văn RADE032",
-
-        "price": 900000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-hanh-phuc-van-phong-2-tang-chau-su-hoa-tiet-mowgarden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây hạnh phúc để sàn chậu sứ RADE031",
-
-        "price": 550000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-hanh-phuc-de-san-chau-su-trang-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây kim ngân để bàn thắt bính tiểu cảnh chậu sứ LONI038",
-
-        "price": 380000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-kim-ngan-that-binh-lon-de-san-chau-su-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây lưỡi hổ xanh để bàn mini 'Black Gold' chậu sứ SHBG005",
-
-        "price": 120000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/luoi-ho-xanh-mini-mowgarden-01-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây Lan ý chậu cỡ lớn để bàn chậu sứ trắng PEAC005",
-
-        "price": 240000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-lan-y-de-ban-chau-su-mowgarden-01-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây phú quý chậu sứ thổ cẩm để bàn AGLA104",
-
-        "price": 320000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-phu-quy-chau-su-tho-cam-mow-garden-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây trầu bà đế vương xanh 'Imperial Green' chậu sứ PHIG005",
-
-        "price": 320000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/12-cay-trau-ba-de-vuong-xanh-de-ban-chau-su-trang-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây ngọc ngân để bàn chậu sứ AGSN010",
-
-        "price": 160000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/10-cay-ngoc-ngan-nho-de-ban-chau-su--800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây kim ngân 3 thân để bàn chậu marle LONI037",
-
-        "price": 140000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/9-cay-kim-ngan-3-than-nho-de-ban-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây bàng Đài Loan cẩm thạch chậu sứ BUBU007",
-
-        "price": 1200000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/11-cay-bang-dai-loan-cam-thach-chau-su-trang-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Cây hạnh phúc một thân cổ thụ để bàn chậu sứ RADE030",
-
-        "price": 350000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/8-cay-hanh-phuc-de-ban-chau-su-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu đá mài Granito dáng trụ vót màu trắng XMDM018",
-
-        "price": 340000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-da-mai-vot-day-3-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng hình trụ vuông vân sọc ngang màu đen XMDM017",
-
-        "price": 500000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-xi-mang-hinh-tru-son-den-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu đá mài Granito cao cấp dáng Remy màu trắng XMDM015",
-
-        "price": 360000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-xi-mang-da-mai-granito-dang-remy-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng nhẹ hình trụ vát đáy vân quấn rối XMDM014",
-
-        "price": 220000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-xi-mang-da-mai-van-quan-roi-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng đá mài trụ tròn vẽ zigzac XMDM013",
-
-        "price": 320000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2022/12/chau-xi-mang-da-mai-ve-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng đá mài trụ tròn dáng thấp XMDM012",
-
-        "price": 80000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2021/04/chau-xi-mang-da-mai-tru-tron-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng hình giọt nước sơn decor 32x52cm XMDM011",
-
-        "price": 440000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2022/12/chau-xi-mang-dai-mai-son-hoa-tiet-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng hình giọt nước sơn decor 32x52cm XMDM010",
-
-        "price": 480000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2022/11/chau-xi-mang-son-mau-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng hình giọt nước 32x52cm XMDM009",
-
-        "price": 340000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2022/11/chau-xi-mang-da-mai-giot-nuoc-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu xi măng hình trụ sơn họa tiết 40x40cm XMDM008",
-
-        "price": 520000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2022/11/chau-xi-mang-son-mau-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ hình trụ họa tiết Geometric GOSU059",
-
-        "price": 80000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-hinh-tru-hoa-tiet-geo-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ họa tiết lá Monstera có dĩa GOSU057",
-
-        "price": 20000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-trang-hoa-tiet-monstera-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ họa tiết hoa màu trắng có dĩa GOSU056",
-
-        "price": 20000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-trang-trang-tri-hoa-tiet-4-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ viền hoa cúc có dĩa màu trắng GOSU055",
-
-        "price": 20000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-gom-su-hoa-cuc-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ hình trụ trứng màu trắng GOSU054",
-
-        "price": 80000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-hinh-tru-trung-mau-trang-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ hình khối vân gợn sóng màu trắng GOSU053",
-
-        "price": 80000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-hinh-khoi-vuong-van-gon-song-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ trụ tròn họa tiết kẻ sọc màu trắng GOSU052",
-
-        "price": 100000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-gom-su-tru-tron-trang-hoa-tiet-ke-soc-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ họa tiết tam giác màu trắng GOSU051",
-
-        "price": 100000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-gom-su-hoa-tiet-tam-giac-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ họa tiết ô vuông màu trắng GOSU050",
-
-        "price": 100000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-gom-su-hoa-tiet-o-vuong-1-800x960.jpg"
-
-      },
-
-      {
-
-        "name": "Chậu gốm sứ họa tiết đan mây màu đen GOSU049",
-
-        "price": 160000,
-
-        "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-gom-su-hoa-tiet-dan-may-1-800x960.jpg"
-
-      }
-
-    ],
-
-    "product_category_images": [
-        "https://mowgarden.com/wp-content/uploads/2022/09/cay-trong-hanh-lang-loi-di-400x400.jpg",
-        "https://mowgarden.com/wp-content/uploads/2022/09/cay-kieng-la-trong-nha-400x400.jpg",
-        "https://mowgarden.com/wp-content/uploads/2022/09/cay-canh-de-ban-400x400.jpg",
-        "https://mowgarden.com/wp-content/uploads/2022/09/cay-canh-thuy-canh-400x400.jpg",
-        "https://mowgarden.com/wp-content/uploads/2021/05/chau-cay-trong-nha-dep-380x400.jpg",
-        "https://mowgarden.com/wp-content/uploads/2022/09/chau-dat-nung-dep-400x400.jpg",
-        "https://tse1.mm.bing.net/th?id=OIP.S8v_GICbU1PBLLxaiL5DGgHaHa&pid=Api&P=0&h=180",
-        "https://tse1.mm.bing.net/th?id=OIP.L-M6JzoeHn_zG0xO3BuDGgHaFj&pid=Api&P=0&h=180"
-    ]
-
+  "products": [
+    {
+      "name": "Cây tùng bồng lai tiểu cảnh chậu sứ thổ cẩm TUBO005",
+      "price": 500000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2024/03/tung-bong-lai-chu-su-de-ban-mowgarden-800x960.jpg"
+    },
+    {
+      "name": "Cây phát tài bộ 5 - Cây thiết mộc lan CPTK001", 
+      "price": 750000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-phat-tai-bo-mowgarden-800x960.jpg"
+    },
+    {
+      "name": "Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick LONI040",
+      "price": 280000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-kim-ngan-3-than-mowgarden-800x960.jpg"
+    },
+    {
+      "name": "Cây trầu bà đế vương xanh chậu mặt cool 'Imperial Green' chậu sứ PHIG006",
+      "price": 120000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-trau-ba-de-vuong-xanh-mowgarden-800x960.jpg"
+    },
+    {
+      "name": "Cây Lưỡi Hổ Vương Miện chậu sứ để bàn Sansevireria Cylindrica SANS002",
+      "price": 120000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/luoi-ho-nga-voi-mowgarden-800x960.jpg"
+    },
+    {
+      "name": "Cây cỏ lan chi để bàn chậu sứ mặt cười SPI004",
+      "price": 120000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/co-lan-chi-de-ban-mowgaden-800x960.jpg"
+    },
+    {
+      "name": "Cây trầu bà đế vương đỏ để bàn 'Red Rojo' chậu sứ PHIR008",
+      "price": 320000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/trau-ba-de-vuong-do-de-ban-mowgarden-800x960.jpg"
+    },
+    {
+      "name": "Cây lưỡi hổ Bantel Sensation chậu ươm STBS001",
+      "price": 160000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-luoi-ho-bengar-1-800x960.jpg"
+    },
+    {
+      "name": "Cây hạnh phúc để sàn 2 tầng lớn chậu đá mài RADE033",
+      "price": 1200000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-hanh-phuc-2-tang-chau-da-mai-tron-1-800x960.jpg"
+    },
+    {
+      "name": "Cây trầu bà cột chậu xi măng trụ vuông CTBC007",
+      "price": 1100000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-trau-ba-cot-chau-xi-mang-van-soc-ngang-1-800x960.jpg"
+    },
+    {
+      "name": "Cây hồng môn cỡ nhỏ chậu sứ trắng ANTH010",
+      "price": 240000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-hong-mon-de-ban-chau-su-1-800x960.jpg"
+    },
+    {
+      "name": "Cây ngũ gia bì cẩm thạch nhỏ chậu ươm SCHE020",
+      "price": 100000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/cay-ngu-gia-bi-cam-thach-800x960.jpg"
+    },
+    {
+      "name": "Cây kim ngân một thân để bàn chậu sứ LONI039",
+      "price": 450000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-kim-ngan-mot-than-chau-su-1-800x960.jpg"
+    },
+    {
+      "name": "Cây cọ lá xẻ mini để bàn chậu sứ hoa văn LIVI005",
+      "price": 160000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-co-la-xe-de-ban-chau-su-trang-1a-800x960.jpg"
+    },
+    {
+      "name": "Cây hạnh phúc để sàn 2 tầng chậu sứ hoa văn RADE032",
+      "price": 900000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-hanh-phuc-van-phong-2-tang-chau-su-hoa-tiet-mowgarden-800x960.jpg"
+    },
+    {
+      "name": "Cây hạnh phúc để sàn chậu sứ RADE031",
+      "price": 550000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-hanh-phuc-de-san-chau-su-trang-800x960.jpg"
+    },
+    {
+      "name": "Cây kim ngân để bàn thắt bính tiểu cảnh chậu sứ LONI038",
+      "price": 380000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-kim-ngan-that-binh-lon-de-san-chau-su-800x960.jpg"
+    },
+    {
+      "name": "Cây lưỡi hổ xanh để bàn mini 'Black Gold' chậu sứ SHBG005",
+      "price": 120000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/luoi-ho-xanh-mini-mowgarden-01-800x960.jpg"
+    },
+    {
+      "name": "Cây Lan ý chậu cỡ lớn để bàn chậu sứ trắng PEAC005",
+      "price": 240000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-lan-y-de-ban-chau-su-mowgarden-01-800x960.jpg"
+    },
+    {
+      "name": "Cây phú quý chậu sứ thổ cẩm để bàn AGLA104",
+      "price": 320000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/cay-phu-quy-chau-su-tho-cam-mow-garden-800x960.jpg"
+    },
+    {
+      "name": "Cây trầu bà đế vương xanh 'Imperial Green' chậu sứ PHIG005",
+      "price": 320000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/12-cay-trau-ba-de-vuong-xanh-de-ban-chau-su-trang-1-800x960.jpg"
+    },
+    {
+      "name": "Cây ngọc ngân để bàn chậu sứ AGSN010",
+      "price": 160000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/10-cay-ngoc-ngan-nho-de-ban-chau-su--800x960.jpg"
+    },
+    {
+      "name": "Cây kim ngân 3 thân để bàn chậu marle LONI037",
+      "price": 140000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/9-cay-kim-ngan-3-than-nho-de-ban-1-800x960.jpg"
+    },
+    {
+      "name": "Cây bàng Đài Loan cẩm thạch chậu sứ BUBU007",
+      "price": 1200000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/11-cay-bang-dai-loan-cam-thach-chau-su-trang-1-800x960.jpg"
+    },
+    {
+      "name": "Cây hạnh phúc một thân cổ thụ để bàn chậu sứ RADE030",
+      "price": 350000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/8-cay-hanh-phuc-de-ban-chau-su-1-800x960.jpg"
+    }
+  ],
+  
+  "chaucay": [
+    {
+      "name": "Chậu đá mài Granito dáng trụ vót màu trắng XMDM018",
+      "price": 340000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-da-mai-vot-day-3-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng hình trụ vuông vân sọc ngang màu đen XMDM017",
+      "price": 500000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-xi-mang-hinh-tru-son-den-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu đá mài Granito cao cấp dáng Remy màu trắng XMDM015",
+      "price": 360000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-xi-mang-da-mai-granito-dang-remy-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng nhẹ hình trụ vát đáy vân quấn rối XMDM014",
+      "price": 220000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-xi-mang-da-mai-van-quan-roi-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng đá mài trụ tròn vẽ zigzac XMDM013",
+      "price": 320000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2022/12/chau-xi-mang-da-mai-ve-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng đá mài trụ tròn dáng thấp XMDM012",
+      "price": 80000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2021/04/chau-xi-mang-da-mai-tru-tron-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng hình giọt nước sơn decor 32x52cm XMDM011",
+      "price": 440000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2022/12/chau-xi-mang-dai-mai-son-hoa-tiet-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng hình giọt nước sơn decor 32x52cm XMDM010",
+      "price": 480000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2022/11/chau-xi-mang-son-mau-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng hình giọt nước 32x52cm XMDM009",
+      "price": 340000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2022/11/chau-xi-mang-da-mai-giot-nuoc-800x960.jpg"
+    },
+    {
+      "name": "Chậu xi măng hình trụ sơn họa tiết 40x40cm XMDM008",
+      "price": 520000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2022/11/chau-xi-mang-son-mau-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ hình trụ họa tiết Geometric GOSU059",
+      "price": 80000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-hinh-tru-hoa-tiet-geo-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ họa tiết lá Monstera có dĩa GOSU057",
+      "price": 20000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-trang-hoa-tiet-monstera-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ họa tiết hoa màu trắng có dĩa GOSU056",
+      "price": 20000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-trang-trang-tri-hoa-tiet-4-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ viền hoa cúc có dĩa màu trắng GOSU055",
+      "price": 20000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-gom-su-hoa-cuc-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ hình trụ trứng màu trắng GOSU054",
+      "price": 80000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-hinh-tru-trung-mau-trang-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ hình khối vân gợn sóng màu trắng GOSU053",
+      "price": 80000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-su-hinh-khoi-vuong-van-gon-song-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ trụ tròn họa tiết kẻ sọc màu trắng GOSU052",
+      "price": 100000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/04/chau-gom-su-tru-tron-trang-hoa-tiet-ke-soc-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ họa tiết tam giác màu trắng GOSU051",
+      "price": 100000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-gom-su-hoa-tiet-tam-giac-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ họa tiết ô vuông màu trắng GOSU050",
+      "price": 100000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-gom-su-hoa-tiet-o-vuong-1-800x960.jpg"
+    },
+    {
+      "name": "Chậu gốm sứ họa tiết đan mây màu đen GOSU049",
+      "price": 160000,
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/03/chau-gom-su-hoa-tiet-dan-may-1-800x960.jpg"
+    }
+  ],
+
+  "product_category_images": [
+    "https://mowgarden.com/wp-content/uploads/2022/09/cay-trong-hanh-lang-loi-di-400x400.jpg",
+    "https://mowgarden.com/wp-content/uploads/2022/09/cay-kieng-la-trong-nha-400x400.jpg",
+    "https://mowgarden.com/wp-content/uploads/2022/09/cay-canh-de-ban-400x400.jpg", 
+    "https://mowgarden.com/wp-content/uploads/2022/09/cay-canh-thuy-canh-400x400.jpg",
+    "https://mowgarden.com/wp-content/uploads/2021/05/chau-cay-trong-nha-dep-380x400.jpg",
+    "https://mowgarden.com/wp-content/uploads/2022/09/chau-dat-nung-dep-400x400.jpg",
+    "https://tse1.mm.bing.net/th?id=OIP.S8v_GICbU1PBLLxaiL5DGgHaHa&pid=Api&P=0&h=180",
+    "https://tse1.mm.bing.net/th?id=OIP.L-M6JzoeHn_zG0xO3BuDGgHaFj&pid=Api&P=0&h=180"
+  ],
+
+  "xuongrong-senda": [
+    {
+      "name": "Sen Đá Mini Giá 10k",
+      "image": "https://chohoaonline.com/UserFiles/image/sen-da-mini-gia-10k_sen-da-mini-gia-10k-1.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Tai Thỏ Mini",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-tai-tho-mini_cay-xuong-rong-tai-tho-mini-4.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Sen Đá Mỏ Vịt",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-sen-da-mo-vit_cay-sen-da-mo-vit-7.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Astro Vàng",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-astro-vang_xuong-rong-astro-vang-6.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Hồng Ngọc",
+      "image": "https://chohoaonline.com/UserFiles/image/thumb_cay-xuong-rong-hong-ngoc_cay-xuong-rong-hong-ngoc-7.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Sen Đá Hoa Cúc",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-sen-da-hoa-cuc_cay-sen-da-hoa-cuc-7.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Thạch Trụ Thiên",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-thach-tru-thien_cay-xuong-rong-thach-tru-thien-4.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Sen Đá Nâu",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-sen-da-nau_chau-cay-sen-da-nau-1.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Sen Đá Quan Âm",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-sen-da-quan-am_cay-sen-da-phat-ba-3.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Ba Cạnh",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-ba-canh_cay-xuong-rong-ba-canh-8.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Bông Gòn",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-bong-gon_cay-xuong-rong-bong-gon-2.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Kim Hổ",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-kim-ho_cay-xuong-rong-kim-ho-1.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Vạn Lý Trường Thành",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-van-ly-truong-thanh_cay-xuong-rong-van-ly-truong-thanh-2.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Trứng Chim",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-trung-chim_cay-xuong-rong-trung-chim-9.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Gymno Có Vân",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-gymno-co-van_cay-xuong-rong-gymno-co-van-1.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Thanh Sơn",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-thanh-son_cay-xuong-rong-thanh-son-9.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Tai Thỏ",
+      "image": "https://chohoaonline.com/UserFiles/image/xuong-rong-tai-tho_cay-xuong-rong-tai-tho-1.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Xương Rồng Trụ",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-tru_cay-xuong-rong-tru-1.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Sen Đá Kim Cương",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-sen-da-kim-cuong_cay-sen-da-kim-cuong-4.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây Vuốt Rồng",
+      "image": "https://chohoaonline.com/UserFiles/image/cay-vuot-rong_cay-vuot-rong-4.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây sen đá",
+      "image": "https://chohoaonline.com/UserFiles/image/thumb_cay-sen-da_cay-sen-da-30501.jpg",
+      "price": null
+    },
+    {
+      "name": "Xương Rồng Nhím Biển",
+      "image": "https://chohoaonline.com/UserFiles/image/thumb_xuong-rong-nhim-bien_xrnb.jpg",
+      "price": null
+    },
+    {
+      "name": "Xương Rồng Đuôi Chuột",
+      "image": "https://chohoaonline.com/UserFiles/image/thumb_xuong-rong-duoi-chuot_xr.jpg",
+      "price": null
+    },
+    {
+      "name": "Cây xương rồng bát tiên",
+      "image": "https://chohoaonline.com/UserFiles/image/thumb_cay-xuong-rong-bat-tien_xuong-rong-bat-tien-30501.jpg",
+      "price": null
+    }
+  ]
+,
+  "phanbon": [
+    {
+      "product_name": "Chế phẩm EM ( ủ phân và rác thải ) EMUNIV - Gói 200 gram",
+      "price": 39000,
+      "image": "https://product.hstatic.net/1000269461/product/thiet_ke_chua_co_ten_d429886c172545129286419ecce70009_medium.png"
+    },
+    {
+      "product_name": "Thuốc kích thích sinh trưởng cây trồng và hoa kiểng ATONIK",
+      "price": 10500,
+      "image": "https://product.hstatic.net/1000269461/product/116_71ed088a569c496fa32189f2e574a997_medium.png"
+    },
+    {
+      "product_name": "Phân bò đã qua xử lý Tribat 10dm3",
+      "price": 29000,
+      "image": "https://product.hstatic.net/1000269461/product/11_e91236cef9c14acbafdc2e50684524d1_medium.png"
+    },
+    {
+      "product_name": "Phân Bón Lá Kích Ra Rễ Cực Mạnh N3M",
+      "price": 28000,
+      "image": "https://product.hstatic.net/1000269461/product/32_bc6fbf76b5c544f59c1b89374be53d86_medium.png"
+    },
+    {
+      "product_name": "Phân lân Lâm Thao - Supe Lân",
+      "price": 10000,
+      "image": "https://product.hstatic.net/1000269461/product/69_8b644897265c41c0845b0c66e7a85388_medium.png"
+    },
+    {
+      "product_name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 2kg - Đã qua xử lý",
+      "price": 28000,
+      "image": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_2kg_4d74fe8899c548f6b10cc76e224f97fc_medium.jpg"
+    },
+    {
+      "product_name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 5kg - Đã qua xử lý",
+      "price": 63000,
+      "image": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_5kg_95137ac76fff467689882a06d974fdcd_medium.jpg"
+    },
+    {
+      "product_name": "Nấm đối kháng Trichoderma Điền Trang - Gói 1 Kg",
+      "price": 69000,
+      "image": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000_-_nam_doi_khang_trichoderma_dien_trang_-_goi_1_kg_32a6ee67cddb4424be1b2e8276fb6420_medium.jpg"
+    },
+    {
+      "product_name": "Phân trùn quế SFARM viên nén tan chậm dành cho Lan",
+      "price": 43000,
+      "image": "https://product.hstatic.net/1000269461/product/tan_cham-trun_vien_1kg_c7f3ff3069c346799449f5128e8ac777_medium.png"
+    },
+    {
+      "product_name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 10kg - Đã qua xử lý",
+      "price": 110000,
+      "image": "https://product.hstatic.net/1000269461/product/ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_10kg_0ef13b2cecd644139e4054e099241ac3_medium.jpg"
+    },
+    {
+      "product_name": "Chế phẩm vi sinh EMZEO - Gói 200gr",
+      "price": 31000,
+      "image": "https://product.hstatic.net/1000269461/product/che-pham-vi-sinh-emzeo_f7a775ee6526458f89203a47b035bc03_medium.jpg"
+    },
+    {
+      "product_name": "Phân dê qua xử lý hàng chuẩn ( chuyên cho lan và hoa hồng ) - 1 túi",
+      "price": 22000,
+      "image": "https://product.hstatic.net/1000269461/product/phan_tan_cham_tot_cho_lan___3__180e817cccc74c2eaa60c35daf22aa4c_medium.png"
+    },
+    {
+      "product_name": "Mật rỉ đường SFARM chất lượng cao - 1 lít ( ~ 1.35kg )",
+      "price": 35000,
+      "image": "https://product.hstatic.net/1000269461/product/mat-ri_a78ec087dc824cfab2a7652f42222b2d_medium.jpg"
+    },
+    {
+      "product_name": "Phân bò ủ vi sinh SFARM đã qua xử lý",
+      "price": 55000,
+      "image": "https://product.hstatic.net/1000269461/product/phan-bo-sfram_799da5afda2546d6a800f9d8bedbc0fb_medium.jpg"
+    },
+    {
+      "product_name": "Phân NPK Đầu Trâu 20-20-15+TE (HCM)",
+      "price": 35000,
+      "image": "https://product.hstatic.net/1000269461/product/phan-bon-dau-trau-npk-20-20-15_8543e1690b6b4b5c9948a479b51237e7_medium.jpg"
+    },
+    {
+      "product_name": "Phân bón đầu trâu tan chậm NB NPK 13-13-13+TE chuyên dùng cho hoa, cây ăn quả",
+      "price": 30000,
+      "image": "https://product.hstatic.net/1000269461/product/nnp_-_sp_ko_logo_-_502x502-phan_bon_dau_trau_nb_13-13-13_te_fd4b5acbd0694d0091be0866afe2e946_medium.jpg"
+    },
+    {
+      "product_name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 40kg - Đã qua xử lý",
+      "price": 379000,
+      "image": "https://product.hstatic.net/1000269461/product/ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_40kg_28a05bb66cdd4fd6809d61be0e7f296b_medium.jpg"
+    },
+    {
+      "product_name": "Phân bón lá đậm đặc cao cấp VITAMIN B1 GROWMORE",
+      "price": 17000,
+      "image": "https://product.hstatic.net/1000269461/product/template_ctkm_t7__5__dfc878a6e6dd45d3aaa33d1a9b80df49_medium.png"
+    },
+    {
+      "product_name": "Phân hữu cơ Úc đậm đặc dạng viên BOUNCE BACK",
+      "price": 29000,
+      "image": "https://product.hstatic.net/1000269461/product/bounce-1g_04e1a72d2a2242c299c4b2ad245c0d3b_medium.jpg"
+    },
+    {
+      "product_name": "Phân Đạm UREA Phú Mỹ",
+      "price": 22000,
+      "image": "https://product.hstatic.net/1000269461/product/phan-bon-ure-dam-phu-my_89c43f2bfccb45babe76bee869033818_medium.jpg"
+    },
+    {
+      "product_name": "Chế phẩm nấm đối kháng Trichoderma Plus Humic Sfarm - Gói 1kg",
+      "price": 83000,
+      "image": "https://product.hstatic.net/1000269461/product/dgt-_tricho_humic_-_pc_3-mat_truoc_22062023_7f069e309f824f6c8e66245a9d52f496_medium.png"
+    },
+    {
+      "product_name": "Phân bón đầu trâu BĐ-MK 20-20-15 chuyên cho rau màu - hoa kiểng",
+      "price": 49000,
+      "image": "https://product.hstatic.net/1000269461/product/phan_dau_trau_15_15_20_te_1eb79741c0b94071be0c841141ccb7d6_medium.png"
+    },
+    {
+      "product_name": "Bánh dầu đậu phộng LAVAMIX dạng bột đã qua xử lý - Gói 1kg",
+      "price": 35000,
+      "image": "https://product.hstatic.net/1000269461/product/banh-dau-dau-phong-1kg_b496f7d5563343548a3030abad2b4dfa_medium.jpg"
+    },
+    {
+      "product_name": "Phân bón hỗn hợp NPK MINRO 15-5-20",
+      "price": 11000,
+      "image": "https://product.hstatic.net/1000269461/product/88_004acfc95bd148f0b841a34a620b208d_medium.png"
+    },
+    {
+      "product_name": "Chất dưỡng hoa lâu tàn Chrysal",
+      "price": 3500,
+      "image": "https://product.hstatic.net/1000269461/product/duong-chat-hoa-lau-tan-chryal_3b0a9b44c241431f8b8159cf1c3f0adc_large_97b8ad14baf7496f8c90704814c72282_medium.jpg"
+    }
+  ]
 }
