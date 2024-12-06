@@ -1,55 +1,132 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <!-- Các thẻ meta và link CSS giống như trong index.html -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh toán - PV Garden</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
 </head>
-<body>
-    <!-- Header và Navigation giống như trong index.html -->
+<body class="bg-green-50">
+    <div class="container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center text-green-800 mb-8">Thông tin thanh toán</h1>
+        
+        <div class="max-w-4xl mx-auto">
+            <!-- Hiển thị sản phẩm từ giỏ hàng -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+                <h2 class="text-xl font-semibold mb-4">Sản phẩm trong giỏ hàng</h2>
+                <div id="cartItems" class="space-y-4">
+                    <!-- Sản phẩm sẽ được thêm vào đây bằng JavaScript -->
+                </div>
+                <div class="border-t mt-4 pt-4">
+                    <div class="flex justify-between items-center text-lg font-semibold">
+                        <span>Tổng tiền:</span>
+                        <span id="totalAmount" class="text-green-600"></span>
+                    </div>
+                </div>
+            </div>
 
-    <div class="main-content">
-        <section class="checkout my-5">
-            <div class="container">
-                <h2 class="text-center mb-4">Thông tin thanh toán</h2>
-                <form>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="firstName" class="form-label">Họ</label>
-                            <input type="text" class="form-control" id="firstName" required>
+            <!-- Form thông tin thanh toán -->
+            <div class="bg-white p-8 rounded-lg shadow-md">
+                <form class="space-y-6" id="checkoutForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">Họ</label>
+                            <input type="text" id="firstName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
                         </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="lastName" class="form-label">Tên</label>
-                            <input type="text" class="form-control" id="lastName" required>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Tên</label>
+                            <input type="text" id="lastName" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" required>
+
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="address" class="form-label">Địa chỉ</label>
-                        <input type="text" class="form-control" id="address" required>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Số điện thoại</label>
+                        <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
                     </div>
-                    <div class="mb-3">
-                        <label for="phone" class="form-label">Số điện thoại</label>
-                        <input type="tel" class="form-control" id="phone" required>
+
+                    <div>
+                        <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Địa chỉ giao hàng</label>
+                        <textarea id="address" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent" required></textarea>
                     </div>
-                    <div class="mb-3">
-                        <label for="paymentMethod" class="form-label">Phương thức thanh toán</label>
-                        <select class="form-select" id="paymentMethod" required>
+
+                    <div>
+                        <label for="paymentMethod" class="block text-sm font-medium text-gray-700 mb-1">Phương thức thanh toán</label>
+                        <select id="paymentMethod" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-green-500 focus:border-transparent" required>
                             <option value="">Chọn phương thức thanh toán</option>
-                            <option value="cod">Thanh toán khi nhận hàng</option>
+                            <option value="cod">Thanh toán khi nhận hàng (COD)</option>
                             <option value="bank">Chuyển khoản ngân hàng</option>
+                            <option value="momo">Ví điện tử MoMo</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Đặt hàng</button>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-green-600 text-white py-3 px-6 rounded-md hover:bg-green-700 transition duration-200 font-medium">
+                            Xác nhận đặt hàng
+                        </button>
+                    </div>
                 </form>
             </div>
-        </section>
+        </div>
     </div>
 
-    <!-- Include script -->
-    <script src="include.js"></script>
-    </body>
-</html>
+    <!-- Thông báo cảm ơn -->
+    <div id="thankYouMessage" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-xl">
+            <h2 class="text-2xl font-bold text-green-800 mb-4">Cảm ơn quý khách đã đặt hàng!</h2>
+            <p class="text-gray-600 mb-4">Đơn hàng của quý khách đã được xác nhận.</p>
+            <button onclick="window.location.href='index.html'" class="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700">
+                Quay về trang chủ
+            </button>
+        </div>
+    </div>
 
+    <script src="include.js"></script>
+    <script>
+        // Hiển thị sản phẩm từ giỏ hàng
+        function displayCartItems() {
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartContainer = document.getElementById('cartItems');
+            let total = 0;
+
+            cartContainer.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+
+                cartContainer.innerHTML += `
+                    <div class="flex items-center space-x-4 border-b pb-4">
+                        <img src="${item.image}" alt="${item.name}" class="w-20 h-20 object-cover rounded">
+                        <div class="flex-1">
+                            <h3 class="font-medium">${item.name}</h3>
+                            <p class="text-gray-600">Số lượng: ${item.quantity}</p>
+                            <p class="text-green-600">${item.price.toLocaleString('vi-VN')}đ x ${item.quantity}</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="font-semibold">${itemTotal.toLocaleString('vi-VN')}đ</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            document.getElementById('totalAmount').textContent = total.toLocaleString('vi-VN') + 'đ';
+        }
+
+        // Hiển thị sản phẩm khi trang được tải
+        window.addEventListener('load', displayCartItems);
+
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('thankYouMessage').classList.remove('hidden');
+            // Xóa giỏ hàng sau khi đặt hàng thành công
+            localStorage.removeItem('cartItems');
+        });
+    </script>
+</body>
+</html>

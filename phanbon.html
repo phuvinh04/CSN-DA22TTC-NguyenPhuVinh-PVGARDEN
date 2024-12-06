@@ -45,12 +45,12 @@
 		<script>
 			async function loadFertilizerProducts() {
 				try {
-					const response = await fetch('data.json');
+					const response = await fetch('http://localhost:3000/api/phanbon');
 					const data = await response.json();
 					
 					// Hiển thị sản phẩm phân bón
 					const fertilizerContainer = document.getElementById('fertilizer-products');
-					data.phanbon.forEach(product => {
+					data.forEach(product => {
 						const productCard = `
 							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
 								<img alt="${product.product_name}" class="w-full h-48 object-cover" src="${product.image}"/>

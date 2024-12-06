@@ -22,118 +22,113 @@
         </div>
     </main>
 
+    <div id="footer-placeholder"></div>
+
+    <!-- Thông báo thêm vào giỏ hàng thành công -->
+    <div id="successMessage" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden opacity-0 transition-all duration-300 transform translate-y-[-1rem] z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span>Thêm vào giỏ hàng thành công!</span>
+        </div>
+    </div>
+
     <script>
-        // Hàm thêm vào giỏ hàng
-        function addToCart(name, price, image_url) {
-            try {
-                // Lấy giỏ hàng từ localStorage
-                let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-                
-                // Tạo ID từ tên sản phẩm
-                const productId = name.toLowerCase().replace(/\s+/g, '-');
-                
-                // Kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
-                const existingProduct = cart.find(item => item.id === productId);
-                
-                if (existingProduct) {
-                    // Nếu sản phẩm đã tồn tại, tăng số lượng
-                    existingProduct.quantity += 1;
-                } else {
-                    // Nếu sản phẩm chưa tồn tại, thêm mới
-                    cart.push({
-                        id: productId,
-                        name: name,
-                        price: price,
-                        image: image_url,
-                        quantity: 1
-                    });
-                }
-                
-                // Lưu giỏ hàng vào localStorage
-                localStorage.setItem('cartItems', JSON.stringify(cart));
-                
-                // Hiển thị thông báo
-                alert('Đã thêm sản phẩm vào giỏ hàng!');
-                
-                // Cập nhật số lượng trên icon giỏ hàng
-                updateCartCount();
-                
-                console.log('Giỏ hàng sau khi thêm:', cart);
-                
-            } catch (error) {
-                console.error('Lỗi khi thêm vào giỏ hàng:', error);
-                console.error(error.stack);
+        // Hàm hiển thị thông báo thêm vào giỏ hàng thành công
+        function showSuccessMessage() {
+            const message = document.getElementById('successMessage');
+            message.classList.remove('hidden');
+            message.classList.add('opacity-100', 'translate-y-0');
+            
+            setTimeout(() => {
+                message.classList.remove('opacity-100', 'translate-y-0');
+                message.classList.add('opacity-0', 'translate-y-[-1rem]');
+                setTimeout(() => {
+                    message.classList.add('hidden');
+                }, 300);
+            }, 2000);
+        }
+
+        // Hàm thêm sản phẩm vào giỏ hàng
+        function addToCartWithMessage(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            const existingProduct = cart.find(item => item.name === name);
+            
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
             }
+            
+            localStorage.setItem('cart', JSON.stringify(cart));
+            showSuccessMessage();
         }
 
-        // Hàm cập nhật số lượng giỏ hàng
-        function updateCartCount() {
-            const cartCount = document.getElementById('cartItemCount');
-            const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            if (cartCount) {
-                cartCount.textContent = totalItems;
-            }
-        }
-
-        // Hàm xem chi tiết sản phẩm
-        function viewProductDetail(name) {
-            const encodedName = encodeURIComponent(name);
-            window.location.href = `product-detail.html?name=${encodedName}`;
-        }
-
-        // Hàm tải sản phẩm
+        // Hàm tải và hiển thị sản phẩm chậu cây
         async function loadProducts() {
             try {
-                const response = await fetch('chaucay.json');
-                const data = await response.json();
+                const response = await fetch('http://localhost:3000/api/chaucay');
+                const products = await response.json();
+                
                 const productList = document.getElementById('product-list');
-                
                 productList.innerHTML = '';
-                
-                data.product.forEach(product => {
-                    const productCard = `
-                        <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-                            <img src="${product.image}" 
-                                 alt="${product.name}" 
-                                 class="w-full h-48 object-cover"/>
-                            <div class="p-4">
-                                <h3 class="text-sm font-semibold text-green-800 mb-2 h-12 overflow-hidden">
-                                    ${product.name}
-                                </h3>
-                                <p class="text-green-700 font-bold mb-3">
-                                    ${product.price.toLocaleString('vi-VN')}đ
-                                </p>
-                                <div class="flex gap-2">
-                                    <button onclick="addToCart('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image}')" 
-                                            class="flex-1 flex items-center justify-center bg-green-600 text-white py-2 px-2 rounded-md hover:bg-green-700 transition-colors text-sm">
-                                        <i class="fas fa-cart-plus mr-1"></i>
-                                        Thêm vào giỏ
-                                    </button>
-                                    <button onclick="viewProductDetail('${product.name.replace(/'/g, "\\'")}')"
-                                            class="flex-1 flex items-center justify-center bg-blue-600 text-white py-2 px-2 rounded-md hover:bg-blue-700 transition-colors text-sm">
-                                        <i class="fas fa-info-circle mr-1"></i>
-                                        Xem chi tiết
-                                    </button>
+
+                products.forEach(product => {
+                    if (product.price) { // Chỉ hiển thị sản phẩm có giá
+                        // Thêm xử lý lỗi cho hình ảnh
+                        const fallbackImage = 'images/no-image.jpg'; // Hình ảnh dự phòng khi lỗi
+                        const productCard = `
+                            <div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+                                <img src="${product.image_url}" 
+                                     alt="${product.name}" 
+                                     class="w-full h-48 object-cover"
+                                     onerror="this.onerror=null; this.src='${fallbackImage}'"/>
+                                <div class="p-4">
+                                    <h3 class="text-sm font-semibold text-green-800 mb-2 h-12 overflow-hidden">
+                                        ${product.name}
+                                    </h3>
+                                    <p class="text-green-700 font-bold mb-3">
+                                        ${product.price.toLocaleString('vi-VN')}đ
+                                    </p>
+                                    <div class="flex gap-2">
+                                        <button onclick="addToCartWithMessage('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image_url}')" 
+                                                class="flex-1 flex items-center justify-center bg-green-600 text-white py-2 px-2 rounded-md hover:bg-green-700 transition-colors text-sm">
+                                            <i class="fas fa-cart-plus mr-1"></i>
+                                            Thêm vào giỏ
+                                        </button>
+                                        <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
+                                                class="flex-1 flex items-center justify-center bg-blue-600 text-white py-2 px-2 rounded-md hover:bg-blue-700 transition-colors text-sm">
+                                            <i class="fas fa-info-circle mr-1"></i>
+                                            Xem chi tiết
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    `;
-                    productList.innerHTML += productCard;
+                        `;
+                        productList.innerHTML += productCard;
+                    }
                 });
             } catch (error) {
                 console.error('Lỗi khi tải sản phẩm:', error);
-                console.error(error.stack);
             }
         }
 
-        // Load nav.html
+        // Load nav.html và footer.html
         fetch('nav.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('nav-placeholder').innerHTML = data;
-                // Sau khi load nav xong mới cập nhật số lượng giỏ hàng
-                updateCartCount();
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
             });
 
         // Khởi tạo khi trang được tải
@@ -141,5 +136,6 @@
             loadProducts();
         });
     </script>
+    
 </body>
 </html>

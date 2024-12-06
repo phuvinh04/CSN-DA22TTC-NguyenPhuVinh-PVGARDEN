@@ -32,9 +32,14 @@
 
 			</div>
 
-			<!-- Danh mục cây cảnh -->
-			<h2 class="text-2xl font-bold text-green-800 mb-4">Cây Cảnh</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="plants">
+			<!-- Danh mục sản phẩm -->
+			<h2 class="text-2xl font-bold text-green-800 mb-4">Cây cảnh</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="products">
+			</div>
+
+			<!-- Danh mục xương rồng và sen đá -->
+			<h2 class="text-2xl font-bold text-green-800 mb-4">Xương Rồng và Sen Đá</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="succulent-products">
 			</div>
 
 			<!-- Danh mục chậu cây -->
@@ -42,9 +47,9 @@
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="pots">
 			</div>
 
-			<!-- Danh mục xương rồng và sen đá -->
-			<h2 class="text-2xl font-bold text-green-800 mt-8 mb-4">Xương Rồng và Sen Đá</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="succulent-products">
+			<!-- Danh mục phân bón -->
+			<h2 class="text-2xl font-bold text-green-800 mt-8 mb-4">Phân Bón</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="fertilizer-products">
 			</div>
 
 		</main>
@@ -57,108 +62,181 @@
 			</div>
 		</div>
 
+		<script src="include.js"></script>
+
 		<script>
+			// Hàm hiển thị thông báo thêm vào giỏ hàng thành công
+			function showSuccessMessage() {
+				const message = document.getElementById('successMessage');
+				message.classList.remove('hidden');
+				message.classList.add('opacity-100', 'translate-y-0');
+				
+				setTimeout(() => {
+					message.classList.remove('opacity-100', 'translate-y-0');
+					message.classList.add('opacity-0', 'translate-y-[-1rem]');
+					setTimeout(() => {
+						message.classList.add('hidden');
+					}, 300);
+				}, 2000);
+			}
+
+			// Hàm thêm sản phẩm vào giỏ hàng
+			function addToCartWithMessage(name, price, image) {
+				let cart = JSON.parse(localStorage.getItem('cart')) || [];
+				
+				const existingProduct = cart.find(item => item.name === name);
+				
+				if (existingProduct) {
+					existingProduct.quantity += 1;
+				} else {
+					cart.push({
+						name: name,
+						price: price,
+						image: image,
+						quantity: 1
+					});
+				}
+				
+				localStorage.setItem('cart', JSON.stringify(cart));
+				showSuccessMessage();
+			}
+
+			// Hàm tải và hiển thị sản phẩm
 			async function loadAllProducts() {
 				try {
-					const response = await fetch('data.json');
-					const data = await response.json();
-					
-					// Hiển thị sản phẩm cây cảnh
-					const plantsContainer = document.getElementById('plants');
-					data.products.forEach(product => {
+					// Tải dữ liệu từ các API
+					const [productsResponse, succulentsResponse, potsResponse, fertilizerResponse] = await Promise.all([
+						fetch('http://localhost:3000/api/products'),
+						fetch('http://localhost:3000/api/xuongrong-senda'),
+						fetch('http://localhost:3000/api/chaucay'),
+						fetch('http://localhost:3000/api/phanbon')
+					]);
+
+					// Kiểm tra response
+					if (!productsResponse.ok || !succulentsResponse.ok || !potsResponse.ok || !fertilizerResponse.ok) {
+						throw new Error('Lỗi khi tải dữ liệu');
+					}
+
+					const [productsData, succulentsData, potsData, fertilizerData] = await Promise.all([
+						productsResponse.json(),
+						succulentsResponse.json(),
+						potsResponse.json(),
+						fertilizerResponse.json()
+					]);
+
+					// Hiển thị sản phẩm chung
+					const productsContainer = document.getElementById('products');
+					productsData.forEach(product => {
 						const productCard = `
 							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-								<img alt="${product.name}" class="w-full h-48 object-cover" src="${product.image_url}"/>
+								<img src="${product.image_url}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
 								<div class="p-4">
 									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
-									<p class="text-green-700 font-bold">${product.price.toLocaleString('vi-VN')}đ</p>
+									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
 									<div class="flex space-x-2">
 										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image_url}')" 
-											class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors flex items-center justify-center">
-											<i class="fas fa-shopping-cart mr-2"></i>
-											Thêm vào giỏ
+											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
 										</button>
-										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'" 
-											class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">
-											<i class="fas fa-info-circle mr-2"></i>
-											Xem chi tiết
+										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
+											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+											<i class="fas fa-info-circle mr-2"></i>Chi tiết
 										</button>
 									</div>
 								</div>
 							</div>
 						`;
-						plantsContainer.innerHTML += productCard;
+						productsContainer.insertAdjacentHTML('beforeend', productCard);
 					});
 
-					// Hiển thị sản phẩm chậu cây
+					// Hiển thị xương rồng và sen đá
+					const succulentProducts = document.getElementById('succulent-products');
+					succulentsData.forEach(product => {
+						const productCard = `
+							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+								<img src="${product.image_url}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
+								<div class="p-4">
+									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
+									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
+									<div class="flex space-x-2">
+										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image_url}')" 
+											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
+										</button>
+										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
+											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+											<i class="fas fa-info-circle mr-2"></i>Chi tiết
+										</button>
+									</div>
+								</div>
+							</div>
+						`;
+						succulentProducts.insertAdjacentHTML('beforeend', productCard);
+					});
+
+					// Hiển thị chậu cây
 					const potsContainer = document.getElementById('pots');
-					data.chaucay.forEach(pot => {
+					potsData.forEach(pot => {
 						const potCard = `
 							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-								<img alt="${pot.name}" class="w-full h-48 object-cover" src="${pot.image_url}"/>
+								<img src="${pot.image_url}" alt="${pot.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
 								<div class="p-4">
 									<h3 class="text-lg font-semibold text-green-800 mb-2">${pot.name}</h3>
-									<p class="text-green-700 font-bold">${pot.price.toLocaleString('vi-VN')}đ</p>
+									<p class="text-green-700 font-bold mb-2">${pot.price.toLocaleString('vi-VN')}đ</p>
 									<div class="flex space-x-2">
-										<button onclick="addToCartWithMessage('${pot.name}', ${pot.price}, '${pot.image_url}')" 
-											class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors flex items-center justify-center">
-											<i class="fas fa-shopping-cart mr-2"></i>
-											Thêm vào giỏ
+										<button onclick="addToCartWithMessage('${pot.name}', ${pot.price}, '${pot.image}')"
+											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
 										</button>
-										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(pot.name)}'" 
-											class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">
-											<i class="fas fa-info-circle mr-2"></i>
-											Xem chi tiết
+										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(pot.name)}'"
+											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+											<i class="fas fa-info-circle mr-2"></i>Chi tiết
 										</button>
 									</div>
 								</div>
 							</div>
 						`;
-						potsContainer.innerHTML += potCard;
+						potsContainer.insertAdjacentHTML('beforeend', potCard);
 					});
 
-					// Hiển thị sản phẩm xương rồng và sen đá
-					const succulentProducts = document.getElementById('succulent-products');
-					data['xuongrong-senda'].forEach(product => {
-						if (product.name && product.image) {
-							const price = product.price || 150000; // Giá mặc định 150,000đ
-							const decodedName = product.name.replace(/u00([a-fA-F0-9]{2})/g, (match, p1) => {
-								return String.fromCharCode(parseInt(p1, 16));
-							}).replace(/u1ed|u1ec|u1ea|u0111/g, '');
-							
-							const productCard = `
-								<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-									<img alt="${decodedName}" class="w-full h-48 object-cover" src="${product.image}"/>
-									<div class="p-4">
-										<h3 class="text-lg font-semibold text-green-800 mb-2">${decodedName}</h3>
-										<p class="text-green-700 font-bold">${price.toLocaleString('vi-VN')}đ</p>
-										<div class="flex space-x-2">
-											<button onclick="addToCartWithMessage('${decodedName}', ${price}, '${product.image}')" 
-												class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors flex items-center justify-center">
-												<i class="fas fa-shopping-cart mr-2"></i>
-												Thêm vào giỏ
-											</button>
-											<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(decodedName)}'" 
-												class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">
-												<i class="fas fa-info-circle mr-2"></i>
-												Xem chi tiết
-											</button>
-										</div>
+					// Hiển thị phân bón
+					const fertilizerProducts = document.getElementById('fertilizer-products');
+					fertilizerData.forEach(product => {
+						const productCard = `
+							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+								<img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
+								<div class="p-4">
+									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
+									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
+									<div class="flex space-x-2">
+										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image}')"
+											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
+										</button>
+										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
+											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+											<i class="fas fa-info-circle mr-2"></i>Chi tiết
+										</button>
 									</div>
 								</div>
-							`;
-							succulentProducts.innerHTML += productCard;
-						}
+							</div>
+						`;
+						fertilizerProducts.insertAdjacentHTML('beforeend', productCard);
 					});
+
 				} catch (error) {
-					console.error('Lỗi khi tải sản phẩm:', error);
+					console.error('Lỗi:', error);
+					// Hiển thị thông báo lỗi
+					const errorMessage = document.createElement('div');
+					errorMessage.className = 'text-red-500 text-center mt-4';
+					errorMessage.textContent = 'Không thể tải dữ liệu sản phẩm. Vui lòng thử lại sau.';
+					document.querySelector('main').appendChild(errorMessage);
 				}
 			}
-			
+
+			// Chạy hàm loadAllProducts khi trang đã tải xong
 			document.addEventListener('DOMContentLoaded', loadAllProducts);
 		</script>
-
-		<script src="include.js"></script>
 
 	</body>
 
