@@ -48,6 +48,25 @@ app.get('/api/phanbon', (req, res) => {
     }
 });
 
+app.get('/api/dungcu', (req, res) => {
+    try {
+        const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data.json'), 'utf8'));
+        res.json(data.dungcu);
+    } catch (error) {
+        res.status(500).json({ error: 'Lỗi khi đọc dữ liệu dụng cụ' });
+    }
+});
+
+app.get('/api/dat', (req, res) => {
+    try {
+        const data = JSON.parse(fs.readFileSync(path.join(__dirname, 'data.json'), 'utf8'));
+        res.json(data.dat);
+    } catch (error) {
+        res.status(500).json({ error: 'Lỗi khi đọc dữ liệu đất' });
+    }
+});
+
+
 // Khởi động server
 app.listen(PORT, () => {
     console.log(`Server đang chạy tại http://localhost:${PORT}`);

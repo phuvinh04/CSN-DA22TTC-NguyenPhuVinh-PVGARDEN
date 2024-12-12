@@ -60,13 +60,21 @@
         // Tải và hiển thị sản phẩm từ API
         async function loadAllProducts() {
             try {
-                const response = await fetch('http://localhost:3000/api/products');
-                if (!response.ok) {
+                // Tải cả sản phẩm và xương rồng sen đá
+                const [productsResponse, xuongrongResponse] = await Promise.all([
+                    fetch('http://localhost:3000/api/products'),
+                    fetch('http://localhost:3000/api/xuongrong-senda')
+                ]);
+
+                if (!productsResponse.ok || !xuongrongResponse.ok) {
                     throw new Error('Không thể tải dữ liệu sản phẩm');
                 }
 
-                const data = await response.json();
-                const allProducts = data || [];
+                const productsData = await productsResponse.json();
+                const xuongrongData = await xuongrongResponse.json();
+
+                // Gộp 2 mảng sản phẩm
+                const allProducts = [...(productsData || []), ...(xuongrongData || [])];
                 
                 // Trộn ngẫu nhiên và lấy 15 sản phẩm
                 const shuffledProducts = allProducts.sort(() => Math.random() - 0.5).slice(0, 15);

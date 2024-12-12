@@ -9,56 +9,61 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="flex flex-col min-h-screen">
-
-    <!-- Header -->
-    <header class="container mx-auto my-3">
-        <div class="flex items-center">
-            <a href="index.html">
-                <img id="logo" src="images/logo.jpg" alt="Logo PV Garden" class="w-12 h-12">
-            </a>
-            <h1 class="ml-2 text-2xl font-bold">PV GARDEN</h1>
+<body class="flex flex-col min-h-screen px-4 md:px-8">
+    <!-- Banner -->
+    <div class="relative h-96 overflow-hidden">
+        <img src="https://mowgarden.com/wp-content/uploads/2023/07/cay-kim-ngan-3-than-mowgarden-800x960.jpg" alt="Banner" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <h1 class="text-5xl font-bold text-white text-center">Chào Mừng Đến Với PV GARDEN</h1>
         </div>
-    </header>
-
-
+    </div>
 
     <!-- Giới thiệu -->
-    <section class="intro my-8 container mx-auto px-4">
+    <section class="intro my-8 container mx-auto px-4 md:px-8">
         <h2 class="text-3xl font-bold mb-4">Giới thiệu</h2>
-        <div class="space-y-4">
-            <p class="text-gray-700">
-                Chào mừng bạn đến với trang web chuyên cung cấp thông tin, kiến thức và sản phẩm về cây cảnh mini!
-                Chúng tôi tự hào là điểm đến lý tưởng cho những ai yêu thích nghệ thuật cây xanh. Tại đây, bạn sẽ
-                khám phá vô vàn loại cây cảnh độc đáo, từ những cây trang trí bàn làm việc cho đến các loại bonsai
-                mang giá trị phong thủy cao.
-            </p>
-            <h1 class="text-4xl font-bold mb-4">Chào Mừng Đến Với Thế Giới Cây Cảnh Mini Tại PVGRADEN</h1>
-            <p class="text-gray-700">Bạn yêu thích vẻ đẹp của cây xanh nhưng lại không có nhiều không gian? <strong>PVGRADEN</strong> là điểm đến hoàn hảo cho những ai đam mê cây cảnh mini! Chúng tôi cung cấp một bộ sưu tập đa dạng các loại cây cảnh mini dễ thương, giúp bạn tạo ra không gian sống xanh mát và đầy sức sống ngay tại nhà hoặc văn phòng.</p>
-        
-            <h2 class="text-2xl font-bold mt-6 mb-2">Giới Thiệu Về PVGRADEN</h2>
-            <p class="text-gray-700">Tại <strong>PVGRADEN</strong>, chúng tôi hiểu rằng không phải ai cũng có đủ không gian cho một khu vườn lớn. Vì vậy, chúng tôi tập trung vào việc mang đến cho bạn những lựa chọn cây cảnh mini lý tưởng, từ các loại như cây xương rồng, sen đá đến các loại cây bonsai nhỏ xinh. Chúng tôi cam kết cung cấp những sản phẩm chất lượng, an toàn và thân thiện với môi trường.</p>
-        
-            <h2 class="text-2xl font-bold mt-6 mb-2">Sản Phẩm Đặc Sắc</h2>
-            <p class="text-gray-700">Dưới đây là một số sản phẩm nổi bật mà chúng tôi cung cấp:</p>
-            <ul class="list-disc pl-5 space-y-2 text-gray-700">
-                <li><strong>Cây Xương Rồng:</strong> Với hình dáng độc đáo và dễ chăm sóc, cây xương rồng là lựa chọn hoàn hảo cho những ai bận rộn.</li>
-                <li><strong>Sen Đá:</strong> Những loại sen đá nhỏ nhắn, đầy màu sắc không chỉ đẹp mắt mà còn giúp thanh lọc không khí.</li>
-                <li><strong>Cây Bonsai Mini:</strong> Tạo điểm nhấn nghệ thuật cho không gian sống của bạn với các loại bonsai tinh tế.</li>
-                <li><strong>Cây Thủy Sinh:</strong> Một lựa chọn mới mẻ cho những ai yêu thích nước và muốn tạo không gian sống động.</li>
-            </ul>
-        
-            <h2 class="text-2xl font-bold mt-6 mb-2">Hỗ Trợ Chăm Sóc</h2>
-            <p class="text-gray-700">Chúng tôi không chỉ cung cấp sản phẩm, mà còn muốn bạn trở thành một người chăm sóc cây cảnh giỏi. Hãy tham gia vào các bài viết hướng dẫn chăm sóc cây, mẹo tưới nước và cách bố trí cây trong không gian sống để cây của bạn luôn xanh tươi và khỏe mạnh.</p>
-        
-            <h2 class="text-2xl font-bold mt-6 mb-2">Kết Nối Với Chúng Tôi</h2>
-            <p class="text-gray-700">Khám phá vẻ đẹp của cây cảnh mini ngay hôm nay tại <strong>PVGRADEN</strong>! Hãy để chúng tôi giúp bạn biến không gian của mình trở nên tươi mát và tràn đầy sức sống. Chúng tôi luôn sẵn sàng chào đón bạn!</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+                <p class="text-gray-700">
+                    Chào mừng bạn đến với trang web chuyên cung cấp thông tin, kiến thức và sản phẩm về cây cảnh mini!
+                    Chúng tôi tự hào là điểm đến lý tưởng cho những ai yêu thích nghệ thuật cây xanh.
+                </p>
+                <img src="https://mowgarden.com/wp-content/uploads/2024/03/tung-bong-lai-chu-su-de-ban-mowgarden-800x960.jpg" alt="Cây cảnh mini" class="rounded-lg shadow-lg">
+            </div>
+            <div class="space-y-4">
+                <h1 class="text-4xl font-bold mb-4">Thế Giới Cây Cảnh Mini Tại PVGRADEN</h1>
+                <p class="text-gray-700">Bạn yêu thích vẻ đẹp của cây xanh nhưng lại không có nhiều không gian? <strong>PVGRADEN</strong> là điểm đến hoàn hảo cho những ai đam mê cây cảnh mini!</p>
+                <img src="https://mowgarden.com/wp-content/uploads/2023/07/cay-phat-tai-bo-mowgarden-800x960.jpg" alt="Cây phát tài" class="rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Sản Phẩm Đặc Sắc</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://mowgarden.com/wp-content/uploads/2023/07/luoi-ho-nga-voi-mowgarden-800x960.jpg" alt="Xương rồng" class="rounded-lg shadow-lg">
+                    <img src="https://mowgarden.com/wp-content/uploads/2023/07/co-lan-chi-de-ban-mowgaden-800x960.jpg" alt="Sen đá" class="rounded-lg shadow-lg">
+                </div>
+                <ul class="list-disc pl-5 space-y-2 text-gray-700 mt-4">
+                    <li><strong>Cây Xương Rồng:</strong> Với hình dáng độc đáo và dễ chăm sóc</li>
+                    <li><strong>Sen Đá:</strong> Những loại sen đá nhỏ nhắn, đầy màu sắc</li>
+                    <li><strong>Cây Bonsai Mini:</strong> Tạo điểm nhấn nghệ thuật cho không gian</li>
+                    <li><strong>Cây Thủy Sinh:</strong> Một lựa chọn mới mẻ và độc đáo</li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-2xl font-bold mb-4">Hỗ Trợ Chăm Sóc</h2>
+                <img src="https://mowgarden.com/wp-content/uploads/2023/07/trau-ba-de-vuong-do-de-ban-mowgarden-800x960.jpg" alt="Chăm sóc cây" class="rounded-lg shadow-lg mb-4">
+                <p class="text-gray-700">Chúng tôi không chỉ cung cấp sản phẩm, mà còn muốn bạn trở thành một người chăm sóc cây cảnh giỏi. Hãy tham gia vào các bài viết hướng dẫn chăm sóc cây, mẹo tưới nước và cách bố trí cây trong không gian sống.</p>
+            </div>
+        </div>
+
+        <div class="mt-12 text-center">
+            <h2 class="text-2xl font-bold mb-4">Kết Nối Với Chúng Tôi</h2>
+            <p class="text-gray-700">Khám phá vẻ đẹp của cây cảnh mini ngay hôm nay tại <strong>PVGRADEN</strong>! Hãy để chúng tôi giúp bạn biến không gian của mình trở nên tươi mát và tràn đầy sức sống.</p>
         </div>
     </section>
 
-
-
-    <!-- Font Awesome for icons -->
+    
    
 
     <!-- Include script -->

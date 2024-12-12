@@ -1,4 +1,66 @@
 {
+  "dungcu": [
+    {
+      "name": "Cưa cắt cây cảnh (bonsai) 350mm NN0022",
+      "price": 100000,
+      "image": "images/cuacatcaycanh.jpg"
+    },
+    {
+      "name": "Cặp kéo cắt cành và bấm răm 100k + ship",
+      "price": 100000,
+      "image": "images/keocatcaycanh"
+    },
+    {
+      "name": "Cưa Top cán gỗ 270mm",
+      "price": 35000,
+      "image": "images/cuacango.jpg"
+    },
+    {
+      "name": "Cưa Gỗ Cầm Tay Top 350mm giá rẻ",
+      "price": 90000,
+      "image": "images/cuacamtay.jpg"
+    },
+    {
+      "name": "Kéo cắt cây cảnh V8 và kéo bấm răm cây cảnh",
+      "price": 130000,
+      "image": "images/keov8.jpeg"
+    },
+    {
+      "name": "Cạp xéo 210mm cạp cây bonsai",
+      "price": 360000,
+      "image": "images/capxeo.jpeg"
+    },
+    {
+      "name": "Cặp kéo cắt cành Top và kéo bấm răm",
+      "price": 130000,
+      "image": "images/keobamram.jpeg"
+    },
+    {
+      "name": "Kéo chiết cành loại không răng cưa",
+      "price": 50000,
+      "image": "images/rangkhongcua.jpeg"
+    },
+    {
+      "name": "Kéo cắt cây cảnh bonsai AOHO",
+      "price": 100000,
+      "image": "images/keobonsai.jpeg"
+    },
+    {
+      "name": "Cưa barker lưỡi đen 350mm",
+      "price": 100000,
+      "image": "images/cuabarker.jpeg"
+    },
+    {
+      "name": "kéo cắt cành quả táo , cắt cây cảnh",
+      "price": 95000,
+      "image": "images/keocatcanhtao.jpeg"
+    },
+    {
+      "name": "kéo cắt cành cây cảnh Sada-210 cao cấp",
+      "price": 110000,
+      "image": "images/sada.jpeg"
+    }
+  ],
   "products": [
     {
       "name": "Cây tùng bồng lai tiểu cảnh chậu sứ thổ cẩm TUBO005",
@@ -7,15 +69,15 @@
       "description": "Cây tùng bồng lai mini trang trí bàn làm việc, mang lại không khí tươi mát và may mắn"
     },
     {
-      "name": "Cây phát tài bộ 5 - Cây thiết mộc lan CPTK001", 
-      "price": 750000,
+      "name": "Cây phát tài bộ 5 - Cây thiết mộc lan CPTK001",
+      "price": 750000, 
       "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-phat-tai-bo-mowgarden-800x960.jpg",
-      "description": "Bộ 5 cây phát tài thiết mộc lan tượng trưng cho tài lộc và thịnh vượng"
+      "description": "Bộ 5 cây phát tài thiết mộc lan tượng trưng cho tài lộc và thịnh vư��ng"
     },
     {
       "name": "Cây kim ngân ba thân để bàn chậu sứ gấu BearBrick LONI040",
       "price": 280000,
-      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-kim-ngan-3-than-mowgarden-800x960.jpg",
+      "image_url": "https://mowgarden.com/wp-content/uploads/2023/07/cay-kim-ngan-3-than-mowgarden-800x960.jpg", 
       "description": "Cây kim ngân 3 thân phong thủy trong chậu sứ hình gấu dễ thương, thích hợp trang trí bàn làm việc"
     },
     {
@@ -151,7 +213,7 @@
       "description": "Cây hạnh phúc một thân dáng cổ thụ trong chậu sứ, mang đến sự may mắn"
     }
   ],
-  
+
   "chaucay": [
     {
       "name": "Chậu đá mài Granito dáng trụ vót màu trắng XMDM018",
@@ -275,8 +337,6 @@
     }
   ],
 
-  
-
   "xuongrong-senda": [
     {
       "name": "Sen Đá Mini Giá 10k",
@@ -284,59 +344,48 @@
       "price": 35000,
       "description": "Sen đá mini xinh xắn, thích hợp trang trí bàn học, góc làm việc"
     },
-    {
-      "name": "Cây Xương Rồng Tai Thỏ Mini",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-tai-tho-mini_cay-xuong-rong-tai-tho-mini-4.jpg",
-      "price": 42000,
-      "description": "Xương rồng tai thỏ mini dễ thương, dễ chăm sóc"
-    },
+    
     {
       "name": "Cây Sen Đá Mỏ Vịt",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-mo-vit_cay-sen-da-mo-vit-7.jpg",
       "price": 38000,
+      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-mo-vit_cay-sen-da-mo-vit-7.jpg",
       "description": "Sen đá mỏ vịt với lá hình mỏ vịt độc đáo, dễ sinh trưởng"
     },
     {
       "name": "Cây Xương Rồng Astro Vàng",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-astro-vang_xuong-rong-astro-vang-6.jpg",
       "price": 45000,
+      "image_url": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-astro-vang_xuong-rong-astro-vang-6.jpg",
       "description": "Xương rồng Astro với màu vàng đặc trưng, tạo điểm nhấn"
     },
     {
       "name": "Cây Xương Rồng Hồng Ngọc",
-      "image_url": "https://chohoaonline.com/UserFiles/image/thumb_cay-xuong-rong-hong-ngoc_cay-xuong-rong-hong-ngoc-7.jpg",
       "price": 33000,
+      "image_url": "https://chohoaonline.com/UserFiles/image/thumb_cay-xuong-rong-hong-ngoc_cay-xuong-rong-hong-ngoc-7.jpg",
       "description": "Xương rồng hồng ngọc với màu sắc rực rỡ, đẹp mắt"
     },
     {
       "name": "Cây Sen Đá Hoa Cúc",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-hoa-cuc_cay-sen-da-hoa-cuc-7.jpg",
       "price": 47000,
+      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-hoa-cuc_cay-sen-da-hoa-cuc-7.jpg",
       "description": "Sen đá hoa cúc với cánh hoa xếp tầng như hoa cúc"
     },
     {
       "name": "Cây Xương Rồng Thạch Trụ Thiên",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-thach-tru-thien_cay-xuong-rong-thach-tru-thien-4.jpg",
       "price": 39000,
+      "image_url": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-thach-tru-thien_cay-xuong-rong-thach-tru-thien-4.jpg",
       "description": "Xương rồng thạch trụ thiên dáng cao, thẳng đứng ấn tượng"
     },
     {
       "name": "Cây Sen Đá Nâu",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-nau_chau-cay-sen-da-nau-1.jpg",
       "price": 44000,
+      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-nau_chau-cay-sen-da-nau-1.jpg",
       "description": "Sen đá nâu với màu sắc độc đáo, dễ chăm sóc"
     },
     {
       "name": "Cây Sen Đá Quan Âm",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-quan-am_cay-sen-da-phat-ba-3.jpg",
       "price": 36000,
+      "image_url": "https://chohoaonline.com/UserFiles/image/cay-sen-da-quan-am_cay-sen-da-phat-ba-3.jpg",
       "description": "Sen đá quan âm với lá xếp tầng đẹp mắt, mang ý nghĩa tâm linh"
-    },
-    {
-      "name": "Cây Xương Rồng Ba Cạnh",
-      "image_url": "https://chohoaonline.com/UserFiles/image/cay-xuong-rong-ba-canh_cay-xuong-rong-ba-canh-8.jpg",
-      "price": 41000,
-      "description": "Xương rồng có thân hình tam giác đặc biệt, dễ chăm sóc"
     },
     {
       "name": "Cây Xương Rồng Bông Gòn", 
@@ -422,158 +471,176 @@
       "price": 42000,
       "description": "Xương rồng có 8 cạnh đều đặn, mang ý nghĩa may mắn"
     }
-  ]
-,
+  ],
+
   "phanbon": [
     {
       "name": "Chế phẩm EM ( ủ phân và rác thải ) EMUNIV - Gói 200 gram",
       "price": 39000,
-      "image": "https://product.hstatic.net/1000269461/product/thiet_ke_chua_co_ten_d429886c172545129286419ecce70009_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/thiet_ke_chua_co_ten_d429886c172545129286419ecce70009_medium.png",
       "description": "Chế phẩm vi sinh giúp ủ phân và xử lý rác thải hữu cơ"
     },
     {
       "name": "Thuốc kích thích sinh trưởng cây trồng và hoa kiểng ATONIK", 
       "price": 10500,
-      "image": "https://product.hstatic.net/1000269461/product/116_71ed088a569c496fa32189f2e574a997_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/116_71ed088a569c496fa32189f2e574a997_medium.png",
       "description": "Kích thích tăng trưởng và phát triển cho cây trồng"
     },
     {
       "name": "Phân bò đã qua xử lý Tribat 10dm3",
       "price": 29000,
-      "image": "https://product.hstatic.net/1000269461/product/11_e91236cef9c14acbafdc2e50684524d1_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/11_e91236cef9c14acbafdc2e50684524d1_medium.png",
       "description": "Phân bò hữu cơ đã được xử lý vi sinh"
     },
     {
       "name": "Phân Bón Lá Kích Ra Rễ Cực Mạnh N3M",
       "price": 28000,
-      "image": "https://product.hstatic.net/1000269461/product/32_bc6fbf76b5c544f59c1b89374be53d86_medium.png", 
+      "image_url": "https://product.hstatic.net/1000269461/product/32_bc6fbf76b5c544f59c1b89374be53d86_medium.png", 
       "description": "Kích thích ra rễ nhanh và mạnh cho cây"
     },
     {
       "name": "Phân lân Lâm Thao - Supe Lân",
       "price": 10000,
-      "image": "https://product.hstatic.net/1000269461/product/69_8b644897265c41c0845b0c66e7a85388_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/69_8b644897265c41c0845b0c66e7a85388_medium.png",
       "description": "Cung cấp lân cho cây trồng"
     },
     {
       "name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 2kg",
       "price": 28000,
-      "image": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_2kg_4d74fe8899c548f6b10cc76e224f97fc_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_2kg_4d74fe8899c548f6b10cc76e224f97fc_medium.jpg",
       "description": "Phân trùn quế hữu cơ đã qua xử lý"
     },
     {
       "name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 5kg",
       "price": 63000,
-      "image": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_5kg_95137ac76fff467689882a06d974fdcd_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_5kg_95137ac76fff467689882a06d974fdcd_medium.jpg",
       "description": "Phân trùn quế hữu cơ đóng gói 5kg"
     },
     {
       "name": "Nấm đối kháng Trichoderma Điền Trang - Gói 1 Kg",
       "price": 69000,
-      "image": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000_-_nam_doi_khang_trichoderma_dien_trang_-_goi_1_kg_32a6ee67cddb4424be1b2e8276fb6420_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/_ko_logo_-_1000x1000_-_nam_doi_khang_trichoderma_dien_trang_-_goi_1_kg_32a6ee67cddb4424be1b2e8276fb6420_medium.jpg",
       "description": "Nấm đối kháng phòng trừ bệnh cho cây"
     },
     {
       "name": "Phân trùn quế SFARM viên nén tan chậm dành cho Lan",
       "price": 43000,
-      "image": "https://product.hstatic.net/1000269461/product/tan_cham-trun_vien_1kg_c7f3ff3069c346799449f5128e8ac777_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/tan_cham-trun_vien_1kg_c7f3ff3069c346799449f5128e8ac777_medium.png",
       "description": "Phân viên nén chuyên dùng cho lan"
     },
     {
       "name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 10kg",
       "price": 110000,
-      "image": "https://product.hstatic.net/1000269461/product/ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_10kg_0ef13b2cecd644139e4054e099241ac3_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_10kg_0ef13b2cecd644139e4054e099241ac3_medium.jpg",
       "description": "Phân trùn quế đóng gói 10kg"
     },
     {
       "name": "Chế phẩm vi sinh EMZEO - Gói 200gr",
       "price": 31000,
-      "image": "https://product.hstatic.net/1000269461/product/che-pham-vi-sinh-emzeo_f7a775ee6526458f89203a47b035bc03_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/che-pham-vi-sinh-emzeo_f7a775ee6526458f89203a47b035bc03_medium.jpg",
       "description": "Vi sinh vật có ích cho đất trồng"
     },
     {
       "name": "Phân dê qua xử lý hàng chuẩn - 1 túi",
       "price": 22000,
-      "image": "https://product.hstatic.net/1000269461/product/phan_tan_cham_tot_cho_lan___3__180e817cccc74c2eaa60c35daf22aa4c_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/phan_tan_cham_tot_cho_lan___3__180e817cccc74c2eaa60c35daf22aa4c_medium.png",
       "description": "Phân dê xử lý cho lan và hoa hồng"
     },
     {
       "name": "Mật rỉ đường SFARM chất lượng cao - 1 lít",
       "price": 35000,
-      "image": "https://product.hstatic.net/1000269461/product/mat-ri_a78ec087dc824cfab2a7652f42222b2d_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/mat-ri_a78ec087dc824cfab2a7652f42222b2d_medium.jpg",
       "description": "Bổ sung dinh dưỡng cho cây trồng"
     },
     {
       "name": "Phân bò ủ vi sinh SFARM đã qua xử lý",
       "price": 55000,
-      "image": "https://product.hstatic.net/1000269461/product/phan-bo-sfram_799da5afda2546d6a800f9d8bedbc0fb_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/phan-bo-sfram_799da5afda2546d6a800f9d8bedbc0fb_medium.jpg",
       "description": "Phân bò ủ với vi sinh vật có ích"
     },
     {
       "name": "Phân NPK Đầu Trâu 20-20-15+TE (HCM)",
       "price": 35000,
-      "image": "https://product.hstatic.net/1000269461/product/phan-bon-dau-trau-npk-20-20-15_8543e1690b6b4b5c9948a479b51237e7_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/phan-bon-dau-trau-npk-20-20-15_8543e1690b6b4b5c9948a479b51237e7_medium.jpg",
       "description": "Phân NPK đa năng cho cây trồng"
     },
     {
       "name": "Phân bón đầu trâu tan chậm NB NPK 13-13-13+TE",
       "price": 30000,
-      "image": "https://product.hstatic.net/1000269461/product/nnp_-_sp_ko_logo_-_502x502-phan_bon_dau_trau_nb_13-13-13_te_fd4b5acbd0694d0091be0866afe2e946_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/nnp_-_sp_ko_logo_-_502x502-phan_bon_dau_trau_nb_13-13-13_te_fd4b5acbd0694d0091be0866afe2e946_medium.jpg",
       "description": "Phân tan chậm cho hoa và cây ăn quả"
     },
     {
       "name": "Phân trùn quế cao cấp Sfarm Pb01 - Bao 40kg",
       "price": 379000,
-      "image": "https://product.hstatic.net/1000269461/product/ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_40kg_28a05bb66cdd4fd6809d61be0e7f296b_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/ko_logo_-_1000x1000-phan_trun_que__da_qua_xu_ly__sfarm_pb01_-_bao_40kg_28a05bb66cdd4fd6809d61be0e7f296b_medium.jpg",
       "description": "Phân trùn quế đóng gói lớn 40kg"
     },
     {
       "name": "Phân bón lá đậm đặc cao cấp VITAMIN B1 GROWMORE",
       "price": 17000,
-      "image": "https://product.hstatic.net/1000269461/product/template_ctkm_t7__5__dfc878a6e6dd45d3aaa33d1a9b80df49_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/template_ctkm_t7__5__dfc878a6e6dd45d3aaa33d1a9b80df49_medium.png",
       "description": "Bổ sung vitamin B1 cho cây"
     },
     {
       "name": "Phân hữu cơ Úc đậm đặc dạng viên BOUNCE BACK",
       "price": 29000,
-      "image": "https://product.hstatic.net/1000269461/product/bounce-1g_04e1a72d2a2242c299c4b2ad245c0d3b_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/bounce-1g_04e1a72d2a2242c299c4b2ad245c0d3b_medium.jpg",
       "description": "Phân hữu cơ nhập khẩu từ Úc"
     },
     {
       "name": "Phân Đạm UREA Phú Mỹ",
       "price": 22000,
-      "image": "https://product.hstatic.net/1000269461/product/phan-bon-ure-dam-phu-my_89c43f2bfccb45babe76bee869033818_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/phan-bon-ure-dam-phu-my_89c43f2bfccb45babe76bee869033818_medium.jpg",
       "description": "Cung cấp đạm cho cây trồng"
     },
     {
       "name": "Chế phẩm nấm đối kháng Trichoderma Plus Humic Sfarm - Gói 1kg",
       "price": 83000,
-      "image": "https://product.hstatic.net/1000269461/product/dgt-_tricho_humic_-_pc_3-mat_truoc_22062023_7f069e309f824f6c8e66245a9d52f496_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/dgt-_tricho_humic_-_pc_3-mat_truoc_22062023_7f069e309f824f6c8e66245a9d52f496_medium.png",
       "description": "Nấm đối kháng kết hợp humic acid"
     },
     {
       "name": "Phân bón đầu trâu BĐ-MK 20-20-15",
       "price": 49000,
-      "image": "https://product.hstatic.net/1000269461/product/phan_dau_trau_15_15_20_te_1eb79741c0b94071be0c841141ccb7d6_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/phan_dau_trau_15_15_20_te_1eb79741c0b94071be0c841141ccb7d6_medium.png",
       "description": "Chuyên dùng cho rau màu và hoa kiểng"
     },
     {
       "name": "Bánh dầu đậu phộng LAVAMIX dạng bột - Gói 1kg",
       "price": 35000,
-      "image": "https://product.hstatic.net/1000269461/product/banh-dau-dau-phong-1kg_b496f7d5563343548a3030abad2b4dfa_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/banh-dau-dau-phong-1kg_b496f7d5563343548a3030abad2b4dfa_medium.jpg",
       "description": "Bổ sung dinh dưỡng từ đậu phộng"
     },
     {
       "name": "Phân bón hỗn hợp NPK MINRO 15-5-20",
       "price": 11000,
-      "image": "https://product.hstatic.net/1000269461/product/88_004acfc95bd148f0b841a34a620b208d_medium.png",
+      "image_url": "https://product.hstatic.net/1000269461/product/88_004acfc95bd148f0b841a34a620b208d_medium.png",
       "description": "Phân NPK cân đối cho cây trồng"
     },
     {
       "name": "Chất dưỡng hoa lâu tàn Chrysal",
       "price": 3500,
-      "image": "https://product.hstatic.net/1000269461/product/duong-chat-hoa-lau-tan-chryal_3b0a9b44c241431f8b8159cf1c3f0adc_large_97b8ad14baf7496f8c90704814c72282_medium.jpg",
+      "image_url": "https://product.hstatic.net/1000269461/product/duong-chat-hoa-lau-tan-chryal_3b0a9b44c241431f8b8159cf1c3f0adc_large_97b8ad14baf7496f8c90704814c72282_medium.jpg",
       "description": "Giúp hoa tươi lâu hơn"
+    }
+  ],
+
+  "dat": [
+    {
+      "name": "Giá thể trồng hoa cao cấp Ficoco",
+      "price": 85000,
+      "image": "https://makagarden.vn/wp-content/uploads/2022/12/gia-the-trong-hoa-cao-cap-ficoco-cover-makagarden-600x600.jpg"
+    },
+    {
+      "name": "Giá thể trồng cây đa dụng Ficoco", 
+      "price": 55000,
+      "image": "https://makagarden.vn/wp-content/uploads/2023/09/gia-the-trong-cay-da-dung-ficoco-maka-garden-1-600x600.jpg"
+    },
+    {
+      "name": "Lớp phủ hữu cơ Namix",
+      "price": 50000,
+      "image": "https://makagarden.vn/wp-content/uploads/2021/06/lop-phu-huu-co-namix-cover2-600x600.jpg"
     }
   ]
 }

@@ -1,0 +1,115 @@
+<html lang="vi">
+
+	<head>
+
+		<meta charset="utf-8"/>
+
+		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+		<link rel="icon" type="image/x-icon" href="images/logo.jpg" />
+		<title>Đất Trồng Cây - PV GARDEN</title>
+
+		<script src="https://cdn.tailwindcss.com">
+
+		</script>
+
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+	</head>
+
+	<body class="bg-green-50 font-sans">
+
+		<main class="container mx-auto px-4 py-8 mt-8">
+
+			<div class="text-center mb-8">
+
+				<h1 class="text-4xl font-bold text-green-800 mb-4">Đất Trồng Cây</h1>
+
+				<p class="text-xl text-green-700">Các loại đất trồng chất lượng cao cho vườn của bạn.</p>
+
+			</div>
+
+			<!-- Danh mục đất trồng -->
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="tool-products">
+			</div>
+
+		</main>
+
+		<!-- Thông báo thêm vào giỏ hàng thành công -->
+		<div id="successMessage" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden opacity-0 transition-all duration-300 transform translate-y-[-1rem] z-50">
+			<div class="flex items-center">
+				<i class="fas fa-check-circle mr-2"></i>
+				<span>Thêm vào giỏ hàng thành công!</span>
+			</div>
+		</div>
+
+		<script>
+			async function loadToolProducts() {
+				try {
+					// Dữ liệu mẫu cho đất trồng
+					const datData = [
+						{
+							name: "Giá thể trồng hoa cao cấp Ficoco",
+							price: 85000,
+							image: "https://makagarden.vn/wp-content/uploads/2022/12/gia-the-trong-hoa-cao-cap-ficoco-cover-makagarden-600x600.jpg"
+						},
+						{
+							name: "Giá thể trồng cây đa dụng Ficoco",
+							price: 55000, 
+							image: "https://makagarden.vn/wp-content/uploads/2023/09/gia-the-trong-cay-da-dung-ficoco-maka-garden-1-600x600.jpg"
+						},
+						{
+							name: "Lớp phủ hữu cơ Namix",
+							price: 50000,
+							image: "https://makagarden.vn/wp-content/uploads/2021/06/lop-phu-huu-co-namix-cover2-600x600.jpg"
+						}
+					];
+					
+					// Hiển thị sản phẩm đất
+					const toolContainer = document.getElementById('tool-products');
+					if (!datData || datData.length === 0) {
+						toolContainer.innerHTML = '<p class="text-center col-span-full text-gray-500">Không có sản phẩm nào</p>';
+						return;
+					}
+
+					// Xóa nội dung cũ trước khi thêm sản phẩm mới
+					toolContainer.innerHTML = '';
+
+					datData.forEach(product => {
+						const productCard = `
+							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+								<img alt="${product.name}" class="w-full h-48 object-cover" src="${product.image}" onerror="this.src='images/image-not-found.jpg'"/>
+								<div class="p-4">
+									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
+									<p class="text-green-700 font-bold">${product.price.toLocaleString('vi-VN')}đ</p>
+									<div class="flex space-x-2">
+										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image}')" 
+											class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors flex items-center justify-center">
+											<i class="fas fa-shopping-cart mr-2"></i>
+											Thêm vào giỏ
+										</button>
+										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'" 
+											class="mt-3 w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors flex items-center justify-center">
+											<i class="fas fa-info-circle mr-2"></i>
+											Xem chi tiết
+										</button>
+									</div>
+								</div>
+							</div>
+						`;
+						toolContainer.innerHTML += productCard;
+					});
+				} catch (error) {
+					console.error('Lỗi khi tải sản phẩm đất:', error);
+					const toolContainer = document.getElementById('tool-products');
+					toolContainer.innerHTML = '<p class="text-center col-span-full text-red-500">Đã xảy ra lỗi khi tải sản phẩm</p>';
+				}
+			}
+			
+			document.addEventListener('DOMContentLoaded', loadToolProducts);
+		</script>
+
+		<script src="include.js"></script>
+
+	</body>
+
+</html>
