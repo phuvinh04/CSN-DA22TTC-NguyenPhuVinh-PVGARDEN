@@ -70,32 +70,6 @@
 </header>
 
 <div class="pt-16"></div>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-      // Lấy dữ liệu từ localStorage
-      const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-      
-      // Tính tổng số lượng sản phẩm
-      const totalQuantity = cart.reduce((total, item) => total + (item.quantity || 0), 0);
-      
-      // Cập nhật số lượng trên nav
-      const cartCount = document.getElementById('cartItemCount');
-      if (cartCount) {
-          cartCount.textContent = totalQuantity;
-      }
-  });
-  
-  // Lắng nghe sự thay đổi của localStorage
-  window.addEventListener('storage', function(e) {
-      if (e.key === 'cartItems') {
-          const cart = JSON.parse(e.newValue || '[]');
-          const totalQuantity = cart.reduce((total, item) => total + (item.quantity || 0), 0);
-          const cartCount = document.getElementById('cartItemCount');
-          if (cartCount) {
-              cartCount.textContent = totalQuantity;
-          }
-      }
-  });
-  </script>
+
 </body>
 </html>

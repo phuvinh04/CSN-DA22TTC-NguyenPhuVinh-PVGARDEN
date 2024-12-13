@@ -66,14 +66,16 @@
 
 			// Hàm thêm sản phẩm vào giỏ hàng
 			function addToCartWithMessage(name, price, image) {
-				let cart = JSON.parse(localStorage.getItem('cart')) || [];
+				let cart = JSON.parse(localStorage.getItem('cartItems')) || []; // Sửa 'cart' thành 'cartItems'
 				
-				const existingProduct = cart.find(item => item.name === name);
+				const productId = name.toLowerCase().replace(/\s+/g, '-'); // Tạo ID cho sản phẩm
+				const existingProduct = cart.find(item => item.id === productId);
 				
 				if (existingProduct) {
 					existingProduct.quantity += 1;
 				} else {
 					cart.push({
+						id: productId,
 						name: name,
 						price: price,
 						image: image,
@@ -81,7 +83,8 @@
 					});
 				}
 				
-				localStorage.setItem('cart', JSON.stringify(cart));
+				localStorage.setItem('cartItems', JSON.stringify(cart)); // Sửa 'cart' thành 'cartItems'
+				updateCartCount(); // Cập nhật số lượng hiển thị
 				showSuccessMessage();
 			}
 
@@ -147,24 +150,14 @@
 				}
 			}
 			
-			// Load nav và footer trước khi tải sản phẩm
-			fetch('nav.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('nav-placeholder').innerHTML = data;
-				})
-				.catch(error => console.error('Lỗi khi tải navigation:', error));
-
-			fetch('footer.html')
-				.then(response => response.text())
-				.then(data => {
-					document.getElementById('footer-placeholder').innerHTML = data;
-				})
-				.catch(error => console.error('Lỗi khi tải footer:', error));
+			
 
 			// Đợi DOM load xong và tải sản phẩm
 			document.addEventListener('DOMContentLoaded', loadProducts);
 		</script>
+
+		<script src="include.js"></script>
+		<script src="cart.js"></script>
 
 	</body>
 

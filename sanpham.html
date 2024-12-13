@@ -81,24 +81,39 @@
 			}
 
 			// Hàm thêm sản phẩm vào giỏ hàng
-			function addToCartWithMessage(name, price, image) {
-				let cart = JSON.parse(localStorage.getItem('cart')) || [];
-				
-				const existingProduct = cart.find(item => item.name === name);
-				
-				if (existingProduct) {
-					existingProduct.quantity += 1;
-				} else {
-					cart.push({
-						name: name,
-						price: price,
-						image: image,
-						quantity: 1
-					});
+			function addToCart(name, price, image_url) {
+				try {
+					if (!name || price === undefined || !image_url) {
+						throw new Error('Thông tin sản phẩm không hợp lệ');
+					}
+
+					let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+					const productId = name.toLowerCase().replace(/\s+/g, '-');
+					
+					const existingProduct = cart.find(item => item.id === productId);
+					
+					if (existingProduct) {
+						existingProduct.quantity += 1;
+					} else {
+						cart.push({
+							id: productId,
+							name: name,
+							price: price,
+							image: image_url,
+							quantity: 1
+						});
+					}
+					
+					localStorage.setItem('cartItems', JSON.stringify(cart));
+					showSuccessMessage();
+				} catch (error) {
+					console.error('Lỗi:', error);
+					// Hiển thị thông báo lỗi
+					const errorMessage = document.createElement('div');
+					errorMessage.className = 'text-red-500 text-center mt-4';
+					errorMessage.textContent = 'Không thể tải dữ liệu sản phẩm. Vui lòng thử lại sau.';
+					document.querySelector('main').appendChild(errorMessage);
 				}
-				
-				localStorage.setItem('cart', JSON.stringify(cart));
-				showSuccessMessage();
 			}
 
 			// Hàm tải và hiển thị sản phẩm
@@ -134,7 +149,7 @@
 									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
 									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
 									<div class="flex space-x-2">
-										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image_url}')" 
+										<button onclick="addToCart(\`${product.name}\`, ${product.price}, \`${product.image_url}\`)" 
 											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
 											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
 										</button>
@@ -159,7 +174,7 @@
 									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
 									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
 									<div class="flex space-x-2">
-										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image_url}')" 
+										<button onclick="addToCart('${product.name}', ${product.price}, '${product.image_url}')" 
 											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
 											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
 										</button>
@@ -184,7 +199,7 @@
 									<h3 class="text-lg font-semibold text-green-800 mb-2">${pot.name}</h3>
 									<p class="text-green-700 font-bold mb-2">${pot.price.toLocaleString('vi-VN')}đ</p>
 									<div class="flex space-x-2">
-										<button onclick="addToCartWithMessage('${pot.name}', ${pot.price}, '${pot.image}')"
+										<button onclick="addToCart(\`${pot.name}\`, ${pot.price}, \`${pot.image_url}\`)"
 											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
 											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
 										</button>
@@ -209,7 +224,7 @@
 									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
 									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
 									<div class="flex space-x-2">
-										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image}')"
+										<button onclick="addToCartWithMessage('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image_url.replace(/'/g, "\\'")}')"
 											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
 											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
 										</button>

@@ -55,6 +55,16 @@
                 </div>
             </div>
         </section>
+
+        <!-- Sản phẩm tương tự -->
+        <section class="similar-products mb-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-2xl font-bold text-gray-800 mb-8">Sản phẩm tương tự</h2>
+                <div id="similar-products-container" class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <!-- Sản phẩm tương tự sẽ được thêm vào đây -->
+                </div>
+            </div>
+        </section>
     </div>
 
     <div id="footer-placeholder"></div>
@@ -88,12 +98,43 @@
                     document.getElementById('productImage').src = product.image_url || product.image;
                     document.getElementById('productImage').alt = product.name;
                     document.getElementById('productDescription').textContent = product.description || 'Sản phẩm chất lượng cao từ PV Garden, được tuyển chọn kỹ lưỡng để đảm bảo sự hài lòng của khách hàng.';
+
+                    // Tải sản phẩm tương tự
+                    loadSimilarProducts(allProducts, product);
                 } else {
                     console.error('Không tìm thấy sản phẩm');
                 }
             } catch (error) {
                 console.error('Lỗi khi tải thông tin sản phẩm:', error);
             }
+        }
+
+        // Hàm tải sản phẩm tương tự
+        function loadSimilarProducts(allProducts, currentProduct) {
+            const similarProducts = allProducts
+                .filter(p => p.name !== currentProduct.name)
+                .sort(() => Math.random() - 0.5)
+                .slice(0, 4);
+
+            const container = document.getElementById('similar-products-container');
+            container.innerHTML = '';
+
+            similarProducts.forEach(product => {
+                const productCard = `
+                    <div class="bg-white rounded-xl shadow-lg p-6">
+                        <img src="${product.image_url || product.image}" 
+                             alt="${product.name}" 
+                             class="w-full h-48 object-cover rounded-lg mb-4">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">${product.name}</h3>
+                        <p class="text-green-600 font-bold mb-4">${product.price.toLocaleString('vi-VN')}đ</p>
+                        <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
+                                class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition duration-300">
+                            Xem chi tiết
+                        </button>
+                    </div>
+                `;
+                container.innerHTML += productCard;
+            });
         }
 
         // Xử lý form thêm vào giỏ hàng

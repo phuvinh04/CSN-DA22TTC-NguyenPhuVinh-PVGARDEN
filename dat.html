@@ -43,26 +43,65 @@
 		</div>
 
 		<script>
+			// Hàm hiển thị thông báo thêm vào giỏ hàng thành công
+			function showSuccessMessage() {
+				const message = document.getElementById('successMessage');
+				message.classList.remove('hidden');
+				message.classList.add('opacity-100', 'translate-y-0');
+				
+				setTimeout(() => {
+					message.classList.remove('opacity-100', 'translate-y-0');
+					message.classList.add('opacity-0', 'translate-y-[-1rem]');
+					setTimeout(() => {
+						message.classList.add('hidden');
+					}, 300);
+				}, 2000);
+			}
+
+			// Hàm thêm sản phẩm vào giỏ hàng
+			function addToCartWithMessage(name, price, image) {
+				let cart = JSON.parse(localStorage.getItem('cartItems')) || []; // Sửa 'cart' thành 'cartItems'
+				
+				const productId = name.toLowerCase().replace(/\s+/g, '-'); // Tạo ID cho sản phẩm
+				const existingProduct = cart.find(item => item.id === productId);
+				
+				if (existingProduct) {
+					existingProduct.quantity += 1;
+				} else {
+					cart.push({
+						id: productId,
+						name: name,
+						price: price,
+						image: image,
+						quantity: 1
+					});
+				}
+				
+				localStorage.setItem('cartItems', JSON.stringify(cart)); // Sửa 'cart' thành 'cartItems'
+				updateCartCount(); // Cập nhật số lượng hiển thị
+				showSuccessMessage();
+			}
+
+
+			// Hàm cập nhật số lượng trong giỏ hàng
+			function updateCartCount() {
+				const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+				const cartCount = document.getElementById('cartCount');
+				if (cartCount) {
+					// Tính tổng số lượng sản phẩm trong giỏ hàng
+					const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+					cartCount.textContent = totalItems;
+				}
+			}
+
 			async function loadToolProducts() {
 				try {
-					// Dữ liệu mẫu cho đất trồng
-					const datData = [
-						{
-							name: "Giá thể trồng hoa cao cấp Ficoco",
-							price: 85000,
-							image: "https://makagarden.vn/wp-content/uploads/2022/12/gia-the-trong-hoa-cao-cap-ficoco-cover-makagarden-600x600.jpg"
-						},
-						{
-							name: "Giá thể trồng cây đa dụng Ficoco",
-							price: 55000, 
-							image: "https://makagarden.vn/wp-content/uploads/2023/09/gia-the-trong-cay-da-dung-ficoco-maka-garden-1-600x600.jpg"
-						},
-						{
-							name: "Lớp phủ hữu cơ Namix",
-							price: 50000,
-							image: "https://makagarden.vn/wp-content/uploads/2021/06/lop-phu-huu-co-namix-cover2-600x600.jpg"
-						}
-					];
+					const response = await fetch('http://localhost:3000/api/dat');
+					if (!response.ok) {
+						throw new Error('Không thể tải dữ liệu sản phẩm');
+					}
+
+					const datData = await response.json();
 					
 					// Hiển thị sản phẩm đất
 					const toolContainer = document.getElementById('tool-products');
@@ -77,12 +116,12 @@
 					datData.forEach(product => {
 						const productCard = `
 							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-								<img alt="${product.name}" class="w-full h-48 object-cover" src="${product.image}" onerror="this.src='images/image-not-found.jpg'"/>
+								<img alt="${product.name}" class="w-full h-48 object-cover" src="${product.image_url || product.image}" onerror="this.src='images/image-not-found.jpg'"/>
 								<div class="p-4">
 									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
 									<p class="text-green-700 font-bold">${product.price.toLocaleString('vi-VN')}đ</p>
 									<div class="flex space-x-2">
-										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image}')" 
+										<button onclick="addToCartWithMessage('${product.name}', ${product.price}, '${product.image_url || product.image}')" 
 											class="mt-3 w-full bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors flex items-center justify-center">
 											<i class="fas fa-shopping-cart mr-2"></i>
 											Thêm vào giỏ
@@ -109,7 +148,7 @@
 		</script>
 
 		<script src="include.js"></script>
-
+		
 	</body>
 
 </html>

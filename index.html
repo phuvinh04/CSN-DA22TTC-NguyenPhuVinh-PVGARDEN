@@ -7,11 +7,18 @@
     <title>PV GARDEN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="product-actions.js"></script>
 </head>
 
 <body class="bg-green-50 font-sans">
+    <div id="successMessage" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden opacity-0 transition-all duration-300 transform translate-y-[-1rem] z-50">
+        <div class="flex items-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            <span>Thêm vào giỏ hàng thành công!</span>
+        </div>
+    </div>
     <main class="container mx-auto px-20 py-12 mt-16">
-        <h2 class="text-3xl font-bold text-green-800 mb-12">Sản phẩm nổi bật</h2>
+        
 
         <div class="bg-[#f8f5ed] py-16 px-24 mb-16">
             <h1 class="text-center text-xl font-bold text-green-800 mb-12">DANH MỤC SẢN PHẨM</h1>
@@ -49,7 +56,7 @@
                 </a>
             </div>
         </div>
-
+        <h2 class="text-3xl font-bold text-green-800 mb-12">Sản phẩm nổi bật</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10" id="featured-products">
             <!-- Sản phẩm sẽ được thêm vào đây từ API -->
         </div>
@@ -57,6 +64,21 @@
 
     <script src="include.js"></script>
     <script>
+        // Hàm hiển thị thông báo thành công
+        function showSuccessMessage() {
+            const message = document.getElementById('successMessage');
+            message.classList.remove('hidden');
+            message.classList.add('opacity-100', 'translate-y-0');
+            
+            setTimeout(() => {
+                message.classList.remove('opacity-100', 'translate-y-0');
+                message.classList.add('opacity-0', 'translate-y-[-1rem]');
+                setTimeout(() => {
+                    message.classList.add('hidden');
+                }, 300);
+            }, 2000);
+        }
+
         // Tải và hiển thị sản phẩm từ API
         async function loadAllProducts() {
             try {
@@ -102,15 +124,13 @@
                                 <p class="text-sm text-gray-600 mb-2 line-clamp-2" title="${description}">${description || 'Chưa có mô tả'}</p>
                                 <p class="text-green-700 font-bold mt-auto mb-3">${price ? price.toLocaleString('vi-VN') + 'đ' : 'Liên hệ'}</p>
                                 <div class="flex gap-2">
-                                    <button onclick="addToCart('${name}', ${price || 0}, '${image}')" 
-                                        class="flex-1 flex items-center justify-center bg-green-600 text-white py-2 px-2 rounded-md hover:bg-green-700 transition-colors text-sm">
-                                        <i class="fas fa-cart-plus mr-1"></i>
-                                        Thêm vào giỏ
+                                    <button onclick="addToCartWithMessage('${name}', ${price}, '${image}')" 
+                                        class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+                                        <i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
                                     </button>
                                     <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(name)}'"
-                                        class="flex-1 flex items-center justify-center bg-blue-600 text-white py-2 px-2 rounded-md hover:bg-blue-700 transition-colors text-sm">
-                                        <i class="fas fa-info-circle mr-1"></i>
-                                        Xem chi tiết
+                                        class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+                                        <i class="fas fa-info-circle mr-2"></i>Chi tiết
                                     </button>
                                 </div>
                             </div>
@@ -134,39 +154,44 @@
         }
 
         // Hàm thêm vào giỏ hàng
-        function addToCart(name, price, image_url) {
-            try {
-                if (!name || price === undefined || !image_url) {
-                    throw new Error('Thông tin sản phẩm không hợp lệ');
-                }
+        function addToCartWithMessage(name, price, image) {
+            let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            
+            const productId = name.toLowerCase().replace(/\s+/g, '-');
+            const existingProduct = cart.find(item => item.id === productId);
+            
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({
+                    id: productId,
+                    name: name,
+                    price: price,
+                    image: image,
+                    quantity: 1
+                });
+            }
+            
+            localStorage.setItem('cartItems', JSON.stringify(cart));
+            showSuccessMessage();
+            updateCartCount(); // Cập nhật số lượng hiển thị
+        }
 
-                let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
-                const productId = name.toLowerCase().replace(/\s+/g, '-');
-                
-                const existingProduct = cart.find(item => item.id === productId);
-                
-                if (existingProduct) {
-                    existingProduct.quantity += 1;
-                } else {
-                    cart.push({
-                        id: productId,
-                        name: name,
-                        price: price,
-                        image: image_url,
-                        quantity: 1
-                    });
-                }
-                
-                localStorage.setItem('cartItems', JSON.stringify(cart));
-                alert('Đã thêm sản phẩm vào giỏ hàng!');
-            } catch (error) {
-                console.error('Lỗi khi thêm vào giỏ hàng:', error);
-                alert('Không thể thêm sản phẩm vào giỏ hàng. Vui lòng thử lại sau.');
+        // Hàm cập nhật số lượng trong giỏ hàng
+        function updateCartCount() {
+            const cart = JSON.parse(localStorage.getItem('cartItems')) || [];
+            const cartCount = document.getElementById('cartCount');
+            if (cartCount) {
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                cartCount.textContent = totalItems;
             }
         }
 
         // Gọi hàm tải sản phẩm khi trang được tải
-        document.addEventListener('DOMContentLoaded', loadAllProducts);
+        document.addEventListener('DOMContentLoaded', () => {
+            loadAllProducts();
+            updateCartCount(); // Cập nhật số lượng giỏ hàng khi tải trang
+        });
     </script>
 </body>
 </html>

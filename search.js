@@ -11,18 +11,32 @@ function initializeSearch() {
             return;
         }
         
-        let products = [];
+        let allProducts = [];
         
-        // Tải dữ liệu sản phẩm
-        fetch('data.json')
-          .then(response => response.json())
-          .then(data => {
-            products = data.products;
-            console.log('Đã tải dữ liệu sản phẩm:', products.length);
-          })
-          .catch(error => {
+        // Tải dữ liệu sản phẩm từ tất cả các danh mục
+        Promise.all([
+            fetch('http://localhost:3000/api/products'),
+            fetch('http://localhost:3000/api/chaucay'),
+            fetch('http://localhost:3000/api/xuongrong-senda'), 
+            fetch('http://localhost:3000/api/phanbon'),
+            fetch('http://localhost:3000/api/dungcu'),
+            fetch('http://localhost:3000/api/dat')
+        ])
+        .then(responses => Promise.all(responses.map(res => res.json())))
+        .then(([products, chaucay, xuongrongSenda, phanbon, dungcu, dat]) => {
+            allProducts = [
+                ...products || [],
+                ...chaucay || [],
+                ...xuongrongSenda || [],
+                ...phanbon || [],
+                ...dungcu || [],
+                ...dat || []
+            ];
+            console.log('Đã tải tất cả sản phẩm:', allProducts.length);
+        })
+        .catch(error => {
             console.error('Lỗi khi tải dữ liệu:', error);
-          });
+        });
 
         // Xử lý khi nhập text
         searchInput.addEventListener('input', () => {
@@ -34,8 +48,8 @@ function initializeSearch() {
             return;
           }
 
-          const filteredProducts = products.filter(product => 
-            product.name.toLowerCase().includes(searchTerm)
+          const filteredProducts = allProducts.filter(product => 
+            product && product.name && product.name.toLowerCase().includes(searchTerm)
           );
 
           console.log('Kết quả tìm được:', filteredProducts.length);
@@ -49,19 +63,19 @@ function initializeSearch() {
               div.className = 'p-4 hover:bg-gray-50 cursor-pointer transition-colors duration-150';
               div.innerHTML = `
                 <div class="flex items-center space-x-4">
-                  <img src="${product.image_url}" 
+                  <img src="${product.image_url || product.image || ''}" 
                     class="w-16 h-16 object-cover rounded-lg flex-shrink-0"
                     onerror="this.src='images/default-product.jpg'">
                   <div class="flex-1 min-w-0">
-                    <div class="text-sm text-gray-800 font-medium line-clamp-2">${product.name}</div>
+                    <div class="text-sm text-gray-800 font-medium line-clamp-2">${product.name || 'Không có tên'}</div>
                     <div class="text-sm font-semibold text-green-600 mt-1">
-                      ${product.price.toLocaleString('vi-VN')}đ
+                      ${(product.price || 0).toLocaleString('vi-VN')}đ
                     </div>
                   </div>
                 </div>
               `;
               div.addEventListener('click', () => {
-                window.location.href = `product-detail.html?name=${encodeURIComponent(product.name)}`;
+                window.location.href = `product-detail.html?name=${encodeURIComponent(product.name || '')}`;
               });
               resultsList.appendChild(div);
             });
