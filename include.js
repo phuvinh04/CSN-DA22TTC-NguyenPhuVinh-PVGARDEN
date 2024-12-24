@@ -1,4 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Thêm Font Awesome nếu chưa có
+    if (!document.querySelector('link[href*="font-awesome"]')) {
+        const fontAwesome = document.createElement('link');
+        fontAwesome.rel = 'stylesheet';
+        fontAwesome.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css';
+        document.head.appendChild(fontAwesome);
+    }
+
     // Load navigation
     fetch('nav.html')
         .then(response => response.text())
@@ -49,12 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const productDiv = document.createElement('div');
             productDiv.className = 'bg-white p-4 rounded shadow cursor-pointer';
             productDiv.innerHTML = `
-                <h3 class="text-xl font-semibold">${product.name || 'Không có tên'}</h3>
-                <p class="text-gray-600">Giá: ${product.price ? product.price.toLocaleString('vi-VN') : 0} VNĐ</p>
-                <button onclick="addToCart('${product.id || ''}', '${product.name || ''}', ${product.price || 0}, '${product.image_url || product.image || ''}')" 
-                    class="mt-2 bg-green-600 text-white py-1 px-2 rounded">Thêm vào giỏ</button>
-                <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name || '')}'" 
-                    class="mt-2 bg-blue-600 text-white py-1 px-2 rounded">Xem thông tin</button>
+                <h3 class="text-2xl font-bold text-green-800 mb-3">${product.name || 'Không có tên'}</h3>
+                <p class="text-lg text-gray-600 mb-3">Giá: ${product.price ? product.price.toLocaleString('vi-VN') : 0} VNĐ</p>
+                <div class="flex gap-2">
+                    <button onclick="addToCart('${product.id || ''}', '${product.name || ''}', ${product.price || 0}, '${product.image_url || product.image || ''}')" 
+                        class="flex-1 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 text-base font-semibold">
+                        <i class="fas fa-cart-plus mr-2"></i>Thêm vào giỏ
+                    </button>
+                    <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name || '')}'" 
+                        class="flex-1 bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 text-base font-semibold">
+                        <i class="fas fa-info-circle mr-2"></i>Xem thông tin
+                    </button>
+                </div>
             `;
             productsContainer.appendChild(productDiv);
         });
