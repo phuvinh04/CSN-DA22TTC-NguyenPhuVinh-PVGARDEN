@@ -4,7 +4,6 @@ PV GARDEN là một website bán cây cảnh được thiết kế để cung c�
 - Xem danh sách và chi tiết sản phẩm
 - Giỏ hàng và thanh toán 
 - Tìm kiếm sản phẩm
-- Chat hỗ trợ khách hàng
 - Hướng dẫn chăm sóc cây
 
 ## Công nghệ sử dụng
