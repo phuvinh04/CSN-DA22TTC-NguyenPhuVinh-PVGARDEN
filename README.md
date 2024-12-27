@@ -33,15 +33,22 @@ project/
 ├── cart.html
 ├── checkout.html
 ├── nav.html
-├── js/
+├── chaucay.html
+├── dat.html
+├── phanbon.html
+├── xuongrong.html
+├── xuongrong-senda.html
+├── search-results.html
 │ ├── main.js
 │ ├── cart.js
-│ ├── chat.js
-│ ├── bot.js
+│ ├── data.js
+│ ├── cart.js
+│ ├── search.js
 │ ├── include.js
 │ └── java.js
 ├── server.js
 └── package.json
+
 ```
 
 ## Cách chạy dự án
