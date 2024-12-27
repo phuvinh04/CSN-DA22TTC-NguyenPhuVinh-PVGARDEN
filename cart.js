@@ -11,31 +11,6 @@ function updateCartCount() {
     }
 }
 
-// Hàm thêm sản phẩm vào giỏ hàng
-function addToCart(productId, name, price, image) {
-    const existingProduct = cart.find(item => item.id === productId);
-
-    if (existingProduct) {
-        existingProduct.quantity += 1;
-    } else {
-        cart.push({
-            id: productId,
-            name: name,
-            price: price,
-            image: image,
-            quantity: 1
-        });
-    }
-
-    // Lưu giỏ hàng vào localStorage
-    localStorage.setItem('cartItems', JSON.stringify(cart));
-
-    // Cập nhật số lượng trên icon giỏ hàng
-    updateCartCount();
-
-    // Hiển thị thông báo
-    alert('Đã thêm sản phẩm vào giỏ hàng!');
-}
 
 // Hàm cập nhật số lượng sản phẩm
 function updateQuantity(productId, newQuantity) {

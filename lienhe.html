@@ -11,60 +11,56 @@
 <body class="bg-gray-50">
     <div id="nav-placeholder"></div>
 
-    <main class="container mx-auto px-4 py-8">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-3xl font-bold text-green-800 mb-8 text-center">Liên Hệ Với Chúng Tôi</h1>
+    <main class="container mx-auto px-4 py-16">
+        <div class="max-w-5xl mx-auto">
+            <h1 class="text-4xl font-bold text-green-800 mb-12 text-center">Liên Hệ Với Chúng Tôi</h1>
             
             <!-- Thông tin liên hệ -->
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-xl font-semibold text-green-700 mb-4">Thông Tin Liên Hệ</h2>
-                    <div class="space-y-4">
+            <div class="grid md:grid-cols-2 gap-10 mb-12">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-6">Thông Tin Liên Hệ</h2>
+                    <div class="space-y-6">
                         <div class="flex items-center">
-                            <i class="fas fa-map-marker-alt text-green-600 w-6"></i>
-                            <span class="ml-3">Càng Long, Trà Vinh</span>
+                            <i class="fas fa-map-marker-alt text-green-600 w-8 text-xl"></i>
+                            <span class="ml-4 text-lg">Càng Long, Trà Vinh</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-phone-alt text-green-600 w-6"></i>
-                            <span class="ml-3">0353603304</span>
+                            <i class="fas fa-phone-alt text-green-600 w-8 text-xl"></i>
+                            <span class="ml-4 text-lg">0353603304</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-envelope text-green-600 w-6"></i>
-                            <span class="ml-3">vinhadmw@gmail.com</span>
-                        </div>
-                        <div class="flex items-center">
-                            <i class="fas fa-clock text-green-600 w-6"></i>
-                            <span class="ml-3">8:00 - 20:00 (Thứ 2 - Chủ Nhật)</span>
+                            <i class="fas fa-envelope text-green-600 w-8 text-xl"></i>
+                            <span class="ml-4 text-lg">vinhadmw@gmail.com</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Form liên hệ -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h2 class="text-xl font-semibold text-green-700 mb-4">Gửi Tin Nhắn</h2>
-                    <form id="contactForm" class="space-y-4">
+                <div class="bg-white p-8 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-6">Gửi Tin Nhắn</h2>
+                    <form id="contactForm" class="space-y-5">
                         <div>
-                            <label for="name" class="block text-gray-700 mb-2">Họ và tên</label>
+                            <label for="name" class="block text-gray-700 text-lg mb-2">Họ và tên</label>
                             <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500">
+                                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-green-500 text-lg">
                         </div>
                         <div>
-                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <label for="email" class="block text-gray-700 text-lg mb-2">Email</label>
                             <input type="email" id="email" name="email" required
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500">
+                                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-green-500 text-lg">
                         </div>
                         <div>
-                            <label for="phone" class="block text-gray-700 mb-2">Số điện thoại</label>
+                            <label for="phone" class="block text-gray-700 text-lg mb-2">Số điện thoại</label>
                             <input type="tel" id="phone" name="phone" required
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500">
+                                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-green-500 text-lg">
                         </div>
                         <div>
-                            <label for="message" class="block text-gray-700 mb-2">Nội dung</label>
+                            <label for="message" class="block text-gray-700 text-lg mb-2">Nội dung</label>
                             <textarea id="message" name="message" rows="4" required
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-green-500"></textarea>
+                                class="w-full px-4 py-3 border rounded-lg focus:outline-none focus:border-green-500 text-lg"></textarea>
                         </div>
                         <button type="submit"
-                            class="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition-colors">
+                            class="w-full bg-green-600 text-white py-3 px-6 rounded-lg hover:bg-green-700 transition-colors text-lg font-semibold">
                             Gửi tin nhắn
                         </button>
                     </form>
@@ -72,8 +68,8 @@
             </div>
 
             <!-- Bản đồ -->
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h2 class="text-xl font-semibold text-green-700 mb-4">Bản Đồ</h2>
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-2xl font-semibold text-green-700 mb-6">Bản Đồ</h2>
                 <div class="aspect-w-16 aspect-h-9">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.5248540669387!2d106.21893631479!3d9.98893999288784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a017b1b8e6aa67%3A0x6c3c37963e2c8ba9!2zWDQ3TStDNjIsIEFuIFRyxrDhu51uZyBBLCBDw6BuZyBMb25nLCBUcsOgIFZpbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1679876543210"
@@ -82,7 +78,8 @@
                         style="border:0;" 
                         allowfullscreen="" 
                         loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
+                        referrerpolicy="no-referrer-when-downgrade"
+                        class="rounded-lg">
                     </iframe>
                 </div>
             </div>
