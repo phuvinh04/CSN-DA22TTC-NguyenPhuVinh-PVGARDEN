@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full bg-gray-100">
+<head>
+    <title>Kết quả tìm kiếm</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-green-50 font-sans">
+    <div id="nav-placeholder"></div>
+
+    <!-- Banner -->
+    <div class="relative h-48 overflow-hidden">
+        <img src="images/logo.jpg" alt="Banner" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <h1 class="text-4xl font-bold text-white text-center">Kết Quả Tìm Kiếm</h1>
+        </div>
+    </div>
+
+    <!-- Kết quả tìm kiếm -->
+    <div class="container mx-auto px-4 py-8">
+        <div id="searchInfo" class="mb-6 text-center">
+            <p class="text-lg text-gray-600">Kết quả tìm kiếm cho: <span id="searchTerm" class="font-semibold text-green-600"></span></p>
+        </div>
+
+        <div id="searchResultsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Kết quả sẽ được thêm vào đây bằng JavaScript -->
+        </div>
+        
+        <!-- Thông báo không tìm thấy -->
+        <div id="noResults" class="hidden text-center py-8">
+            <p class="text-gray-600 text-lg">Không tìm thấy sản phẩm phù hợp</p>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="include.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const searchTerm = urlParams.get('q');
+            
+            // Hiển thị từ khóa tìm kiếm
+            document.getElementById('searchTerm').textContent = searchTerm;
+
+            if (searchTerm) {
+                // Tải tất cả sản phẩm và lọc
+                Promise.all([
+                    fetch('http://localhost:3000/api/products'),
+                    fetch('http://localhost:3000/api/chaucay'),
+                    fetch('http://localhost:3000/api/xuongrong-senda'),
+                    fetch('http://localhost:3000/api/phanbon'),
+                    fetch('http://localhost:3000/api/dungcu'),
+                    fetch('http://localhost:3000/api/dat')
+                ])
+                .then(responses => Promise.all(responses.map(res => res.json())))
+                .then(([products, chaucay, xuongrongSenda, phanbon, dungcu, dat]) => {
+                    const allProducts = [
+                        ...products || [],
+                        ...chaucay || [],
+                        ...xuongrongSenda || [],
+                        ...phanbon || [],
+                        ...dungcu || [],
+                        ...dat || []
+                    ];
+
+                    const filteredProducts = allProducts.filter(product =>
+                        product && product.name && 
+                        product.name.toLowerCase().includes(searchTerm.toLowerCase())
+                    );
+
+                    const searchResultsContainer = document.getElementById('searchResultsContainer');
+                    const noResults = document.getElementById('noResults');
+
+                    if (filteredProducts.length > 0) {
+                        filteredProducts.forEach(product => {
+                            const productCard = document.createElement('div');
+                            productCard.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+                            productCard.innerHTML = `
+                                <img src="${product.image_url || product.image}" 
+                                     alt="${product.name}" 
+                                     class="w-full h-48 object-cover"
+                                     onerror="this.src='images/image-not-found.jpg'">
+                                <div class="p-4">
+                                    <h3 class="text-lg font-semibold mb-2">${product.name}</h3>
+                                    <p class="text-green-600 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
+                                    <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'" 
+                                            class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors">
+                                        <i class="fas fa-info-circle mr-2"></i>Xem chi tiết
+                                    </button>
+                                </div>
+                            `;
+                            searchResultsContainer.appendChild(productCard);
+                        });
+                    } else {
+                        noResults.classList.remove('hidden');
+                    }
+                })
+                .catch(error => {
+                    console.error('Lỗi khi tải dữ liệu:', error);
+                    document.getElementById('noResults').classList.remove('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

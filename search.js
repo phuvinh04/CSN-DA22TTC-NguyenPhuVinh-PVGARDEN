@@ -85,7 +85,8 @@ function initializeSearch() {
               viewMore.className = 'p-3 text-center text-sm text-green-600 hover:bg-gray-50 cursor-pointer font-medium transition-colors duration-150 border-t border-gray-100';
               viewMore.textContent = `Xem thêm ${filteredProducts.length - 5} sản phẩm`;
               viewMore.addEventListener('click', () => {
-                window.location.href = `sanpham.html?search=${encodeURIComponent(searchTerm)}`;
+                // Chuyển đến trang kết quả tìm kiếm với đầy đủ từ khóa tìm kiếm
+                window.location.href = `search-results.html?q=${encodeURIComponent(searchTerm)}`;
               });
               resultsList.appendChild(viewMore);
             }
