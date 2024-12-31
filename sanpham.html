@@ -1,57 +1,35 @@
 <html lang="vi">
-
 	<head>
-
 		<meta charset="utf-8"/>
-
 		<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 		<link rel="icon" type="image/x-icon" href="images/logo.jpg" />
-		<title>
-
-			Sản phẩm - PV GARDEN
-
-		</title>
-
-		<script src="https://cdn.tailwindcss.com">
-
-		</script>
-
+		<title>Sản phẩm - PV GARDEN</title>
+		<script src="https://cdn.tailwindcss.com"></script>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-
 	</head>
 
 	<body class="bg-green-50 font-sans">
-
 		<main class="container mx-auto px-20 py-12 mt-8">
-
 			<div class="text-center mb-8">
-
 				<h1 class="text-4xl font-bold text-green-800 mb-4">Danh sách sản phẩm</h1>
-
 				<p class="text-xl text-green-700">Tìm hiểu thêm về tất cả các sản phẩm mà chúng tôi cung cấp.</p>
-
 			</div>
 
 			<!-- Danh mục sản phẩm -->
 			<h2 class="text-2xl font-bold text-green-800 mb-4">Cây cảnh</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="products">
-			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="products"></div>
 
 			<!-- Danh mục xương rồng và sen đá -->
 			<h2 class="text-2xl font-bold text-green-800 mb-4">Xương Rồng và Sen Đá</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="succulent-products">
-			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="succulent-products"></div>
 
 			<!-- Danh mục chậu cây -->
 			<h2 class="text-2xl font-bold text-green-800 mt-8 mb-4">Chậu Cây Cảnh</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="pots">
-			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="pots"></div>
 
 			<!-- Danh mục phân bón -->
 			<h2 class="text-2xl font-bold text-green-800 mt-8 mb-4">Phân Bón</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="fertilizer-products">
-			</div>
-
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="fertilizer-products"></div>
 		</main>
 
 		<!-- Thông báo thêm vào giỏ hàng thành công -->
@@ -63,7 +41,6 @@
 		</div>
 
 		<script src="include.js"></script>
-
 		<script>
 			// Hàm hiển thị thông báo thêm vào giỏ hàng thành công
 			function showSuccessMessage() {
@@ -89,7 +66,6 @@
 
 					let cart = JSON.parse(localStorage.getItem('cartItems')) || [];
 					const productId = name.toLowerCase().replace(/\s+/g, '-');
-					
 					const existingProduct = cart.find(item => item.id === productId);
 					
 					if (existingProduct) {
@@ -108,151 +84,86 @@
 					showSuccessMessage();
 				} catch (error) {
 					console.error('Lỗi:', error);
-					// Hiển thị thông báo lỗi
-					const errorMessage = document.createElement('div');
-					errorMessage.className = 'text-red-500 text-center mt-4';
-					errorMessage.textContent = 'Không thể tải dữ liệu sản phẩm. Vui lòng thử lại sau.';
-					document.querySelector('main').appendChild(errorMessage);
+					showErrorMessage();
 				}
+			}
+
+			// Hàm hiển thị thông báo lỗi
+			function showErrorMessage() {
+				const errorMessage = document.createElement('div');
+				errorMessage.className = 'text-red-500 text-center mt-4';
+				errorMessage.textContent = 'Không thể tải dữ liệu sản phẩm. Vui lòng thử lại sau.';
+				document.querySelector('main').appendChild(errorMessage);
+			}
+
+			// Hàm tạo card sản phẩm
+			function createProductCard(product) {
+				return `
+					<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+						<img src="${product.image_url}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
+						<div class="p-4">
+							<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
+							<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
+							<div class="flex space-x-2">
+								<button onclick="addToCart(\`${product.name}\`, ${product.price}, \`${product.image_url}\`)" 
+									class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+									<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
+								</button>
+								<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
+									class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
+									<i class="fas fa-info-circle mr-2"></i>Chi tiết
+								</button>
+							</div>
+						</div>
+					</div>
+				`;
 			}
 
 			// Hàm tải và hiển thị sản phẩm
 			async function loadAllProducts() {
 				try {
-					// Tải dữ liệu từ các API
-					const [productsResponse, succulentsResponse, potsResponse, fertilizerResponse] = await Promise.all([
-						fetch('http://localhost:3000/api/products'),
-						fetch('http://localhost:3000/api/xuongrong-senda'),
-						fetch('http://localhost:3000/api/chaucay'),
-						fetch('http://localhost:3000/api/phanbon')
-					]);
+					const endpoints = [
+						'products',
+						'xuongrong-senda',
+						'chaucay',
+						'phanbon'
+					];
 
-					// Kiểm tra response
-					if (!productsResponse.ok || !succulentsResponse.ok || !potsResponse.ok || !fertilizerResponse.ok) {
+					const responses = await Promise.all(
+						endpoints.map(endpoint => 
+							fetch(`http://localhost:3000/api/${endpoint}`)
+						)
+					);
+
+					if (!responses.every(response => response.ok)) {
 						throw new Error('Lỗi khi tải dữ liệu');
 					}
 
-					const [productsData, succulentsData, potsData, fertilizerData] = await Promise.all([
-						productsResponse.json(),
-						succulentsResponse.json(),
-						potsResponse.json(),
-						fertilizerResponse.json()
-					]);
+					const [productsData, succulentsData, potsData, fertilizerData] = 
+						await Promise.all(responses.map(response => response.json()));
 
-					// Hiển thị sản phẩm chung
-					const productsContainer = document.getElementById('products');
-					productsData.forEach(product => {
-						const productCard = `
-							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-								<img src="${product.image_url}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
-								<div class="p-4">
-									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
-									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
-									<div class="flex space-x-2">
-										<button onclick="addToCart(\`${product.name}\`, ${product.price}, \`${product.image_url}\`)" 
-											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
-										</button>
-										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
-											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
-											<i class="fas fa-info-circle mr-2"></i>Chi tiết
-										</button>
-									</div>
-								</div>
-							</div>
-						`;
-						productsContainer.insertAdjacentHTML('beforeend', productCard);
-					});
+					const containers = {
+						'products': productsData,
+						'succulent-products': succulentsData,
+						'pots': potsData,
+						'fertilizer-products': fertilizerData
+					};
 
-					// Hiển thị xương rồng và sen đá
-					const succulentProducts = document.getElementById('succulent-products');
-					succulentsData.forEach(product => {
-						const productCard = `
-							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-								<img src="${product.image_url}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
-								<div class="p-4">
-									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
-									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
-									<div class="flex space-x-2">
-										<button onclick="addToCart('${product.name}', ${product.price}, '${product.image_url}')" 
-											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
-										</button>
-										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
-											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
-											<i class="fas fa-info-circle mr-2"></i>Chi tiết
-										</button>
-									</div>
-								</div>
-							</div>
-						`;
-						succulentProducts.insertAdjacentHTML('beforeend', productCard);
-					});
-
-					// Hiển thị chậu cây
-					const potsContainer = document.getElementById('pots');
-					potsData.forEach(pot => {
-						const potCard = `
-							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-								<img src="${pot.image_url}" alt="${pot.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
-								<div class="p-4">
-									<h3 class="text-lg font-semibold text-green-800 mb-2">${pot.name}</h3>
-									<p class="text-green-700 font-bold mb-2">${pot.price.toLocaleString('vi-VN')}đ</p>
-									<div class="flex space-x-2">
-										<button onclick="addToCart(\`${pot.name}\`, ${pot.price}, \`${pot.image_url}\`)"
-											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
-										</button>
-										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(pot.name)}'"
-											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
-											<i class="fas fa-info-circle mr-2"></i>Chi tiết
-										</button>
-									</div>
-								</div>
-							</div>
-						`;
-						potsContainer.insertAdjacentHTML('beforeend', potCard);
-					});
-
-					// Hiển thị phân bón
-					const fertilizerProducts = document.getElementById('fertilizer-products');
-					fertilizerData.forEach(product => {
-						const productCard = `
-							<div class="bg-white rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
-								<img src="${product.image_url}" alt="${product.name}" class="w-full h-48 object-cover" onerror="this.src='images/image-not-found.jpg'">
-								<div class="p-4">
-									<h3 class="text-lg font-semibold text-green-800 mb-2">${product.name}</h3>
-									<p class="text-green-700 font-bold mb-2">${product.price.toLocaleString('vi-VN')}đ</p>
-									<div class="flex space-x-2">
-										<button onclick="addToCartWithMessage('${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image_url.replace(/'/g, "\\'")}')"
-											class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
-											<i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
-										</button>
-										<button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(product.name)}'"
-											class="flex-1 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition-colors">
-											<i class="fas fa-info-circle mr-2"></i>Chi tiết
-										</button>
-									</div>
-								</div>
-							</div>
-						`;
-						fertilizerProducts.insertAdjacentHTML('beforeend', productCard);
+					Object.entries(containers).forEach(([containerId, data]) => {
+						const container = document.getElementById(containerId);
+						data.forEach(item => {
+							container.insertAdjacentHTML('beforeend', createProductCard(item));
+						});
 					});
 
 				} catch (error) {
 					console.error('Lỗi:', error);
-					// Hiển thị thông báo lỗi
-					const errorMessage = document.createElement('div');
-					errorMessage.className = 'text-red-500 text-center mt-4';
-					errorMessage.textContent = 'Không thể tải dữ liệu sản phẩm. Vui lòng thử lại sau.';
-					document.querySelector('main').appendChild(errorMessage);
+					showErrorMessage();
 				}
 			}
 
 			// Chạy hàm loadAllProducts khi trang đã tải xong
 			document.addEventListener('DOMContentLoaded', loadAllProducts);
 		</script>
-
 	</body>
-
 </html>

@@ -8,9 +8,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <script src="product-actions.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+    }
+    </script>
+    <script type="module" src="bot.js"></script>
+    <script type="module" src="chat-component.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
 </head>
 
 <body class="bg-green-50 font-sans">
+    <chat-component></chat-component>
     <div id="successMessage" class="fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg hidden opacity-0 transition-all duration-300 transform translate-y-[-1rem] z-50">
         <div class="flex items-center">
             <i class="fas fa-check-circle mr-2"></i>
@@ -57,7 +69,7 @@
             </div>
         </div>
         <h2 class="text-3xl font-bold text-green-800 mb-12">Sản phẩm nổi bật</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-10" id="featured-products">
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10" id="featured-products">
             <!-- Sản phẩm sẽ được thêm vào đây từ API -->
         </div>
     </main>
@@ -125,7 +137,7 @@
                                 <p class="text-green-700 font-bold mt-auto mb-3">${price ? price.toLocaleString('vi-VN') + 'đ' : 'Liên hệ'}</p>
                                 <div class="flex gap-2">
                                     <button onclick="addToCartWithMessage('${name}', ${price}, '${image}')" 
-                                        class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors">
+                                        class="flex-1 bg-green-600 text-white py-2 rounded-md hover:bg-green-700 transition-colors whitespace-nowrap">
                                         <i class="fas fa-shopping-cart mr-2"></i>Thêm vào giỏ
                                     </button>
                                     <button onclick="window.location.href='product-detail.html?name=${encodeURIComponent(name)}'"
