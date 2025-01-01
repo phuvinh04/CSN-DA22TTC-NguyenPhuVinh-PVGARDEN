@@ -16,12 +16,10 @@
 - Tối ưu responsive design cho mobile
 
 ## Tuần 4 (16/12/2024 - 22/12/2024)
-- Hoàn thiện chức năng giỏ hàng nâng cao
+- Hoàn thiện chức năng giỏ hàng
 - Thêm trang thanh toán và đơn hàng
 - Testing và fix bugs
 
 ## Tuần 5 (23/12/2024 - 29/12/2024)
 - Hoàn thiện các trang còn lại
-- Testing toàn diện
-- Triển khai website lên hosting
-- Viết tài liệu hướng dẫn sử dụng
+- Xây dựng thêm các tính năng phát triển trong tương lai.
